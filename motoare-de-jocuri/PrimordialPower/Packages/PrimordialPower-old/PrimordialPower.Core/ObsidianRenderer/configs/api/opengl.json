@@ -1,0 +1,29 @@
+{
+  "api": "opengl",
+  "defines": [
+    "USE_OPENGL",
+    "RENDERER_API_OPENGL"
+  ],
+  "include_paths": {
+    "windows": [
+      "C:/Program Files (x86)/Windows Kits/10/Include/*/um"
+    ],
+    "linux": [
+      "/usr/include/GL"
+    ],
+    "macos": [
+      "/System/Library/Frameworks/OpenGL.framework/Headers"
+    ]
+  },
+  "libraries": {
+    "windows": [
+      "opengl32.lib"
+    ],
+    "linux": [
+      "GL"
+    ],
+    "macos": [
+      "OpenGL"
+    ]
+  }
+}

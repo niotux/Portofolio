@@ -1,0 +1,23 @@
+<Solution>
+  <Folder Name="/manshell/">
+    <Project Path="lib2/lib2.csproj" />
+  </Folder>
+  <Project Path="App/App.csproj" />
+  <Project Path="Benchmark.Vectors/Benchmark.Vectors.csproj" />
+  <Project Path="Game/Game.csproj" />
+  <Project Path="OpenUL.Windowing/OpenUL.Windowing.csproj" />
+  <Project Path="RealGame/RealGame.vbproj" />
+  <Project Path="manshell/manshell.csproj" />
+  <Project Path="OpenUL.Assets.Media.Common/OpenUL.Assets.Media.Common.csproj" />
+  <Project Path="OpenUL.Assets.Media.STB/OpenUL.Assets.Media.STB.csproj" />
+  <Project Path="OpenUL.Assets.Media/OpenUL.Assets.Media.csproj" />
+  <Project Path="OpenUL.Assets/OpenUL.Assets.csproj" />
+  <Project Path="OpenUL.Audio/OpenUL.Audio.csproj" />
+  <Project Path="OpenUL.Devices/OpenUL.Devices.csproj" />
+  <Project Path="OpenUL.Graphics.Vulkan/OpenUL.Graphics.Vulkan.csproj" />
+  <Project Path="OpenUL.Manshell/OpenUL.Manshell.csproj" />
+  <Project Path="OpenUL.Mathematics/OpenUL.Mathematics.csproj" />
+  <Project Path="OpenUL.Utility.Collections/OpenUL.Utility.Collections.csproj" />
+  <Project Path="OpenUL.Utility.RefCounted/OpenUL.Utility.RefCounted.csproj" />
+  <Project Path="OpenUL.Windowing.GLFW/OpenUL.Windowing.GLFW.csproj" />
+</Solution>

@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/UnivKit.Unmanaged/UnivKit.Unmanaged.csproj" />
+    <ProjectReference Include="../../src/UnivKit/UnivKit.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="assets/**/*" Pack="true" PackagePath="assets" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

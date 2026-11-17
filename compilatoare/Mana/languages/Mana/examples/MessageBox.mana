@@ -1,0 +1,31 @@
+use Base;
+use Base.Aliases;
+use Base.OS.GUI;
+use Base.OS.Desktop;
+
+unit MessageBox;
+
+public module App
+{
+  private const string AppName = "Message Box";
+  private const string DefaultMessage = "Ok";
+
+  entry int Main(string[] args)
+  {
+    val message = if args.Count > 0
+      then args[0]
+      else DefaultMessage;
+
+    val win = Window.Create(AppName, { 800, 600 });
+  }
+}
+
+public class MessageBox
+{
+  is: IWidget
+
+  public Position Position { get; }
+  public Size Size { get; }
+
+  public IEnumerable<IWidget>
+}

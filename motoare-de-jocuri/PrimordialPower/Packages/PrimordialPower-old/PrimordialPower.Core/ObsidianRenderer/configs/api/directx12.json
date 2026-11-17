@@ -1,0 +1,20 @@
+{
+  "api": "directx12",
+  "defines": [
+    "USE_DIRECTX12",
+    "RENDERER_API_DX12"
+  ],
+  "include_paths": {
+    "windows": [
+      "C:/Program Files (x86)/Windows Kits/10/Include/*/um",
+      "C:/Program Files (x86)/Windows Kits/10/Include/*/shared"
+    ]
+  },
+  "libraries": {
+    "windows": [
+      "d3d12.lib",
+      "dxgi.lib",
+      "d3dcompiler.lib"
+    ]
+  }
+}

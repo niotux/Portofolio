@@ -1,0 +1,27 @@
+<Solution>
+  <Folder Name="/tests/">
+    <Project Path="tests/QuantiX.Engine.Benchmarks/QuantiX.Engine.Benchmarks.csproj" />
+    <Project Path="tests/QuantiX.Engine.Tests.AppServers/QuantiX.Engine.Tests.AppServers.csproj" />
+    <Project Path="tests/Quantix.Engine.Tests.Assets/Quantix.Engine.Tests.Assets.csproj" />
+    <Project Path="tests/QuantiX.Engine.Tests.FPS/QuantiX.Engine.Tests.Games.FPS.csproj" />
+    <Project Path="tests/QuantiX.Engine.Tests.Native/QuantiX.Engine.Tests.Native.csproj" />
+    <Project Path="tests/QuantiX.Engine.Tests.Portal/QuantiX.Engine.Tests.Games.Portal.csproj" />
+    <Project Path="tests/QuantiX.Engine.Tests.Rendering/QuantiX.Engine.Tests.Games.VoxelGame.csproj" />
+  </Folder>
+  <Folder Name="/extensions/">
+    <Project Path="extensions/QuantiX.Engine.Renderers.Glyph/QuantiX.Engine.Renderers.Glyph.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/QuantiX.Engine/QuantiX.Engine.csproj" />
+    <Project Path="src/QuantiX.Engine.Audio/QuantiX.Engine.Audio.csproj" />
+    <Project Path="src/QuantiX.Engine.Platform/QuantiX.Engine.Platform.csproj" />
+    <Project Path="src/QuantiX.Engine.Rendering/QuantiX.Engine.Rendering.csproj" />
+    <Project Path="src/QuantiX.Engine.Windowing/QuantiX.Engine.Windowing.csproj" />
+    <Project Path="src/QuantiX.Engine.Assets/QuantiX.Engine.Assets.csproj" />
+    <Project Path="src/QuantiX.Engine.Mathematics.Generators/QuantiX.Engine.Mathematics.Generators.csproj" />
+    <Project Path="src/QuantiX.Engine.Mathematics/QuantiX.Engine.Mathematics.csproj" />
+    <Project Path="src/QuantiX.Engine.Native/QuantiX.Engine.Native.csproj" />
+    <Project Path="src/QuantiX.Engine.Assets.Common/QuantiX.Engine.Assets.Common.csproj" />
+    <Project Path="src/QuantiX.Engine.Renderers.Quartz/QuantiX.Engine.Renderers.Quartz.csproj" />
+  </Folder>
+</Solution>

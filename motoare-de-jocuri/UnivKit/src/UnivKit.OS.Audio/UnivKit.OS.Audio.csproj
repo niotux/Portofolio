@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="../UnivKit.Application/UnivKit.Application.csproj" />
+    <ProjectReference Include="../UnivKit.Audio/UnivKit.Audio.csproj" />
+    <ProjectReference Include="../UnivKit.OS.Platform.Linux/UnivKit.OS.Platform.Linux.csproj" PrivateAssets="compile"/>
+  </ItemGroup>
+  
+</Project>

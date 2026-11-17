@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="tmp\**" />
+    <Compile Remove="ignore\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../QuantiX.Engine.Windowing/QuantiX.Engine.Windowing.csproj" />
+  </ItemGroup>
+
+</Project>

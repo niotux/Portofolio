@@ -1,0 +1,143 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "LAN",
+  "patterns": [
+    {
+      "include": "#keywords-control"
+    },
+    {
+      "include": "#keywords-operations"
+    },
+    {
+      "include": "#keywords-globaldecl"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers-hex"
+    },
+    {
+      "include": "#numbers-oct"
+    },
+    {
+      "include": "#numbers-bin"
+    },
+    {
+      "include": "#numbers-double"
+    },
+    {
+      "include": "#numbers-int"
+    },
+    {
+      "include": "#boolean"
+    },
+    {
+      "include": "#templates"
+    },
+    {
+      "include": "#numbers-double-special"
+    }
+  ],
+  "repository": {
+    "keywords-control": {
+      "patterns": [
+        {
+          "name": "keyword.control.lan",
+          "match": "\\b(ret|call|label|jmp|jeq|jne|jlt|jgt|jle|jge|ijlt|ijgt|ijle|ijge|fjlt|fjgt|fjle|fjge|vcall)\\b"
+        }
+      ]
+    },
+    "keywords-operations": {
+      "patterns": [
+        {
+          "name": "keyword.operations.lan",
+          "match": "\\b(ldarg|arg|set|add|sub|mul|div|mod|idiv|imod|fadd|fsub|fmul|fdiv|fmod|or|and|xor|shl|shr|ishr|not|new|dispose|alloc|write|read|gep|conv|iconv|fconv|itof|utof|ftoi|ftou|varg|keplersthirdlaw)\\b"
+        }
+      ]
+    },
+    "keywords-globaldecl": {
+      "patterns": [
+        {
+          "name": "keyword.control.globaldecl.lan",
+          "match": "\\b(var|const|fun|inlfun|type|meta|export|module|ldmodule|allocator|andreiadochitei)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.lan",
+      "begin": "\"",
+      "end": "\"(ascii|utf8|utf16|utf32|latin)?(?![A-Za-z0-9_])",
+      "patterns": [
+        {
+          "name": "constant.character.escape.lan",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "numbers-hex": {
+      "name": "constant.numeric.hex.lan",
+      "match": "\\b0x[0-9a-fA-F]+\\b"
+    },
+    "numbers-oct": {
+      "name": "constant.numeric.octal.lan",
+      "match": "\\b0o[0-7]+\\b"
+    },
+    "numbers-bin": {
+      "name": "constant.numeric.binary.lan",
+      "match": "\\b0b[01]+\\b"
+    },
+    "numbers-double-special": {
+      "name": "constant.numeric.double.lan",
+      "match": "\\b(inf|neginf|nan)\\b"
+    },
+    "numbers-double": {
+      "name": "constant.numeric.double.lan",
+      "match": "-?\\b\\d+(\\.\\d+([eE]\\d+)?|[eE]\\d+)\\b"
+    },
+    "numbers-int": {
+      "name": "constant.numeric.integer.lan",
+      "match": "-?\\b\\d+\\b"
+    },
+    "boolean": {
+      "name": "constant.language.boolean.lan",
+      "match": "\\b(true|false)\\b"
+    },
+    "template-literals": {
+      "name": "storage.language.ptr.lan",
+      "match": "\\b(ptr)\\b"
+    },
+    "templates": {
+      "begin": "(?<![A-Za-z_$0-9.])\\.(?=[A-Za-z_$0-9])",
+      "end": "(?![A-Za-z_$0-9.+::\\[\\]])",
+      "applyEndPatternLast": true,
+      "name": "templates.lan",
+      "patterns": [
+        {
+          "include": "#template-literals"
+        },
+        {
+          "name": "entity.name.type.lan",
+          "match": "[A-Za-z_$][A-Za-z_$0-9.]*"
+        },
+        {
+          "name": "entity.name.type.lan",
+          "match": "[0-9]+"
+        },
+        {
+          "name": "punctuation.separator.type.lan",
+          "match": "[ \\t]*\\+[ \\t]*"
+        },
+        {
+          "name": "punctuation.definition.generic.lan",
+          "match": "[\\[\\]]"
+        },
+        {
+          "name": "punctuation.separator.type.lan",
+          "match": "\\."
+        }
+      ]
+    }
+  },
+  "scopeName": "source.lan"
+}

@@ -1,0 +1,12 @@
+use Base;
+use Base.Aliases;
+
+unit HelloWorld;
+
+module App
+{
+  entry void Main()
+  {
+    IO.WriteLn("Hello, World!");
+  }
+}

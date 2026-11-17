@@ -1,0 +1,18 @@
+{
+  "Name": "lan",
+  "Dependencies": [],
+  "Source": "",
+  "OutputBase": "",
+  "Output": "bin/$EMPIRE_CONFIG/$EMPIRE_RID/",
+  "Artefacts": "obj/",
+  "Configs": [
+    {
+      "Name": "Debug",
+      "Flags": "-c Debug"
+    },
+    {
+      "Name": "Release",
+      "Flags": "-c Release"
+    }
+  ]
+}

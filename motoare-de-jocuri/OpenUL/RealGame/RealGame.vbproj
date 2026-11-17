@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>RealGame</RootNamespace>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../OpenUL.Assets.Media.Common/OpenUL.Assets.Media.Common.csproj" />
+    <ProjectReference Include="../OpenUL.Assets.Media/OpenUL.Assets.Media.csproj" />
+    <ProjectReference Include="../OpenUL.Assets/OpenUL.Assets.csproj" />
+    <ProjectReference Include="../OpenUL.Windowing.GLFW/OpenUL.Windowing.GLFW.csproj" />
+    <ProjectReference Include="../OpenUL.Windowing/OpenUL.Windowing.csproj" />
+  </ItemGroup>
+
+</Project>

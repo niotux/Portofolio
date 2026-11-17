@@ -1,0 +1,21 @@
+// METAL - FRAGMENT SHADER
+#version 460 core
+
+in vec3 Normal;
+in vec3 fragPos;
+in vec2 TexCoord;
+
+out vec4 fragColor;
+
+uniform sampler2D Texture;
+uniform vec3 lightDirection;
+uniform vec3 cameraPos;
+
+void main()
+{
+    vec4 flatColor = texture(Texture, TexCoord);
+
+    float diffuseLight = max(dot(Normal, lightDirection), 0.0f);
+    float specularLight = pow(max(dot(normalize(normalize(lightDirection) + normalize(cameraPos - fragPos)), Normal), 0.0f), 15);
+    fragColor = flatColor * diffuseLight * 0.5f + specularLight * 0.4f;
+}

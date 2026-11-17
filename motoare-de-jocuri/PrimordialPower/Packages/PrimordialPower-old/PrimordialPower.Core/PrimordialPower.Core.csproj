@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+    <RendererName>ObsidianRenderer</RendererName>
+
+    <HostOS Condition="'$(OS)' == 'Windows_NT'">win</HostOS>
+    <HostOS Condition="'$(HostOS)' == '' and '$(OS)' == 'Unix' and Exists('/System/Library/CoreServices')">mac</HostOS>
+    <HostOS Condition="'$(HostOS)' == ''">linux</HostOS>
+  
+    <PlatformArchitecture Condition="'$(PlatformArchitecture)' == '' and '$(PROCESSOR_ARCHITECTURE)' == 'x86'">x86</PlatformArchitecture>
+    <PlatformArchitecture Condition="'$(PlatformArchitecture)' == '' and '$(PROCESSOR_ARCHITECTURE)' == 'AMD64'">x64</PlatformArchitecture>
+    <PlatformArchitecture Condition="'$(PlatformArchitecture)' == '' and '$(PROCESSOR_ARCHITECTURE)' == 'ARM64'">arm64</PlatformArchitecture>
+    <PlatformArchitecture Condition="'$(PlatformArchitecture)' == ''">x64</PlatformArchitecture>
+
+    <RendererBasePath>$(RendererName)/build-$(Configuration)-$(HostOS)-$(PlatformArchitecture)/bin</RendererBasePath>
+    <RendererLib Condition="'$(HostOS)' == 'win'">$(RendererBasePath)/$(RendererName).dll</RendererLib>
+    <RendererLib Condition="'$(HostOS)' == 'linux'">$(RendererBasePath)/lib$(RendererName).so</RendererLib>
+    <RendererLib Condition="'$(HostOS)' == 'mac'">$(RendererBasePath)/lib$(RendererName).dylib</RendererLib>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="$(RendererLib)">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

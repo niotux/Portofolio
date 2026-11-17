@@ -1,0 +1,3 @@
+"""Empire — cross-module build orchestrator."""
+
+__version__ = "0.1.0"

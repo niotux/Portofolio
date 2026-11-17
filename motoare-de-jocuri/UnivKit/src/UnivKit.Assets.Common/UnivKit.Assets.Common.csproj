@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../UnivKit.Assets/UnivKit.Assets.csproj" />
+    <ProjectReference Include="../UnivKit.Audio/UnivKit.Audio.csproj" />
+    <ProjectReference Include="../UnivKit.Utility.Async/UnivKit.Utility.Async.csproj" PrivateAssets="compile" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FFmpeg.AutoGen" Version="6.0.0" />
+    <PackageReference Include="StbImageSharp" Version="2.30.15" PrivateAssets="compile" />
+    <PackageReference Include="StbImageWriteSharp" Version="1.16.7" PrivateAssets="compile" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="runtimes/**/*" Pack="true" PackagePath="runtimes" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

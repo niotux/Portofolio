@@ -1,0 +1,1 @@
+namespace PrimordialPower.Platform.MacOS;

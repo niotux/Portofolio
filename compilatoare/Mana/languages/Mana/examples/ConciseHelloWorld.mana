@@ -1,0 +1,7 @@
+use Base;
+use Base.Aliases;
+
+entry void Main()
+{
+  IO.WriteLn("Hello, World!");
+}

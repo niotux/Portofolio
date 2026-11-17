@@ -1,0 +1,30 @@
+{
+  "api": "vulkan",
+  "defines": [
+    "USE_VULKAN",
+    "RENDERER_API_VULKAN"
+  ],
+  "include_paths": {
+    "windows": [
+      "${env:VULKAN_SDK}/Include"
+    ],
+    "linux": [
+      "${env:VULKAN_SDK}/include",
+      "/usr/include"
+    ],
+    "macos": [
+      "${env:VULKAN_SDK}/include"
+    ]
+  },
+  "libraries": {
+    "windows": [
+      "${env:VULKAN_SDK}/Lib/vulkan-1.lib"
+    ],
+    "linux": [
+      "${env:VULKAN_SDK}/lib/libvulkan.so"
+    ],
+    "macos": [
+      "${env:VULKAN_SDK}/lib/libvulkan.dylib"
+    ]
+  }
+}

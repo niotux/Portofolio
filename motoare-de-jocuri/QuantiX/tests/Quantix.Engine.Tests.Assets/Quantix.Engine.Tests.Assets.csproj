@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\QuantiX.Engine.Assets.Common\QuantiX.Engine.Assets.Common.csproj" />
+    <ProjectReference Include="..\..\src\QuantiX.Engine.Assets\QuantiX.Engine.Assets.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,1 @@
+Get-ChildItem ./Game/bin/Release/net10.0/*.dll | % { Add-Type -Path $_.FullName }

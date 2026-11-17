@@ -1,0 +1,256 @@
+﻿using System;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using PrimordialPower.Mathematics.Matrices;
+using PrimordialPower.Mathematics.ConstArrays;
+
+namespace PrimordialPower.Mathematics.Vectors;
+
+using ThisVector = Vec2I;
+using ThisValue = int;
+using ThisCross = Vec3I;
+
+[StructLayout(LayoutKind.Explicit)]
+public struct Vec2I : IVector<ThisVector, ThisValue>, IVectorConvertible, IVectorHasCross<ThisVector, ThisCross>
+{
+  [FieldOffset(0)]
+  private ConstArray2<ThisValue> array;
+
+
+
+  [FieldOffset(sizeof(ThisValue) * 0)]
+  public ThisValue X;
+  [FieldOffset(sizeof(ThisValue) * 1)]
+  public ThisValue Y;
+
+
+
+  [FieldOffset(sizeof(ThisValue) * 0)]
+  public ThisValue TextureS;
+  [FieldOffset(sizeof(ThisValue) * 1)]
+  public ThisValue TextureT;
+
+
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining)]
+  public Vec2I(ThisValue x, ThisValue y)
+  {
+    this.X = x;
+    this.Y = y;
+  }
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining)]
+  public Vec2I(ThisValue value)
+  {
+    this.X = value;
+    this.Y = value;
+  }
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining)]
+  public Vec2I(in ThisVector other)
+  {
+    this.X = other.X;
+    this.Y = other.Y;
+  }
+
+
+
+  public ThisValue LengthSquared
+  {
+    [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+    get => X * X + Y * Y;
+  }
+
+
+
+  public static uint DimCount => 2;
+  public uint Dimensions => DimCount;
+
+
+
+  public static ThisVector Identity
+  {
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    get => new(1);
+  }
+
+  public static ThisVector Zero
+  {
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    get => new(0);
+  }
+
+
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public ThisValue DistanceSquared(in ThisVector vector)
+  => (this - vector).LengthSquared;
+
+
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public ThisVector Neg()
+  => new(-X, -Y);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public ThisVector Add(in ThisVector other)
+  => new(X + other.X, Y + other.Y);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public ThisVector Add(ThisValue scalar)
+  => new(X + scalar, Y + scalar);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public ThisVector Subtract(in ThisVector other)
+  => new(X - other.X, Y - other.Y);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public ThisVector Subtract(ThisValue scalar)
+  => new(X - scalar, Y - scalar);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public ThisVector Multiply(in ThisVector other)
+  => new(X * other.X, Y * other.Y);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public ThisVector Multiply(ThisValue scalar)
+  => new(X * scalar, Y * scalar);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public ThisVector Divide(in ThisVector other)
+  => new(X / other.X, Y / other.Y);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public ThisVector Divide(ThisValue scalar)
+  => new(X / scalar, Y / scalar);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public ThisVector Modulo(in ThisVector other)
+  => new(X % other.X, Y % other.Y);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public ThisVector Modulo(ThisValue scalar)
+  => new(X % scalar, Y % scalar);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public ThisValue Dot(in ThisVector other)
+  => X * other.X + Y * other.Y;
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public ThisCross Cross(in ThisVector other)
+  => new(
+    0,
+    0,
+    X * other.Y - Y * other.X
+  );
+
+
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public static ThisVector operator -(in ThisVector right)
+  => right.Neg();
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public static ThisVector operator +(in ThisVector left, in ThisVector right)
+  => left.Add(right);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public static ThisVector operator +(in ThisVector left, ThisValue right)
+  => left.Add(right);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public static ThisVector operator +(ThisValue left, in ThisVector right)
+  => right.Add(left);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public static ThisVector operator -(in ThisVector left, in ThisVector right)
+  => left.Subtract(right);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public static ThisVector operator -(in ThisVector left, ThisValue right)
+  => left.Subtract(right);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public static ThisVector operator *(in ThisVector left, in ThisVector right)
+  => left.Multiply(right);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public static ThisVector operator *(in ThisVector left, ThisValue right)
+  => left.Multiply(right);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public static ThisVector operator *(ThisValue left, in ThisVector right)
+  => right.Multiply(left);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public static ThisVector operator %(in ThisVector left, in ThisVector right)
+  => left.Modulo(right);
+
+  public static ThisVector operator %(in ThisVector left, ThisValue right)
+  => left.Modulo(right);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public static ThisVector operator /(in ThisVector left, ThisValue right)
+  => left.Divide(right);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public static ThisVector operator /(in ThisVector left, in ThisVector right)
+  => left.Divide(right);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public static ThisCross operator ^(in ThisVector left, in ThisVector right)
+  => left.Cross(right);
+
+
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public static implicit operator Vec2<ThisValue>(in ThisVector vector)
+  => new(vector.X, vector.Y);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public static implicit operator ThisVector(in Vec2<ThisValue> vector)
+  => new(vector.X, vector.Y);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public static implicit operator (ThisValue X, ThisValue Y)(in ThisVector vector)
+  => (vector.X, vector.Y);
+
+  [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+  public static implicit operator ThisVector(in (ThisValue, ThisValue) tuple)
+  => new(tuple.Item1, tuple.Item2);
+
+
+
+  public ThisValue this[int index]
+  {
+    [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+    get => this.array[index];
+    [MethodImpl(MethodImplOptions.AggressiveInlining | MethodImplOptions.AggressiveOptimization)]
+    set => this.array[index] = value;
+  }
+
+  public ThisValue this[uint index]
+  {
+    get => this[(int)index];
+    set => this[(int)index] = value;
+  }
+
+
+
+  public Vec2F ToVec2F() => new((float)this.X, (float)this.Y);
+  public Vec3F ToVec3F() => new((float)this.X, (float)this.Y, 0F);
+  public Vec4F ToVec4F() => new((float)this.X, (float)this.Y, 0F, 0F);
+  public Vec5F ToVec5F() => new((float)this.X, (float)this.Y, 0F, 0F, 0F);
+  public Vec2D ToVec2D() => new(this.X, this.Y);
+  public Vec3D ToVec3D() => new(this.X, this.Y, 0D);
+  public Vec4D ToVec4D() => new(this.X, this.Y, 0D, 0D);
+  public Vec5D ToVec5D() => new(this.X, this.Y, 0D, 0D, 0D);
+  public Vec2I ToVec2I() => new((int)this.X, (int)this.Y);
+  public Vec3I ToVec3I() => new((int)this.X, (int)this.Y, 0);
+  public Vec4I ToVec4I() => new((int)this.X, (int)this.Y, 0, 0);
+  public Vec5I ToVec5I() => new((int)this.X, (int)this.Y, 0, 0, 0);
+
+
+
+  public override string ToString() => Vector.ToString<ThisVector, ThisValue>(this);
+}

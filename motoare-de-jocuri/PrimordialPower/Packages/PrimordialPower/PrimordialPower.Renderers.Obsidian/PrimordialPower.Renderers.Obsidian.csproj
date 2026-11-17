@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+
+  <Target Name="BuildNativeLib" BeforeTargets="BeforeBuild">
+    <PropertyGroup>
+      <NativeDir>$(MSBuildProjectDirectory)\native</NativeDir>
+      <NativeRID Condition="'$(RuntimeIdentifier)' != ''">$(RuntimeIdentifier)</NativeRID>
+      <NativeRID Condition="'$(RuntimeIdentifier)' == '' AND $([MSBuild]::IsOSPlatform('Windows'))">win-x64</NativeRID>
+      <NativeRID Condition="'$(RuntimeIdentifier)' == '' AND $([MSBuild]::IsOSPlatform('Linux'))">linux-x64</NativeRID>
+      <NativeRID Condition="'$(RuntimeIdentifier)' == '' AND $([MSBuild]::IsOSPlatform('OSX'))">osx-x64</NativeRID>
+      <NativeOutputDir>$(MSBuildProjectDirectory)\runtimes\$(NativeRID)\native</NativeOutputDir>
+      
+      <!-- Set CMake generator based on platform -->
+      <CMakeGenerator Condition="$([MSBuild]::IsOSPlatform('Windows'))">Visual Studio 17 2022</CMakeGenerator>
+      <CMakeGenerator Condition="$([MSBuild]::IsOSPlatform('Linux'))">Ninja</CMakeGenerator>
+      <CMakeGenerator Condition="$([MSBuild]::IsOSPlatform('OSX'))">Ninja</CMakeGenerator>
+      
+      <!-- Set architecture for VS generator -->
+      <CMakeArchFlag Condition="$([MSBuild]::IsOSPlatform('Windows'))">-A x64</CMakeArchFlag>
+      <CMakeArchFlag Condition="!$([MSBuild]::IsOSPlatform('Windows'))"></CMakeArchFlag>
+    </PropertyGroup>
+    
+    <Message Text="Building native library for $(NativeRID) using $(CMakeGenerator)..." Importance="high" />
+    
+
+    <Exec Command="cmake -G &quot;$(CMakeGenerator)&quot; $(CMakeArchFlag) -B obj -S . -DOUTPUT_DIR=&quot;$(NativeOutputDir)&quot;" WorkingDirectory="$(NativeDir)" ContinueOnError="false" />
+    
+    <Exec Command="cmake --build obj --config $(Configuration)" WorkingDirectory="$(NativeDir)" ContinueOnError="false" />
+  </Target>
+
+  <ItemGroup>
+    <None Include="runtimes\**\*" DependsOnTargets="BuildNativeLib">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../PrimordialPower.Platform/PrimordialPower.Platform.csproj" />
+  </ItemGroup>
+</Project>

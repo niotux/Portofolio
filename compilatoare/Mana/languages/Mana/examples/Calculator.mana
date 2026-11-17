@@ -1,0 +1,19 @@
+use Base;
+use Base.Aliases;
+
+unit Calculator;
+
+module App
+{
+  entry void Main()
+  {
+    int a = IO.ReadLn();
+    int b = IO.ReadLn();
+    IO.WriteLn(Add(a, b));
+  }
+
+  private int Add(int left, int right)
+  {
+    return left + right;
+  }
+}

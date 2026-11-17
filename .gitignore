@@ -1,0 +1,22 @@
+# Fișiere generate la compilare și instrumente locale
+**/bin/
+**/obj/
+**/build/
+**/dist/
+**/node_modules/
+**/Debug/
+**/Release/
+**/x64/
+**/x86/
+**/.vs/
+**/.idea/
+**/.cache/
+**/__pycache__/
+**/BenchmarkDotNet.Artifacts/
+**/cmake-build-*/
+*.user
+*.suo
+*.log
+*.pyc
+.env
+.env.*

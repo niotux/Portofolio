@@ -1,0 +1,131 @@
+{
+  "Name": "target",
+  "Type": "generic",
+  "Tools": [
+    {
+      "Name": "add-dep",
+      "Command": "python3 $EMPIRE_MODULE_DIR/add_dep.py",
+      "Help": [
+        { "Arg": "path", "Optional": null, "Repeat": false }
+      ]
+    },
+    {
+      "Name": "rm-dep",
+      "Command": "python3 $EMPIRE_MODULE_DIR/rm_dep.py",
+      "Help": [
+        { "Arg": "path", "Optional": null, "Repeat": false }
+      ]
+    },
+    {
+      "Name": "ls-deps",
+      "Command": "python3 $EMPIRE_MODULE_DIR/ls_deps.py"
+    },
+    {
+      "Name": "info",
+      "Command": "python3 $EMPIRE_MODULE_DIR/info.py"
+    },
+    {
+      "Name": "add-cfg",
+      "Command": "python3 $EMPIRE_MODULE_DIR/add_cfg.py",
+      "Help": [
+        { "Arg": "name", "Optional": null, "Repeat": false },
+        { "Arg": "flags", "Optional": null, "Repeat": false }
+      ]
+    },
+    {
+      "Name": "rm-cfg",
+      "Command": "python3 $EMPIRE_MODULE_DIR/rm_cfg.py",
+      "Help": [
+        { "Arg": "name", "Optional": null, "Repeat": false }
+      ]
+    },
+    {
+      "Name": "ls-cfgs",
+      "Command": "python3 $EMPIRE_MODULE_DIR/ls_cfgs.py"
+    },
+    {
+      "Name": "set-src",
+      "Command": "python3 $EMPIRE_MODULE_DIR/set_src.py",
+      "Help": [
+        { "Arg": "path", "Optional": null, "Repeat": false }
+      ]
+    },
+    {
+      "Name": "get-src",
+      "Command": "python3 $EMPIRE_MODULE_DIR/get_src.py"
+    },
+    {
+      "Name": "set-outbase",
+      "Command": "python3 $EMPIRE_MODULE_DIR/set_outbase.py",
+      "Help": [
+        { "Arg": "path", "Optional": null, "Repeat": false }
+      ]
+    },
+    {
+      "Name": "get-outbase",
+      "Command": "python3 $EMPIRE_MODULE_DIR/get_outbase.py"
+    },
+    {
+      "Name": "set-out",
+      "Command": "python3 $EMPIRE_MODULE_DIR/set_out.py",
+      "Help": [
+        { "Arg": "path", "Optional": null, "Repeat": false }
+      ]
+    },
+    {
+      "Name": "get-out",
+      "Command": "python3 $EMPIRE_MODULE_DIR/get_out.py"
+    },
+    {
+      "Name": "set-atf",
+      "Command": "python3 $EMPIRE_MODULE_DIR/set_atf.py",
+      "Help": [
+        { "Arg": "path", "Optional": null, "Repeat": false }
+      ]
+    },
+    {
+      "Name": "get-atf",
+      "Command": "python3 $EMPIRE_MODULE_DIR/get_atf.py"
+    },
+    {
+      "Name": "set-on",
+      "Command": "python3 $EMPIRE_MODULE_DIR/set_on.py",
+      "Help": [
+        { "Arg": "path", "Optional": null, "Repeat": false },
+        { "Arg": "tool", "Optional": null, "Repeat": true },
+        { "Arg": "option", "Optional": null, "Repeat": true }
+      ]
+    },
+    {
+      "Name": "get-on",
+      "Command": "python3 $EMPIRE_MODULE_DIR/get_on.py",
+      "Help": [
+        { "Arg": "path", "Optional": null, "Repeat": false }
+      ]
+    },
+    {
+      "Name": "rm-on",
+      "Command": "python3 $EMPIRE_MODULE_DIR/rm_on.py",
+      "Help": [
+        { "Arg": "path", "Optional": null, "Repeat": false },
+        { "Arg": "tool", "Optional": null, "Repeat": false }
+      ]
+    },
+    {
+      "Name": "upgrade",
+      "Command": "python3 $EMPIRE_MODULE_DIR/upgrade.py"
+    },
+    {
+      "Name": "rm-deps-all",
+      "Command": "python3 $EMPIRE_MODULE_DIR/rm_deps_all.py"
+    },
+    {
+      "Name": "rename",
+      "Command": "python3 $EMPIRE_MODULE_DIR/rename.py",
+      "Help": [
+        { "Arg": "new-name", "Optional": null, "Repeat": false }
+      ]
+    }
+  ],
+  "Templates": []
+}

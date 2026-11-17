@@ -1,0 +1,65 @@
+{
+  "renderer": {
+    "name": "RendererTemplate",
+    "version": "1.0.0",
+    "description": "PrimordialPower Standard Renderer Format (PPSRF)",
+    "default_api": "vulkan"
+  },
+  "graphics_apis": {
+    "vulkan": {
+      "enabled": true,
+      "required": false,
+      "find_package": "Vulkan",
+      "environment_variable": "VULKAN_SDK",
+      "compile_definitions": [
+        "USE_VULKAN",
+        "RENDERER_API_VULKAN"
+      ],
+      "include_dirs": [],
+      "libraries": []
+    },
+    "opengl": {
+      "enabled": false,
+      "required": false,
+      "find_package": "OpenGL",
+      "compile_definitions": [
+        "USE_OPENGL",
+        "RENDERER_API_OPENGL"
+      ],
+      "include_dirs": [],
+      "libraries": [],
+      "dependencies": [
+        "GLEW"
+      ]
+    },
+    "directx12": {
+      "enabled": false,
+      "required": false,
+      "platform": "Windows",
+      "compile_definitions": [
+        "USE_DIRECTX12",
+        "RENDERER_API_DX12"
+      ],
+      "include_dirs": [],
+      "system_libraries": [
+        "d3d12",
+        "dxgi",
+        "d3dcompiler"
+      ]
+    },
+    "metal": {
+      "enabled": false,
+      "required": false,
+      "platform": "Darwin",
+      "compile_definitions": [
+        "USE_METAL",
+        "RENDERER_API_METAL"
+      ],
+      "frameworks": [
+        "Metal",
+        "MetalKit",
+        "Foundation"
+      ]
+    }
+  }
+}

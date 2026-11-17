@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="../UnivKit.Application/UnivKit.Application.csproj" />
+    <ProjectReference Include="../UnivKit.Assets.Common/UnivKit.Assets.Common.csproj" />
+    <ProjectReference Include="../UnivKit.Assets/UnivKit.Assets.csproj" />
+    <ProjectReference Include="../UnivKit.OS.Windowing/UnivKit.OS.Windowing.csproj" />
+    <ProjectReference Include="../UnivKit.OS.Audio/UnivKit.OS.Audio.csproj" />
+  </ItemGroup>
+
+</Project>

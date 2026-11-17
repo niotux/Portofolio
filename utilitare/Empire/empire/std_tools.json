@@ -1,0 +1,21 @@
+{
+  "Name": "std_target_tools",
+  "Type": "target",
+  "Tools": [
+    {
+      "Name": "new",
+      "Help": [
+        {"Arg": "name"},
+        {"Arg": "template", "Optional": "-t"}
+      ],
+      "CreateDirs": true
+    },
+    {
+      "Name": "init",
+      "Help": [
+        {"Arg": "template", "Optional": "-t"}
+      ],
+      "CreateDirs": true
+    }
+  ]
+}

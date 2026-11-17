@@ -1,0 +1,105 @@
+{
+  "Name": "c",
+  "Type": "target",
+  "Tools": [
+    {
+      "Name": "build",
+      "Command": "gcc",
+      "Options": [
+        {
+          "Name": "-exe",
+          "Flags": "$EMPIRE_FLAGS_CONFIG -Wall -Wextra -fPIC $EMPIRE_TARGET_SRC/*.c $EMPIRE_FLAGS_LINKING -o $EMPIRE_TARGET_OUT/$EMPIRE_TARGET_NAME",
+          "Linking": null,
+          "Propagate": true,
+          "Copy": true,
+          "RequireConfig": true,
+          "CreateDirs": true
+        },
+        {
+          "Name": "-stlib",
+          "Flags": "$EMPIRE_FLAGS_CONFIG -Wall -Wextra -fPIC -c $EMPIRE_TARGET_SRC/*.c $EMPIRE_FLAGS_LINKING && ar rcs $EMPIRE_TARGET_OUT/lib$EMPIRE_TARGET_NAME.a *.o",
+          "Linking": "-I{SRC} {OUT}/lib{NAME}.a",
+          "Propagate": true,
+          "Copy": false,
+          "RequireConfig": true,
+          "CreateDirs": true
+        },
+        {
+          "Name": "-dylib",
+          "Flags": "-shared $EMPIRE_FLAGS_CONFIG -fPIC $EMPIRE_TARGET_SRC/*.c $EMPIRE_FLAGS_LINKING -o $EMPIRE_TARGET_OUT/lib$EMPIRE_TARGET_NAME.so",
+          "Linking": "-I{SRC} -L{OUT} -l{NAME} -Wl,-rpath,'$ORIGIN'",
+          "Propagate": true,
+          "Copy": true,
+          "RequireConfig": true,
+          "CreateDirs": true
+        }
+      ]
+    },
+		{
+			"Name": "clean",
+			"Command": "rm",
+			"Options": [
+				{
+				  "Name": "-tg",
+				  "Flags": "-rf $EMPIRE_TARGET_OUTBASE",
+				  "Propagate": false
+				},
+				{
+				  "Name": "-tg-cfg",
+				  "Flags": "-rf $EMPIRE_TARGET_OUT $EMPIRE_TARGET_ART",
+				  "Propagate": false,
+				  "RequireConfig": true
+				},
+				{
+				  "Name": "-all",
+				  "Flags": "-rf $EMPIRE_TARGET_OUTBASE",
+				  "Propagate": true
+				},
+				{
+				  "Name": "-cfg",
+				  "Flags": "-rf $EMPIRE_TARGET_OUT $EMPIRE_TARGET_ART",
+				  "Propagate": true,
+				  "RequireConfig": true
+				}
+			]
+		}
+  ],
+  "Templates": [
+    {
+      "Name": "minimal",
+      "Dependencies": [],
+      "Source": "",
+      "OutputBase": "bin",
+      "Output":    "$EMPIRE_CONFIG-$EMPIRE_RID/",
+      "Artefacts": "$EMPIRE_CONFIG-$EMPIRE_RID/obj/",
+      "Configs": [
+        {
+          "Name": "debug",
+          "Flags": "-g -O0 -DDEBUG"
+        },
+        {
+          "Name": "release",
+          "Flags": "-O2 -DNDEBUG"
+        }
+      ]
+    },
+    {
+      "Name": "classic",
+      "Dependencies": [],
+      "Source": "src",
+      "OutputBase": "bin",
+      "Output": "$EMPIRE_CONFIG/$EMPIRE_RID/",
+      "Artefacts": "$EMPIRE_CONFIG/$EMPIRE_RID/obj/",
+      "Configs": [
+        {
+          "Name": "debug",
+          "Flags": "-g -O0 -DDEBUG"
+        },
+        {
+          "Name": "release",
+          "Flags": "-O2 -DNDEBUG"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "api": "metal",
+  "defines": [
+    "USE_METAL",
+    "RENDERER_API_METAL"
+  ],
+  "include_paths": {
+    "macos": [
+      "/System/Library/Frameworks/Metal.framework/Headers",
+      "/System/Library/Frameworks/MetalKit.framework/Headers"
+    ]
+  },
+  "frameworks": {
+    "macos": [
+      "Metal",
+      "MetalKit",
+      "Foundation"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "Name": "lanwarden",
+  "Dependencies": [],
+  "Source": "",
+  "OutputBase": "bin",
+  "Output": "$EMPIRE_CONFIG-$EMPIRE_RID/",
+  "Artefacts": "$EMPIRE_CONFIG-$EMPIRE_RID/obj/",
+  "Configs": [
+    {
+      "Name": "debug",
+      "Flags": "-g -O0 -DDEBUG"
+    },
+    {
+      "Name": "release",
+      "Flags": "-O2 -DNDEBUG"
+    }
+  ]
+}

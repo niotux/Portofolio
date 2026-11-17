@@ -1,0 +1,22 @@
+{
+  "Logging": {
+    "InfoPrefix": "{GRAY}[ {GREEN}Info{GRAY} ]{RESET}",
+    "WarnPrefix": "{GRAY}[ {YELLOW}Warn{GRAY} ]{RESET}",
+    "ErrorPrefix": "{GRAY}[ {RED}Error{GRAY} ]{RESET}"
+  },
+  "Runtimes": {
+    "cli": {
+      "Module": "cli.main",
+      "Label": "CLI",
+      "Default": true
+    },
+    "gui": {
+      "Module": "gui.main",
+      "Label": "GUI"
+    },
+    "tui": {
+      "Module": "tui.main",
+      "Label": "TUI"
+    }
+  }
+}

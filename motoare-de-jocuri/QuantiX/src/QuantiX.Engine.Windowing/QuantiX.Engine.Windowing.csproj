@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../QuantiX.Engine.Platform/QuantiX.Engine.Platform.csproj" />
+    <ProjectReference Include="../QuantiX.Engine/QuantiX.Engine.csproj" />
+  </ItemGroup>
+
+</Project>

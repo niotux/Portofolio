@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/tudor/CodeDev/dotNET/-Projects/PrimordialGDTE/Packages/PrimordialPower/PrimordialPower.Core/ObsidianRenderer/build-Debug-linux-x64",
+  "command": "/usr/bin/c++ -DDEBUG -DObsidianRenderer_EXPORTS -DRENDERER_API_VULKAN -DUSE_VULKAN -D_GNU_SOURCE -I/home/tudor/CodeDev/dotNET/-Projects/PrimordialGDTE/Packages/PrimordialPower/PrimordialPower.Core/ObsidianRenderer/src -I/home/tudor/CodeDev/dotNET/-Projects/PrimordialGDTE/Packages/PrimordialPower/PrimordialPower.Core/ObsidianRenderer/lib -g -std=c++17 -fPIC -Wall -Wextra -Wpedantic -fPIC -O0 -g -o CMakeFiles/ObsidianRenderer.dir/src/VulkanRenderer.cpp.o -c /home/tudor/CodeDev/dotNET/-Projects/PrimordialGDTE/Packages/PrimordialPower/PrimordialPower.Core/ObsidianRenderer/src/VulkanRenderer.cpp",
+  "file": "/home/tudor/CodeDev/dotNET/-Projects/PrimordialGDTE/Packages/PrimordialPower/PrimordialPower.Core/ObsidianRenderer/src/VulkanRenderer.cpp",
+  "output": "CMakeFiles/ObsidianRenderer.dir/src/VulkanRenderer.cpp.o"
+}
+]

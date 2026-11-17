@@ -1,0 +1,1 @@
+namespace QuantiX.Engine.Platform.MacOS;

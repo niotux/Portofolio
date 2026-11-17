@@ -1,0 +1,22 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/UnivKit.Application/UnivKit.Application.csproj" />
+    <Project Path="src/UnivKit.Assets.Common/UnivKit.Assets.Common.csproj" />
+    <Project Path="src/UnivKit.Assets/UnivKit.Assets.csproj" />
+    <Project Path="src/UnivKit.Audio/UnivKit.Audio.csproj" />
+    <Project Path="src/UnivKit.Core/UnivKit.Core.csproj" />
+    <Project Path="src/UnivKit.GUI/UnivKit.GUI.csproj" />
+    <Project Path="src/UnivKit.OS.Audio/UnivKit.OS.Audio.csproj" />
+    <Project Path="src/UnivKit.OS.Platform.Linux/UnivKit.OS.Platform.Linux.csproj" />
+    <Project Path="src/UnivKit.OS.Platform.Windows/UnivKit.OS.Platform.Windows.csproj" />
+    <Project Path="src/UnivKit.OS.Windowing.Abstractions/UnivKit.OS.Windowing.Abstractions.csproj" />
+    <Project Path="src/UnivKit.OS.Windowing/UnivKit.OS.Windowing.csproj" />
+    <Project Path="src/UnivKit.Unmanaged/UnivKit.Unmanaged.csproj" />
+    <Project Path="src/UnivKit.Utility.Async/UnivKit.Utility.Async.csproj" />
+    <Project Path="src/UnivKit/UnivKit.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/GenericBenchmark/GenericBenchmark.csproj" />
+    <Project Path="tests/Standard.Tests.DevExp/Standard.Tests.DevExp.csproj" />
+  </Folder>
+</Solution>

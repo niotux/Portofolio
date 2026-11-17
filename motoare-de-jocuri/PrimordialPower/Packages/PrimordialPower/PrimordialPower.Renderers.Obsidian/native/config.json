@@ -1,0 +1,9 @@
+{
+  "graphics_apis": {
+    "vulkan": {
+      "required": false,
+      "include_dirs": [],
+      "libraries": []
+    }
+  }
+}

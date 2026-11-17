@@ -1,0 +1,20 @@
+mana
+  - high level
+  - low level (lan)
+  - nice
+  - permisive
+  - freedom
+
+ |
+ V
+
+lan (linear assembly notation)
+  - safe
+  - linear => simple
+  - ok
+  - support multiple targets
+
+ |           |
+ V           V
+
+llvm ir     .net

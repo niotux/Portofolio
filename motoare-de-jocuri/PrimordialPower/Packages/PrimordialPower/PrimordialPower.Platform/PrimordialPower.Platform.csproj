@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <!-- <ILRepackEnabled>false</ILRepackEnabled> -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- <PackageReference Include="ILRepack.Lib.MSBuild.Task" Version="2.0.44">
+    </PackageReference> -->
+    <PackageReference Include="NLayer" Version="1.16.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../PrimordialPower.Runtime/PrimordialPower.Runtime.csproj" />
+  </ItemGroup>
+
+</Project>

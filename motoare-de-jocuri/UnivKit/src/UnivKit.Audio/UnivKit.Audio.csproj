@@ -1,0 +1,5 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="../UnivKit.Utility.Async/UnivKit.Utility.Async.csproj" />
+  </ItemGroup>
+</Project>

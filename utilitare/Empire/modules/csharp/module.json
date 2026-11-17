@@ -1,0 +1,74 @@
+{
+  "Name": "csharp",
+  "Type": "target",
+  "Tools": [
+    {
+      "Name": "build",
+      "Command": "bash $EMPIRE_MODULE_DIR/Build.sh",
+      "Options": [
+        {
+          "Name": "-exe",
+          "Flags": "-exe",
+          "Linking": null,
+          "Propagate": true,
+          "Copy": true,
+          "RequireConfig": true,
+          "CreateDirs": true
+        },
+        {
+          "Name": "-lib",
+          "Flags": "-lib",
+          "Linking": "/reference:{OUT}/{NAME}.dll",
+          "Propagate": true,
+          "Copy": true,
+          "RequireConfig": true,
+          "CreateDirs": true
+        },
+        {
+          "Name": "-nuget",
+          "Flags": "-nuget",
+          "Linking": null,
+          "Propagate": true,
+          "Copy": true,
+          "RequireConfig": true,
+          "CreateDirs": true
+        }
+      ]
+    },
+    {
+      "Name": "clean",
+      "Command": "bash $EMPIRE_MODULE_DIR/Clean.sh",
+      "Options": [
+        {
+          "Name": "-all",
+          "Flags": "-all"
+        },
+        {
+          "Name": "-cfg",
+          "Flags": "-cfg",
+          "RequireConfig": true
+        }
+      ]
+    }
+  ],
+  "Templates": [
+    {
+      "Name": ".net",
+      "Dependencies": [],
+      "Source": "",
+      "OutputBase": "",
+      "Output": "bin/$EMPIRE_CONFIG/$EMPIRE_RID/",
+      "Artefacts": "obj/",
+      "Configs": [
+        {
+          "Name": "Debug",
+          "Flags": "-c Debug"
+        },
+        {
+          "Name": "Release",
+          "Flags": "-c Release"
+        }
+      ]
+    }
+  ]
+}

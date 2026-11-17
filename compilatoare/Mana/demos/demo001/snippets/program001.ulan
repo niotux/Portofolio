@@ -1,0 +1,12 @@
+ldarg .4 a;
+ldarg .4 b;
+set .ptr p 0x0;
+add .4 r a b;
+itof .4 .8 fr r;
+itof .4 .8 fa a;
+itof .4 .8 fb b;
+fmul .8 fm fa fb;
+label Loop;
+fdiv .8 fm fm fr;
+fjlt .8 Loop fm 2.0;
+ret .8 fm;

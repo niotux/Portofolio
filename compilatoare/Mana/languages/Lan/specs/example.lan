@@ -1,0 +1,108 @@
+module MyLib;
+
+ldmodule "Base.lan";
+ldmodule "Base.IO.lan";
+ldmodule "Base.Text.lan";
+
+type .Base::Int[4] + Base::String[Base.Text::Encoding.UTF16]* Person; // we assume Person a struct
+  meta .4 "type"; // add a value to the identifier symbol metadata.
+
+export Person;
+
+inlfun .Base::Int[4] Person.Age..get;
+  ldarg .Person* this;
+
+  gep .Person expr..0 this 0;
+  read .Base::Int[4] expr..1 expr..0;
+  ret expr..1;
+
+inlfun .Base::String[Base.Text::Encoding.UTF16]* Person.Name..get;
+  ldarg .Person* this;
+
+  gep .Person expr..0 this 1;
+  read .Base::String[Base.Text::Encoding.UTF16]* expr..1 expr..0;
+  ret expr..1;
+
+fun .0 Person.Greet;
+  ldarg .Person* this;
+  ldarg .Base::String[Base.Text::Encoding.UTF16]* phrase;
+
+  call Base.IO::WriteLn[.Base::String[Base.Text::Encoding.UTF16]*] _;
+    arg phrase;
+
+  call Person.Name..get expr..0;
+    arg this;
+
+  call Base.IO::WriteLn[.Base::String[Base.Text::Encoding.UTF16]*] _;
+    arg expr..0;
+
+
+type .Base::Int[4] + Base::String[Base.Text::Encoding.UTF16]* PersonClass; // ref type / class
+  meta .8 "ref type";
+
+export PersonClass;
+
+inlfun .Base::Int[4] PersonClass.Age..get;
+  ldarg .PersonClass* this;
+
+  gep .PersonClass expr..0 this 0;
+  read .Base::Int[4] expr..1 expr..0;
+  ret expr..1;
+
+inlfun .Base::String[Base.Text::Encoding.UTF16]* PersonClass.Name..get;
+  ldarg .PersonClass* this;
+
+  gep .PersonClass expr..0 this 1;
+  read .Base::String[Base.Text::Encoding.UTF16]* expr..1 expr..0;
+  ret expr..1;
+
+fun .0 PersonClass.Greet;
+  ldarg .PersonClass* this;
+  ldarg .Base::String[Base.Text::Encoding.UTF16]* phrase;
+
+  // IO.WriteLn(phrase);
+  call Base.IO::WriteLn[.Base::String[Base.Text::Encoding.UTF16]*] _;
+    arg phrase;
+
+  // IO.WriteLn(this.Name);
+  call PersonClass.Name..get expr..0;
+    arg this;
+
+  call Base.IO::WriteLn[.Base::String[Base.Text::Encoding.UTF16]*] _;
+    arg expr..0;
+
+  // IO.WriteLn(", said the class.");
+  const .Base::String[Base.Text::Encoding.UTF16] expr..1 17 + ", said the class."utf16
+
+  call Base.IO::WriteLn[.Base::String[Base.Text::Encoding.UTF16]*] _;
+    arg expr..1;
+
+
+type .Base::Object IPerson;
+  meta .9 "interface";
+
+export IPerson;
+
+inlfun .0 IPerson.Greet;
+  ldarg .IPerson* + 1 this;
+  
+
+
+type .PersonRecord .Person + Base::GUID;
+  meta .6 "record";
+
+export PersonRecord;
+
+inlfun .Person PersonRecord.Person..get;
+  ldarg .PersonRecord* this;
+
+  gep .PersonRecord expr..0 this 0;
+  read .Person expr..1 expr..0;
+  ret expr..1;
+
+inlfun .Base::GUID PersonRecord.Id..get;
+  ldarg .PersonRecord* this;
+
+  gep .PersonRecord expr..0 this 3; // types are linear -> PersonRecord = Int + String + GUID
+  read .Base::Int[4] expr..1 expr..0;
+  ret expr..1;

@@ -1,0 +1,5 @@
+add .8 a 0 10;
+add .8 b 0 20;
+add .8 res a b;
+sub .8 a a b;
+fadd .8 fa a b;

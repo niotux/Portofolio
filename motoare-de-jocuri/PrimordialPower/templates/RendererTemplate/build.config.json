@@ -1,0 +1,28 @@
+{
+  "build": {
+    "output_directory": "build-${PLATFORM}-${ARCH}",
+    "bin_directory": "bin/${CONFIG}",
+    "default_configuration": "Release"
+  },
+  "configurations": {
+    "Release": {
+      "optimization": {
+        "msvc": "/O2",
+        "gcc": "-O3",
+        "clang": "-O3"
+      },
+      "debug_info": false
+    },
+    "Debug": {
+      "optimization": {
+        "msvc": "/Od",
+        "gcc": "-O0",
+        "clang": "-O0"
+      },
+      "debug_info": true
+    }
+  },
+  "cmake": {
+    "minimum_version": "3.19"
+  }
+}

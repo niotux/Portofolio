@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/Name.Engine.Audio/Name.Engine.Audio.csproj" />
+    <ProjectReference Include="../../src/Name.Engine.Windowing/Name.Engine.Windowing.csproj" />
+    <ProjectReference Include="../../src/Name.Engine/Name.Engine.csproj" />
+  </ItemGroup>
+
+</Project>

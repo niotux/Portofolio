@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/QuantiX.Engine.Assets.Common/QuantiX.Engine.Assets.Common.csproj" />
+    <ProjectReference Include="../../src/QuantiX.Engine.Assets/QuantiX.Engine.Assets.csproj" />
+    <ProjectReference Include="../../src/QuantiX.Engine.Renderers.Quartz/QuantiX.Engine.Renderers.Quartz.csproj" />
+    <ProjectReference Include="../../src/QuantiX.Engine.Rendering/QuantiX.Engine.Rendering.csproj" />
+    <ProjectReference Include="../../src/QuantiX.Engine.Audio/QuantiX.Engine.Audio.csproj" />
+    <ProjectReference Include="../../src/QuantiX.Engine.Windowing/QuantiX.Engine.Windowing.csproj" />
+    <ProjectReference Include="../../src/QuantiX.Engine/QuantiX.Engine.csproj" />
+    <ProjectReference Include="../../src/QuantiX.Engine.Mathematics/QuantiX.Engine.Mathematics.csproj" />
+  </ItemGroup>
+
+</Project>

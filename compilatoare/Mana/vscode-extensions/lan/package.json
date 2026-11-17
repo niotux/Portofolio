@@ -1,0 +1,38 @@
+{
+  "name": "lan",
+  "displayName": "lanlang",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.125.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "lan",
+        "aliases": [
+          "LAN",
+          "lan"
+        ],
+        "extensions": [
+          "lan"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "lan",
+        "scopeName": "source.lan",
+        "path": "./syntaxes/lan.tmLanguage.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/niotux/Mana"
+  }
+}

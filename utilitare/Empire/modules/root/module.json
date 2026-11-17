@@ -1,0 +1,50 @@
+{
+  "Name": "root",
+  "Type": "target",
+  "Tools": [
+    {
+      "Name": "build",
+      "Command": "",
+      "Options": [
+        {
+          "Name": "-cfg",
+          "Flags": "",
+          "Linking": null,
+          "Propagate": true,
+          "Copy": true,
+          "RequireConfig": true,
+          "CreateDirs": true
+        }
+      ]
+    },
+		{
+			"Name": "clean",
+			"Command": "rm",
+			"Options": [
+				{
+				  "Name": "-tg",
+				  "Flags": "-rf $EMPIRE_TARGET_OUTBASE",
+				  "Propagate": false
+				},
+				{
+				  "Name": "-tg-cfg",
+				  "Flags": "-rf $EMPIRE_TARGET_OUT $EMPIRE_TARGET_ART",
+				  "Propagate": false,
+				  "RequireConfig": true
+				},
+				{
+				  "Name": "-all",
+				  "Flags": "-rf $EMPIRE_TARGET_OUTBASE",
+				  "Propagate": true
+				},
+				{
+				  "Name": "-cfg",
+				  "Flags": "-rf $EMPIRE_TARGET_OUT $EMPIRE_TARGET_ART",
+				  "Propagate": true,
+				  "RequireConfig": true
+				}
+			]
+		}
+  ],
+  "Templates": []
+}

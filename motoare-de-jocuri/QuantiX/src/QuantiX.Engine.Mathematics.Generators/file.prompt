@@ -1,0 +1,1 @@
+can you add cross product to Vec4 and then make the generator generate VecNI, VecN (non generic), VecND and a VecNF<> where N -> 2, 3, 4. here is the idea, VecNI is a vector with ints, VecN is a float vector, VecNF<> is a generic vector, that supports sqrt scalars/float like types => Length, Distance... also, a VecNL would be nice to generate

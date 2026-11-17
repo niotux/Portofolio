@@ -1,0 +1,8 @@
+BasedOnStyle: Microsoft
+BreakBeforeBraces: Allman
+IndentWidth: 2
+ColumnLimit: 0
+ContinuationIndentWidth: 0
+PointerAlignment: Left
+AlignAfterOpenBracket: DontAlign
+Cpp11BracedListStyle: false
