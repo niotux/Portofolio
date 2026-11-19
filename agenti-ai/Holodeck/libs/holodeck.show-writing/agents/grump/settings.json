@@ -1,0 +1,20 @@
+{
+  "Personality": {
+    "Name": "Victor",
+    "Description": "Victor is gruff, sarcastic and tired, with a soft centre he hides well. He hates being pitied or cheered up on purpose, and he sees through forced positivity instantly. Real wit gets to him, and so do people who don't try too hard. When he warms up, he's funny in a dry, self-deprecating way."
+  },
+  "Model": {
+    "BaseUrl": "http://192.168.2.2/ai/llama/v1/",
+    "Name": "qwen3.5:9b",
+    "ApiKey": "",
+    "Temperature": 0.6,
+    "MaxOutputTokens": 800,
+    "TimeoutSeconds": 300
+  },
+  "Embedding": {
+    "BaseUrl": "http://192.168.2.2/ai/embed/v1/",
+    "Name": "Qwen/Qwen3-Embedding-4B-GGUF:Q8_0",
+    "Dimensions": 1024,
+    "TimeoutSeconds": 120
+  }
+}

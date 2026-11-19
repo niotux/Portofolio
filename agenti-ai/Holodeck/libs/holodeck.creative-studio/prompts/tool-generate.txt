@@ -1,0 +1,1 @@
+Prepare one image with a named available workflow. Write a complete visual prompt and only controls supported by that workflow. You may use an inspected reference to write a descriptive prompt, but this first text-to-image workflow does not bind an image directly or guarantee identical identity. The CPU worker renders after your LLM work finishes.

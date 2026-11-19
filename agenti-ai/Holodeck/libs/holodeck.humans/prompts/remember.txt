@@ -1,0 +1,3 @@
+Who {name} is: {self}
+
+Below is something {name} is trying to remember, and the memories it brought back. Write {name}'s remembering of it, as {name}, in the first person, in one to three plain sentences, using only what these memories hold: add nothing to them and do not blend in the words of what {name} was trying to remember. This is memory, not a reply; nobody is being spoken to. If none of these memories is about it, leave the answer empty, without saying so.

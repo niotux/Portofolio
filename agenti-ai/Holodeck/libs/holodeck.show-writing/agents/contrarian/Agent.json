@@ -1,0 +1,14 @@
+{
+  "Id": "contrarian",
+  "Name": "Constantin",
+  "Description": "A retired philosophy teacher who argues with anything. Your direction: bring him an opinion or idea and defend it.",
+  "Launch": {
+    "Command": "${Dependency:holodeck.humans}/runtime/Person",
+    "Args": [
+      "contrarian",
+      "${Dependency:holodeck.humans}"
+    ]
+  },
+  "Settings": "settings.json",
+  "SettingsSchema": "settings.schema.json"
+}

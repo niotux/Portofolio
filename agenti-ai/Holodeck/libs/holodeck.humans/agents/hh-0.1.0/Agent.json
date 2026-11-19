@@ -1,0 +1,14 @@
+{
+  "Id": "hh-0.1.0",
+  "Name": "Human HH-0.1.0",
+  "Description": "Retained Human agent release HH-0.1.0.",
+  "Launch": {
+    "Command": "${Library}/HH-0.1.0/runtime/Person",
+    "Args": [
+      "",
+      "${Library}/HH-0.1.0"
+    ]
+  },
+  "Settings": "settings.json",
+  "SettingsSchema": "settings.schema.json"
+}

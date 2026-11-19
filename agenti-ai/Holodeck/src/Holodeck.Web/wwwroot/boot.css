@@ -1,0 +1,26 @@
+body.booting .taskbar,body.booting #desktop,body.booting .statusbar{display:none}
+.shell-lcars{display:none}
+#boot{flex:1;min-height:0;display:grid;grid-template-columns:minmax(220px,300px) minmax(0,1fr);gap:0;background-color:var(--bg);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:16px 16px}
+.boot-rail{display:flex;flex-direction:column;gap:32px;padding:48px 32px;border-right:1px solid var(--border);background:color-mix(in srgb,var(--surface) 70%,transparent)}
+.boot-home{align-self:flex-start;padding:8px 12px;border:1px solid var(--border);color:var(--text);font-size:13px;letter-spacing:1px;text-decoration:none}.boot-home:hover{background:var(--raised);border-color:var(--muted)}
+.boot-title{margin:0 0 20px;font-size:28px;font-weight:300;letter-spacing:8px;text-transform:uppercase;text-align:right}
+.boot-nav{display:flex;flex-direction:column;gap:4px}.boot-tab{text-align:left;border-color:transparent;background:transparent;padding:10px 12px;font-size:14px;border-left:2px solid transparent}
+.boot-tab[aria-selected=true]{border-left-color:var(--accent);background:var(--raised)}
+.boot-panel{min-width:0;min-height:0;display:flex;flex-direction:column;padding:32px}
+.boot-panel-body{flex:1;min-width:0;min-height:0;display:flex;flex-direction:column;position:relative;background:var(--surface);border:1px solid var(--border);box-shadow:0 12px 40px #0004;overflow:auto}
+.boot-start{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);flex:1;min-height:0}
+/* The heading, actions and path stay in place; only the project list scrolls. */
+.boot-projects>.picker{display:flex;flex-direction:column;overflow:hidden}.boot-projects .explorer-head{flex:none}.boot-projects .explorer-list{flex:0 1 auto;min-height:0;overflow:auto}.boot-projects .explorer-list>*{flex:none}.boot-start.has-recent{grid-template-columns:220px minmax(0,1fr)}
+.boot-recent{display:flex;flex-direction:column;padding:20px 0;border-right:1px solid var(--border);overflow:auto;min-height:0}.boot-recent h3{padding:0 16px 10px;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);border-bottom:1px solid var(--border)}
+.boot-recent-card{display:flex;flex-direction:column;align-items:flex-start;gap:4px;width:auto;padding:10px 16px;text-align:left;white-space:normal;border:0;border-bottom:1px solid var(--border);background:transparent}.boot-recent-card:hover{background:var(--raised)}
+.boot-recent-card strong{font-size:13px;font-weight:550;overflow-wrap:anywhere}.boot-recent-card small{font-size:11px}
+.explorer-head{padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid var(--border)}.explorer-bar{display:flex;gap:8px;align-items:center}.explorer-path{display:flex;flex-wrap:wrap;gap:4px;margin-top:12px}.explorer-segment{font-size:12px}.explorer-segment[aria-current]{border-color:var(--accent);color:var(--accent)}.explorer-path-end{flex:1 1 0;min-width:0}.explorer-search{flex:1;min-width:120px}
+
+.explorer-list{display:flex;flex-direction:column;border:1px solid var(--border)}
+.explorer-row{display:grid;grid-template-columns:minmax(10rem,18rem) 5rem minmax(0,1fr) auto;align-items:center;gap:14px;padding:6px 8px;border-bottom:1px solid var(--border)}.explorer-row:last-child{border-bottom:0}
+.explorer-name{text-align:left;border-color:transparent;background:transparent;font-weight:550;overflow:hidden;text-overflow:ellipsis}.explorer-folder .explorer-name{color:var(--accent)}
+.explorer-kind{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted)}.explorer-detail{font-size:12px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.explorer-tools{display:flex}.explorer-move-dialog{max-width:560px}.explorer-destinations{display:flex;flex-direction:column;gap:4px;margin-top:12px;max-height:min(45vh,24rem);overflow:auto}.explorer-destinations .explorer-name{width:100%}.explorer-tools button{font-size:11px;padding:5px 10px}.explorer-tools button+button{border-left:0}
+.boot-projects{position:relative;display:flex;flex-direction:column;flex:1;min-width:0;min-height:0}
+.project-name{font-size:12px;letter-spacing:1px;color:var(--muted);flex:none;max-width:240px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media(max-width:700px){#boot{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr)}.boot-rail{flex-direction:row;align-items:center;padding:12px 16px;gap:16px;border-right:0;border-bottom:1px solid var(--border)}.boot-home{flex:none}.boot-title{margin-bottom:10px;font-size:20px}.boot-nav{flex-direction:row;overflow:auto}.boot-tab{border-left:0;border-bottom:2px solid transparent;padding:8px 10px}.boot-tab[aria-selected=true]{border-bottom-color:var(--accent)}.boot-panel{padding:12px 16px}.boot-start.has-recent{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr)}.boot-recent{border-right:0;border-bottom:1px solid var(--border);padding:10px 0}.explorer-row{grid-template-columns:minmax(0,1fr) auto}.explorer-kind,.explorer-detail{display:none}.explorer-bar{flex-wrap:wrap}.project-name{max-width:110px}}

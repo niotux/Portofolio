@@ -1,0 +1,11 @@
+{
+  "Id": "person",
+  "Name": "Person",
+  "Description": "A conversational person with retained first-person thoughts, semantic recall and context compaction.",
+  "Launch": {
+    "Command": "${Library}/runtime/Person",
+    "Args": []
+  },
+  "Settings": "settings.json",
+  "SettingsSchema": "settings.schema.json"
+}

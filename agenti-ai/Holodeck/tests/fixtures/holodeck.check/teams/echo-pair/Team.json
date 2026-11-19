@@ -1,0 +1,27 @@
+{
+  "Id": "echo-pair",
+  "Name": "Echo Pair",
+  "Description": "Two independent echo agents, each connected to You.",
+  "Members": [
+    {
+      "Id": "first",
+      "Name": "First Echo",
+      "Agent": "holodeck.check/agents/echo"
+    },
+    {
+      "Id": "second",
+      "Name": "Second Echo",
+      "Agent": "holodeck.check/agents/echo"
+    }
+  ],
+  "Wires": [
+    [
+      "You",
+      "first"
+    ],
+    [
+      "You",
+      "second"
+    ]
+  ]
+}

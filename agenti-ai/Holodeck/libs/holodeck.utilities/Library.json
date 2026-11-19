@@ -1,0 +1,30 @@
+{
+  "FormatVersion": 1,
+  "Id": "holodeck.utilities",
+  "Version": "1.0.0",
+  "Name": "Holodeck Utilities",
+  "Description": "Project utilities with library-owned applets and services.",
+  "Runtime": {
+    "Image": "holodeck-library:1",
+    "Processes": [
+      {
+        "Id": "bash",
+        "Command": ["python3", "/library/services/bash/server.py", "--port", "8090"],
+        "Port": 8090,
+        "HealthPath": "/health"
+      }
+    ]
+  },
+  "Applets": [
+    {
+      "Id": "bash",
+      "Name": "Bash",
+      "Description": "An interactive shell in this project's Utilities environment.",
+      "Icon": ">_",
+      "EntryPoint": "applets/bash/index.html",
+      "Services": ["bash"],
+      "Width": 960,
+      "Height": 640
+    }
+  ]
+}

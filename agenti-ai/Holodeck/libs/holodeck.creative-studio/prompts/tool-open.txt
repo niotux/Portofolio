@@ -1,0 +1,1 @@
+Open one reference available in this exchange or found in notebook search, so you can actually inspect its visible contents. Use its provided reference handle. Images consume the configured visual context allowance.

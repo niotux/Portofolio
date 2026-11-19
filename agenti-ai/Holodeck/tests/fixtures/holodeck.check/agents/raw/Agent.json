@@ -1,0 +1,13 @@
+{
+  "Id": "raw",
+  "Name": "Raw Settings",
+  "Description": "Has settings but no schema, so Team shows the raw settings editor. Never started.",
+  "Launch": {
+    "Command": "python3",
+    "Args": [
+      "-c",
+      "pass"
+    ]
+  },
+  "Settings": "settings.json"
+}

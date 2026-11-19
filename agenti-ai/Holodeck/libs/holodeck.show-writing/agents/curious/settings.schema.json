@@ -1,0 +1,116 @@
+{
+  "type": "object",
+  "title": "Writing collaborator",
+  "additionalProperties": true,
+  "required": [
+    "Personality",
+    "Model"
+  ],
+  "properties": {
+    "Personality": {
+      "type": "object",
+      "title": "Personality",
+      "additionalProperties": false,
+      "required": [
+        "Name",
+        "Description"
+      ],
+      "properties": {
+        "Name": {
+          "type": "string",
+          "title": "Name"
+        },
+        "Description": {
+          "type": "string",
+          "title": "Personality",
+          "x-ui": {
+            "control": "multiline"
+          }
+        }
+      }
+    },
+    "Model": {
+      "type": "object",
+      "title": "Conversation model",
+      "additionalProperties": true,
+      "required": [
+        "BaseUrl",
+        "Name",
+        "ApiKey",
+        "Temperature",
+        "MaxOutputTokens",
+        "TimeoutSeconds"
+      ],
+      "properties": {
+        "BaseUrl": {
+          "type": "string",
+          "title": "API base URL"
+        },
+        "Name": {
+          "type": "string",
+          "title": "Model name"
+        },
+        "ApiKey": {
+          "type": "string",
+          "title": "API key",
+          "x-ui": {
+            "control": "password"
+          }
+        },
+        "Temperature": {
+          "type": "number",
+          "title": "Temperature",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "MaxOutputTokens": {
+          "type": "integer",
+          "title": "Maximum output tokens",
+          "minimum": 1,
+          "maximum": 65536
+        },
+        "TimeoutSeconds": {
+          "type": "integer",
+          "title": "Request timeout (seconds)",
+          "minimum": 1,
+          "maximum": 3600
+        }
+      },
+      "description": "Built-in model thinking is always disabled. The configured first-person voices supply the thinking."
+    },
+    "Embedding": {
+      "type": "object",
+      "title": "Semantic memory",
+      "additionalProperties": false,
+      "required": [
+        "BaseUrl",
+        "Name",
+        "Dimensions",
+        "TimeoutSeconds"
+      ],
+      "properties": {
+        "BaseUrl": {
+          "type": "string",
+          "title": "Embedding API base URL"
+        },
+        "Name": {
+          "type": "string",
+          "title": "Embedding model"
+        },
+        "Dimensions": {
+          "type": "integer",
+          "title": "Leading embedding dimensions",
+          "minimum": 1,
+          "maximum": 32768
+        },
+        "TimeoutSeconds": {
+          "type": "integer",
+          "title": "Embedding timeout (seconds)",
+          "minimum": 1,
+          "maximum": 3600
+        }
+      }
+    }
+  },
+  "description": "Each instance has its own prose memories and conversation context. Grant both llama and memory in Computer. Existing obsolete Work fields are retained but not used."
+}

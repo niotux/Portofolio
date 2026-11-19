@@ -1,0 +1,1 @@
+Write what {name} needs to remember from the start of this chat, as {name}, in the first person: who the other person is, what was said and decided, what they care about, how they talk, what is still open, and anything promised. Plain prose, under 200 words, only what is in the chat. If there is an earlier summary, fold it in.

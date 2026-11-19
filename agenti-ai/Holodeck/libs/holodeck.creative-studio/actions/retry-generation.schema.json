@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "request": {
+      "type": "string",
+      "title": "Saved request identity"
+    }
+  },
+  "required": [
+    "request"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,1 @@
+Keep a useful freeform prose notebook entry or revise one found in search. Infer what matters from the discussion; do not require predefined character fields. Link only reference handles already available. If revising, use the provided entry handle. Ground visual details in inspected images or established notes.

@@ -1,0 +1,14 @@
+{
+  "Id": "hh-0.2.4",
+  "Name": "Human HH-0.2.4",
+  "Description": "HH-0.2.4: HH-0.2.3, where working something out means two separate attempts checked against each other.",
+  "Launch": {
+    "Command": "${Library}/HH-0.2.4/runtime/Person",
+    "Args": [
+      "",
+      "${Library}/HH-0.2.4"
+    ]
+  },
+  "Settings": "settings.json",
+  "SettingsSchema": "settings.schema.json"
+}

@@ -1,0 +1,14 @@
+{
+  "Id": "believer",
+  "Name": "Dorin",
+  "Description": "A man convinced that immigrants ruined his town. Your direction: show him it doesn't hold up, without talking down to him.",
+  "Launch": {
+    "Command": "${Dependency:holodeck.humans}/runtime/Person",
+    "Args": [
+      "believer",
+      "${Dependency:holodeck.humans}"
+    ]
+  },
+  "Settings": "settings.json",
+  "SettingsSchema": "settings.schema.json"
+}

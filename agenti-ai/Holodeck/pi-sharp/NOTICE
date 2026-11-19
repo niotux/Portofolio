@@ -1,0 +1,15 @@
+pi-sharp
+
+This product includes material adapted from OpenAI Codex (https://github.com/openai/codex),
+Copyright 2025 OpenAI, licensed under the Apache License, Version 2.0
+(http://www.apache.org/licenses/LICENSE-2.0):
+
+- src/PiSharp.Core/Config/SystemPrompt.cs, GptWorkingStyle: working-style instructions for GPT
+  models, adapted from codex-rs models-manager/prompt.md for unattended factory seats.
+- src/PiSharp.Llm/Responses/ResponsesRequest.cs (the free-form apply_patch tool): the patch grammar follows
+  Codex's apply_patch Lark grammar.
+
+The rest of the harness's Codex-inspired behaviour (guard rules, the action reviewer, hook
+points, turn diffs, retries, telemetry) is written for pi-sharp and copies no Codex code.
+
+pi-sharp itself is derived from pi (LICENSE.pi-upstream, MIT).

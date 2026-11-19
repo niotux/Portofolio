@@ -1,0 +1,137 @@
+.project-app{display:flex;flex-direction:column;flex:1;min-height:0;min-width:0;container-type:inline-size}
+.project-app .project-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:18px 20px;border-bottom:1px solid var(--border);flex:none}
+.project-app .project-heading-copy{min-width:0}
+.project-app .project-heading h2{font-size:20px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:4px}
+.project-app .project-shortcuts{display:flex;gap:8px;flex-wrap:wrap}
+.project-app .project-layout{display:grid;grid-template-columns:220px minmax(0,1fr);flex:1;min-height:0}
+.project-app .project-side{display:flex;flex-direction:column;min-height:0;border-right:1px solid var(--border);background:var(--bg);padding:12px 10px;gap:12px}
+.project-app .selected{border-color:var(--accent);background:var(--raised)}
+.project-app .project-roster-heading{display:flex;align-items:center;justify-content:space-between;padding:0 6px;font-size:11px}
+.project-app .project-roster-heading h3{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.project-app .project-agent-list{flex:1;min-height:0;overflow:auto}
+.project-app .project-agent{display:flex;width:100%;align-items:center;gap:9px;text-align:left;padding:10px 6px;margin-bottom:4px;background:transparent;border-color:transparent;min-width:0}
+.project-app .project-agent.selected{border-color:var(--border);background:var(--surface)}
+.project-app .project-avatar{width:28px;height:30px;display:grid;place-items:center;border:1px solid var(--border);background:var(--raised);font-weight:600;flex:none}
+.project-app .project-agent-copy{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1}
+.project-app .project-agent-copy strong{font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.project-app .project-agent-copy small{font-size:11px}
+.project-app .status-dot{width:7px;height:7px;border-radius:50%;background:var(--muted);flex:none}
+.project-app .status-dot[data-status=running]{background:var(--accent)}
+.project-app .status-dot[data-status=crashed],.project-app .status-dot[data-status=error]{background:var(--danger)}
+.project-app .project-side-empty{padding:8px;font-size:12px;line-height:1.6}
+.project-app .project-main{display:flex;flex-direction:column;min-height:0;min-width:0;overflow:hidden}
+.project-app .project-agent-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:22px 24px 18px;flex:none}
+.project-app .project-agent-header h2{font-size:21px;margin:0 0 6px;overflow-wrap:anywhere}
+.project-app .project-agent-header p{font-size:12px;margin:0;line-height:1.5}
+.project-app .project-agent-tabs{display:flex;gap:2px;border-bottom:1px solid var(--border);padding:0 18px;overflow:auto;flex:none}
+.project-app .project-agent-tab{border:0;border-bottom:2px solid transparent;background:transparent;padding:10px 9px;font-size:12px}
+.project-app .project-agent-tab.selected{border-bottom-color:var(--accent);color:var(--accent);background:transparent}
+.project-app .project-agent-pane{padding:22px 24px;overflow:auto;min-height:0;flex:1;display:flex;flex-direction:column;gap:16px}
+.project-app .project-overview h3{font-size:14px;margin:0 0 10px}
+.project-app .project-overview p{line-height:1.6;font-size:13px;max-width:480px}
+.project-app .project-facts{display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px 20px;font-size:12px;margin:24px 0;line-height:1.5}
+.project-app .project-facts dt{color:var(--muted)}
+.project-app .project-facts dd{margin:0;overflow-wrap:anywhere}
+.project-app .project-overview-actions{display:flex;gap:8px;flex-wrap:wrap;border-top:1px solid var(--border);padding-top:20px}
+.project-app .project-overview-actions button{font-size:12px}
+.project-app .project-welcome{margin:auto;max-width:460px;padding:32px;text-align:left}
+.project-app .project-welcome h2{font-size:25px;margin:12px 0}
+.project-app .project-welcome p{line-height:1.7;margin:0 0 24px}
+.project-app .project-pane-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:12px;color:var(--muted);line-height:1.5}
+.project-app .project-pane-heading button{flex:none;font-size:12px}
+.project-app .project-connection-list{display:flex;flex-direction:column;min-width:0}
+.project-app .project-connection-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--border);min-width:0}
+.project-app .project-connection-copy{display:flex;flex-direction:column;gap:5px;min-width:0}
+.project-app .project-connection-copy strong{font-size:12px;overflow-wrap:anywhere}
+.project-app .project-connection-copy small{font-size:11px}
+.project-app .project-connection-actions{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.project-app .project-connection-actions button{font-size:11px;padding:6px 8px}
+.project-app .project-settings{min-height:220px;resize:none;flex:1;font-family:ui-monospace,SFMono-Regular,monospace;font-size:12px;line-height:1.6}
+.project-app .project-settings-actions{display:flex;align-items:center;gap:12px;font-size:12px}
+.project-app .settings-facts{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 16px;font-size:12px;margin:0;line-height:1.5}
+.project-app .settings-facts dt{color:var(--muted)}
+.project-app .settings-facts dd{margin:0;overflow-wrap:anywhere}
+.project-app .settings-revision{font-family:ui-monospace,SFMono-Regular,monospace}
+.project-app .settings-notice{font-size:12px;line-height:1.6;margin:0;padding:10px 12px;border:1px solid var(--border);background:var(--raised)}
+.project-app .settings-form{display:flex;flex-direction:column;gap:14px;min-width:0}
+.project-app .settings-group{display:flex;flex-direction:column;gap:14px;border:1px solid var(--border);padding:12px 14px;margin:0;min-width:0}
+.project-app .settings-group legend{font-size:12px;font-weight:600;padding:0 6px}
+.project-app .settings-field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.project-app .settings-caption{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px}
+.project-app .settings-caption label{font-weight:600}
+.project-app .settings-badge{font-size:10px;text-transform:uppercase;letter-spacing:.06em;border:1px solid var(--border);padding:1px 6px}
+.project-app .settings-field input:not([type=checkbox]),.project-app .settings-field select,.project-app .settings-field textarea{width:100%;max-width:560px;box-sizing:border-box}
+.project-app .settings-field input[type=checkbox]{align-self:flex-start}
+.project-app .settings-field textarea{min-height:110px;resize:vertical}
+.project-app .settings-help{font-size:11px;line-height:1.5;margin:0;color:var(--muted);max-width:560px}
+.project-app .settings-field .error,.project-app .settings-errors .error{font-size:12px;margin:0}
+.project-app .settings-conflict{display:flex;flex-direction:column;gap:10px;border:1px solid var(--danger);padding:12px 14px}
+.project-app .settings-conflict h3{font-size:13px;margin:0}
+.project-app .settings-conflict p{font-size:12px;line-height:1.5;margin:0}
+.project-app .settings-latest{min-height:120px;flex:none}
+.project-app .project-settings-actions{flex-wrap:wrap}
+.project-app .agent-settings,.project-app .management-actions,.project-app .management-execution,.project-app .management-action-form,.project-app .management-details,.project-app .management-editor,.project-app .management-result{display:flex;flex-direction:column;gap:14px;min-width:0}
+.project-app .management-actions{border-top:1px solid var(--border);padding-top:18px;margin-top:8px}
+.project-app .management-actions h4{font-size:13px;margin:0}
+.project-app .management-actions p{font-size:12px;line-height:1.5;overflow-wrap:anywhere}
+.project-app .management-intro{display:flex;flex-direction:column;gap:8px}
+.project-app .management-action-form{border:1px solid var(--border);padding:12px}
+.project-app .management-action-form>button{align-self:flex-start;max-width:100%;white-space:normal}
+.project-app .management-jobs{display:flex;flex-direction:column;gap:8px}
+.project-app .management-job{display:flex;align-items:center;gap:10px;padding:8px;border:1px solid var(--border);min-width:0;flex-wrap:wrap}
+.project-app .management-job.selected{border-color:var(--accent)}
+.project-app .management-job-copy{flex:1;min-width:100px;display:flex;flex-direction:column;gap:5px}
+.project-app .management-job-open{align-self:flex-start;max-width:100%;white-space:normal;text-align:left}
+.project-app .management-job-copy time{font-size:10px}
+.project-app .management-job-status{font-size:11px;text-transform:capitalize}
+.project-app .management-details progress{width:100%;max-width:400px}
+.project-app .management-result{border:1px solid var(--border);padding:12px}
+.project-app .project-log{font-family:ui-monospace,SFMono-Regular,monospace;font-size:12px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere;overflow:auto;min-height:0;margin:0;flex:1}
+.project-app .project-agent-pane>button{align-self:flex-start;font-size:12px}
+.project-app .project-file{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--border);font-size:12px}
+.project-app .project-file a{overflow-wrap:anywhere}
+.project-app .project-file small{white-space:nowrap}
+@container (max-width:700px){
+  .project-app .project-layout{grid-template-columns:180px minmax(0,1fr)}
+  .project-app .project-connection-row{align-items:flex-start;flex-direction:column}
+  .project-app .project-connection-actions{justify-content:flex-start}
+  .project-app .project-agent-header{padding:18px 16px}
+  .project-app .project-agent-pane{padding:18px 16px}
+}
+@container (max-width:520px){
+  .project-app .project-heading{padding:12px;gap:8px;align-items:flex-start}
+  .project-app .project-heading h2{font-size:17px}
+  .project-app .project-shortcuts{justify-content:flex-end;gap:4px}
+  .project-app .project-shortcuts button{font-size:11px;padding:6px}
+  .project-app .project-layout{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr)}
+  .project-app .project-side{border-right:0;border-bottom:1px solid var(--border);padding:8px;gap:6px;max-height:170px}
+  .project-app .project-roster-heading{display:none}
+  .project-app .project-agent-list{display:flex;gap:6px;overflow:auto;flex:none}
+  .project-app .project-agent{width:auto;min-width:140px;margin:0;flex:none;padding:6px}
+  .project-app .project-agent-copy small{display:none}
+  .project-app .project-agent-tabs{padding:0 8px}
+  .project-app .project-agent-tab{padding:9px 8px}
+  .project-app .project-pane-heading{align-items:flex-start}
+  .project-app .project-agent-title{font-size:19px}
+}
+
+.project-app .project-unresolved-actions:empty{display:none}
+.project-app .project-definition-error{margin-top:20px;padding:16px;border:1px solid var(--danger);display:flex;flex-direction:column;gap:10px}
+.project-app .project-definition-error h3{color:var(--danger);margin:0}
+.project-app .project-definition-error p{overflow-wrap:anywhere}
+.project-app .project-definition-error button{align-self:flex-start}
+.definition-picker{max-width:540px;display:flex;flex-direction:column;gap:16px;max-height:calc(100% - 32px);width:min(540px,calc(100% - 24px))}
+.definition-picker-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.definition-picker-heading h3{font-size:16px;margin:0}
+.definition-picker>p{font-size:12px;line-height:1.6}
+.definition-picker-list{overflow:auto;min-height:0;display:flex;flex-direction:column;gap:18px}
+.definition-library-heading{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:0 0 8px;border-bottom:1px solid var(--border)}
+.definition-library-heading h4{margin:0;font-size:12px;font-weight:600}
+.definition-library-heading small{font-size:11px}
+.definition-choice{display:flex;flex-direction:column;gap:6px;padding:12px;text-align:left;width:100%;white-space:normal;margin-top:6px;background:var(--bg)}
+.definition-choice strong{font-size:13px}
+.definition-choice small{font-size:12px;line-height:1.5}
+
+.computer-section{border-bottom:1px solid var(--border);padding:14px 0}.computer-section:last-child{border-bottom:0}.computer-section h3{font-size:11px;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}.computer-section>p{font-size:11px;line-height:1.5;margin-bottom:8px}
+.computer-row{display:flex;align-items:center;gap:10px;padding:8px 0;flex-wrap:wrap}.computer-copy{display:flex;flex-direction:column;gap:3px;flex:1;min-width:160px}.computer-copy small{overflow-wrap:anywhere}
+.services-app .project-agent-list>.project-roster-heading{margin:10px 0 6px;gap:8px}.services-app .project-agent-list>.project-roster-heading:first-child{margin-top:0}

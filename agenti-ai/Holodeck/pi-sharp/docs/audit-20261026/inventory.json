@@ -1,0 +1,1926 @@
+{
+  "baseline": "f20e634b5101288fcbe787590cfbddf1c27d1ddc",
+  "source_fingerprint": "57c32da51efde25468275052717d1b52d984420677a5c7cef3e21d5a1dae001d",
+  "files": [
+    {
+      "path": "src/PiSharp.Cli/Ansi.cs",
+      "lines": 43,
+      "sha256": "0dd0420300c07ab00122a3fcb12305a753895dc92aa7aced3132b8e873d9ff4c"
+    },
+    {
+      "path": "src/PiSharp.Cli/Attachments.cs",
+      "lines": 90,
+      "sha256": "56e078b80fca47e9b31d2d9abdab54ac5af3916273c4d5d05855b899068e0060"
+    },
+    {
+      "path": "src/PiSharp.Cli/CliArgs.cs",
+      "lines": 203,
+      "sha256": "52bfe0cee8a4785c843cbd4be5c8d7e510e7938ae0a1d2561e708bd4f43ee63c"
+    },
+    {
+      "path": "src/PiSharp.Cli/CliHost.cs",
+      "lines": 2539,
+      "sha256": "121d94e121f4e442d96cc4e0b7d733f093616942f44cd63b6bcecb8540aca28b"
+    },
+    {
+      "path": "src/PiSharp.Cli/EffectiveSettings.cs",
+      "lines": 45,
+      "sha256": "4dbc75c2eca9a4584bdcabc881fdebe04420ea4c497158a9f36b0e783329b244"
+    },
+    {
+      "path": "src/PiSharp.Cli/EventSinks.cs",
+      "lines": 428,
+      "sha256": "e1890316a887bd5e81c39e4fe790a7ed9aa171ec994dd7655058c493b1fbff30"
+    },
+    {
+      "path": "src/PiSharp.Cli/GuardCommand.cs",
+      "lines": 341,
+      "sha256": "1dc3014c1e75c264eeb7436f78c4f11ce8255ddc00a1e44f7906275c46a8e300"
+    },
+    {
+      "path": "src/PiSharp.Cli/NotebookCommand.cs",
+      "lines": 68,
+      "sha256": "2aba109871cf774afb6124e275bc678f3d81950aa675205343d60a8056bc07bd"
+    },
+    {
+      "path": "src/PiSharp.Cli/PiSharp.Cli.csproj",
+      "lines": 38,
+      "sha256": "8911df011e393a5f7eb1b0bb9de5769a6c62f816f38a6441ec5ca9b81321a1d0"
+    },
+    {
+      "path": "src/PiSharp.Cli/Program.cs",
+      "lines": 21,
+      "sha256": "3560ad52e7a4214f79c939f71bdd7a4ef3b601eec25dc9bbf0a9b0ea7b7385ff"
+    },
+    {
+      "path": "src/PiSharp.Cli/SelfUpdate.cs",
+      "lines": 244,
+      "sha256": "d624ebccd1c55d54a3b6b1d46df94f80ac735abfbecf9bacbdd888e60463c93b"
+    },
+    {
+      "path": "src/PiSharp.Cli/SlashCommands.cs",
+      "lines": 194,
+      "sha256": "ac26ca2b38ef93b586f37d4e99b7f497cc2f9f9a2b863deb0bf993553e277ddf"
+    },
+    {
+      "path": "src/PiSharp.Cli/SubscriptionAssignment.cs",
+      "lines": 489,
+      "sha256": "96d161ef98f91c7ddf8f5ee2c397085b31b9415ae83cbe3856419f1600464364"
+    },
+    {
+      "path": "src/PiSharp.CodeIntel/Auth/CodeIntelAuth.cs",
+      "lines": 53,
+      "sha256": "d4d379894df33d6ff1ebe7021af6de0aa4008f2c23683b30b0b87d20741d26b6"
+    },
+    {
+      "path": "src/PiSharp.CodeIntel/Auth/KbIdentityResolver.cs",
+      "lines": 96,
+      "sha256": "93efc83020bb4dd3e8b2936fccbcab2ca8de11b875a141cdb0978fd26b7ed210"
+    },
+    {
+      "path": "src/PiSharp.CodeIntel/CodeIntelOptionsRegistration.cs",
+      "lines": 13,
+      "sha256": "0c82fe89e3cb89205275b7a1a85ae2940faeb4c769f35d2e0503c2f41229ada9"
+    },
+    {
+      "path": "src/PiSharp.CodeIntel/Git/Git.cs",
+      "lines": 65,
+      "sha256": "cf628ede78b80ccbe3f1044b4849a80e7e9ee15f8cd461a43b2763c165694079"
+    },
+    {
+      "path": "src/PiSharp.CodeIntel/Git/ShadowWorkspace.cs",
+      "lines": 141,
+      "sha256": "c0de52066ef42c29241f7cfdb1b1144891cbb5e8ee7f0de755df43cb5a3c9d46"
+    },
+    {
+      "path": "src/PiSharp.CodeIntel/Lsp/LsProcess.cs",
+      "lines": 347,
+      "sha256": "7880a6be55fe4c3cb98acf51b875200fd52be951b1ba91eaf2966e4c4ffb0620"
+    },
+    {
+      "path": "src/PiSharp.CodeIntel/Lsp/LspPeer.cs",
+      "lines": 308,
+      "sha256": "9ac482879dc7e875ad18164f74936c0c1da676a95e0cf9a2cee30a7af2531343"
+    },
+    {
+      "path": "src/PiSharp.CodeIntel/Mcp/McpEndpoint.cs",
+      "lines": 585,
+      "sha256": "823468513236b771a1f244d224ab3e80fa529ac39fbb5e47bf012c4bd1653809"
+    },
+    {
+      "path": "src/PiSharp.CodeIntel/Options.cs",
+      "lines": 39,
+      "sha256": "c1819c7d3b9c5b5eb64ed6092768a98cd91454809e7d2a0763ab282af03bb91b"
+    },
+    {
+      "path": "src/PiSharp.CodeIntel/PiSharp.CodeIntel.csproj",
+      "lines": 13,
+      "sha256": "c71c15525ec9c7fb4a8bff1fc19b80038e493a6ac9330c4bc25c676c6ed4d111"
+    },
+    {
+      "path": "src/PiSharp.CodeIntel/Program.cs",
+      "lines": 102,
+      "sha256": "6c738f8baae1bf53092c1caae6bb2af866a89b382d5b0d6ae341548fc3a3f1a9"
+    },
+    {
+      "path": "src/PiSharp.CodeIntel/Properties/AssemblyInfo.cs",
+      "lines": 3,
+      "sha256": "de6b6e926c641a56af61da805fda1122ff4624d3e759ecddae28f6b763b5792e"
+    },
+    {
+      "path": "src/PiSharp.CodeIntel/Query/CodeIntelligence.cs",
+      "lines": 420,
+      "sha256": "646e0bba74b2a90c7a59642b6f31c23e2765ba480a0dcddd6c8fcabbf1847c47"
+    },
+    {
+      "path": "src/PiSharp.CodeIntel/WorkspaceManager.cs",
+      "lines": 437,
+      "sha256": "6038908c85a74dac39d72bba9a26d50bfc41db666a52e20f185df3b2a10931a8"
+    },
+    {
+      "path": "src/PiSharp.Core/Agent/AgentContext.cs",
+      "lines": 56,
+      "sha256": "7242937b6829101b48af2e5a20c2595c1e0465a3bbca162805e21ba5ffa4e7d4"
+    },
+    {
+      "path": "src/PiSharp.Core/Agent/AgentEvent.cs",
+      "lines": 39,
+      "sha256": "96f6d537f4496d4cef110f8db7b98b60b0455274ed1bdb5f6ab4c67599581608"
+    },
+    {
+      "path": "src/PiSharp.Core/Agent/AgentLoop.cs",
+      "lines": 1119,
+      "sha256": "6be33cf1b39c0d8192f9ea4ccf9e74fb9fd3293f89190a0e0984ce977ee9c635"
+    },
+    {
+      "path": "src/PiSharp.Core/Agent/AgentLoopConfig.cs",
+      "lines": 175,
+      "sha256": "a445af4040994eb0c89df0b5e4d287a599ce9b349fa3f48b71d2707abd1b0897"
+    },
+    {
+      "path": "src/PiSharp.Core/Agent/CommandHooks.cs",
+      "lines": 158,
+      "sha256": "96f8d5d9b1e84b2c996717f5d6e241dd0126e56e21206c3abf7afb1e0f776ebb"
+    },
+    {
+      "path": "src/PiSharp.Core/Agent/DegenerateReply.cs",
+      "lines": 43,
+      "sha256": "280ec0a2ec2dc29904d28c15ca8e80090493bea323fbbb4f33a261720a918346"
+    },
+    {
+      "path": "src/PiSharp.Core/Agent/ParallelSafeTools.cs",
+      "lines": 18,
+      "sha256": "257cafde9f3e9c4136e8e680a76562fa9d503cf120c6a6ba7540f5ccf5a32cce"
+    },
+    {
+      "path": "src/PiSharp.Core/Agent/PendingToolCleanup.cs",
+      "lines": 13,
+      "sha256": "b02a86a73d6b6f185a991bb6d90693b79d95cb53e7fc058fe5fbd40f4591aa6f"
+    },
+    {
+      "path": "src/PiSharp.Core/Agent/ShellPatch.cs",
+      "lines": 36,
+      "sha256": "c9dc7d2bff0e6648aeaab335b585cfa67b5d5d351de9d84d4485193ae971e534"
+    },
+    {
+      "path": "src/PiSharp.Core/Agent/TextToolCallParser.cs",
+      "lines": 208,
+      "sha256": "820b59838d638a6379c9dd9d8bfb11d255c437bd215ff539c4d7bb69d4c89bc9"
+    },
+    {
+      "path": "src/PiSharp.Core/Agent/ToolArgumentValidator.cs",
+      "lines": 362,
+      "sha256": "c3d6cdd1a2fbc5dc20e2164ab61092ceaa0bbe43c44d7bf22f777fcde2f82837"
+    },
+    {
+      "path": "src/PiSharp.Core/Agent/ToolCatalog.cs",
+      "lines": 143,
+      "sha256": "509ef9b3061840e9f84e1dbab018cee9b1e10441fe73e85e445eeb7b0fcc7692"
+    },
+    {
+      "path": "src/PiSharp.Core/Agent/ToolDiscovery.cs",
+      "lines": 226,
+      "sha256": "a650501c1a736f7eacc056bcbed4ce01e57dca176478db7c6f4721c1d8150e17"
+    },
+    {
+      "path": "src/PiSharp.Core/Agent/ToolReadCache.cs",
+      "lines": 32,
+      "sha256": "0d0dc5ab71bed3a05f743edea1ec3600f70d521b3ca417d39e725635cc120425"
+    },
+    {
+      "path": "src/PiSharp.Core/Agent/ToolResultBudget.cs",
+      "lines": 60,
+      "sha256": "5985bc236117aafe3dd25b01aee2722066cc53659f1df3b39b972cd0775ef08d"
+    },
+    {
+      "path": "src/PiSharp.Core/Agent/Tools.cs",
+      "lines": 132,
+      "sha256": "376f5b5819f9e5c41ff791f5d7663f3f64bc9ce9c2414b1f32d8aa7445029cb6"
+    },
+    {
+      "path": "src/PiSharp.Core/Checkpoints/CheckpointGreenTracker.cs",
+      "lines": 135,
+      "sha256": "593bfcd8347ef18fa406c6a3f8b3b434d6abf15cd2d1796e59a9ba6ba7226563"
+    },
+    {
+      "path": "src/PiSharp.Core/Checkpoints/CheckpointStore.cs",
+      "lines": 892,
+      "sha256": "22bb71eaa89d2581e1b35956ecb8683d4bca269b34eb6e68783c16c4a17afbcb"
+    },
+    {
+      "path": "src/PiSharp.Core/CodeIntelFeedback/CodeIntelFeedback.cs",
+      "lines": 364,
+      "sha256": "57006cd2af10927c22e78a6d0409f9209fa2ab3c7376a6ea5105a84deff4cee7"
+    },
+    {
+      "path": "src/PiSharp.Core/Compaction/CompactionPrompts.cs",
+      "lines": 94,
+      "sha256": "4f087ff4d089a03ad96d11732900e59dda6b4d19b858c42df7888d6f440ee809"
+    },
+    {
+      "path": "src/PiSharp.Core/Compaction/Compactor.cs",
+      "lines": 593,
+      "sha256": "8c4bbca15c328d9f82bbb7c9c02575592a297d395db25603dfd680cdb25bc7db"
+    },
+    {
+      "path": "src/PiSharp.Core/Compaction/FileOperations.cs",
+      "lines": 84,
+      "sha256": "589f45d8eb7a0997cd2a4717f76f91704a6ec153fe39eb104052908521e136b7"
+    },
+    {
+      "path": "src/PiSharp.Core/Compaction/LiveFacts.cs",
+      "lines": 88,
+      "sha256": "b2792aa130e8b5a1905af6284422a3acf372cf5ff4dff772ff354df6aba0396f"
+    },
+    {
+      "path": "src/PiSharp.Core/Compaction/ServerCompaction.cs",
+      "lines": 46,
+      "sha256": "7905f04292016ac4402fee824ab36dc8caeb12de30ce95ec6050d257b62ed52d"
+    },
+    {
+      "path": "src/PiSharp.Core/Config/ConfigPaths.cs",
+      "lines": 44,
+      "sha256": "3c45869f37381f322aa098ba603790657b17f8ccff9fc0256a302426fb46d54d"
+    },
+    {
+      "path": "src/PiSharp.Core/Config/ContextFiles.cs",
+      "lines": 62,
+      "sha256": "2b4314cc04dadf937e7bee632086d8374fe024a645b113c13dae8bf7d1fdbd3c"
+    },
+    {
+      "path": "src/PiSharp.Core/Config/ModelsFile.cs",
+      "lines": 250,
+      "sha256": "fbb46e8d1f3720ac2a9fd7c92a57342128ae7a3e3a2a4a5e8e11a85dc7c8d604"
+    },
+    {
+      "path": "src/PiSharp.Core/Config/Settings.cs",
+      "lines": 585,
+      "sha256": "01d4051eb3e4fc1ffafb1101572b942ca700a8a931d8e5efb26af80350ac0be0"
+    },
+    {
+      "path": "src/PiSharp.Core/Config/SystemPrompt.cs",
+      "lines": 237,
+      "sha256": "8ceeaad89bea7640ba215bc0ffa582911f588def32d5eeea4d7edde29cf0d9fa"
+    },
+    {
+      "path": "src/PiSharp.Core/Factory/AcceptanceCriteria.cs",
+      "lines": 60,
+      "sha256": "cdcd6a1ffabe84504565dacfa2aa31537c387b04ec03b69f3acbff350e982952"
+    },
+    {
+      "path": "src/PiSharp.Core/Factory/EpicBudget.cs",
+      "lines": 56,
+      "sha256": "9ac3c4e5ec7a3b071e90b4c66f36434c4e0d9f6fd45474368957099343fc7d84"
+    },
+    {
+      "path": "src/PiSharp.Core/Factory/EpicUsageLedger.cs",
+      "lines": 27,
+      "sha256": "61544a619d3da2cc65d3752520fe0bb528fa9a2e70421c420a4f5201ff360ff7"
+    },
+    {
+      "path": "src/PiSharp.Core/Factory/FactoryClient.cs",
+      "lines": 1036,
+      "sha256": "ed8c5225b76b4a9dac0f26db3039e449b2c8d7cb47f7fa29df6cf0bffbd30768"
+    },
+    {
+      "path": "src/PiSharp.Core/Factory/FactorySteering.cs",
+      "lines": 2770,
+      "sha256": "5e41abedc1dc6165062b81490d860bef91ef2d32bb3fbeba25c47c8b7fb0bfe1"
+    },
+    {
+      "path": "src/PiSharp.Core/Factory/HandInGate.cs",
+      "lines": 142,
+      "sha256": "ed516a312dd0edaa3875379d162f0e59da62d63a02d6ed6c4e9b4108340d85ee"
+    },
+    {
+      "path": "src/PiSharp.Core/Factory/SeatMigrator.cs",
+      "lines": 395,
+      "sha256": "eabab748497d1f3a414bff475f079a7073b772e1c873fc394f610a1c25c3982a"
+    },
+    {
+      "path": "src/PiSharp.Core/Factory/SeatTelemetry.cs",
+      "lines": 151,
+      "sha256": "fac6e117284a2a9f986fca09758e1b630f0ef9aea23606f8507e3e17723df7cc"
+    },
+    {
+      "path": "src/PiSharp.Core/Factory/StatusGateTool.cs",
+      "lines": 61,
+      "sha256": "341ce5ad4df5da1915f37c9ea76885dc9f06d36dca92ad5987672cd6e78bd7f3"
+    },
+    {
+      "path": "src/PiSharp.Core/Guard/ActionReview.cs",
+      "lines": 142,
+      "sha256": "5013d1337fd6f5a38c5936e05e40e3cf3c1986af3bd8911a8a479be78b51f30b"
+    },
+    {
+      "path": "src/PiSharp.Core/Guard/CorrectionCapture.cs",
+      "lines": 122,
+      "sha256": "8359dc2f088598f4d8d51051ca52fb24e8a87ab49de237d5953450cf39023202"
+    },
+    {
+      "path": "src/PiSharp.Core/Guard/GuardCallCapture.cs",
+      "lines": 49,
+      "sha256": "bb03eb049c2b39d67fd82232b575be4c076b95bccf365157af58712d03860459"
+    },
+    {
+      "path": "src/PiSharp.Core/Guard/GuardCompletion.cs",
+      "lines": 191,
+      "sha256": "2e282ca044a8ab9ac2fcc98de3d0ece3e208c5cdd64d2b9e9a2f17876420feb6"
+    },
+    {
+      "path": "src/PiSharp.Core/Guard/GuardCounters.cs",
+      "lines": 175,
+      "sha256": "ed4960804bb2d1338b861d509c9c31f2d139ec8ffb931a7270e0d2a7a094ad9c"
+    },
+    {
+      "path": "src/PiSharp.Core/Guard/GuardLifecycle.cs",
+      "lines": 388,
+      "sha256": "2faa5c6eee69c47c6742c95736bddddf8c573b3ee057ee4635e5013272439786"
+    },
+    {
+      "path": "src/PiSharp.Core/Guard/ToolGuard.cs",
+      "lines": 884,
+      "sha256": "856f1d6cbb7633bc6cbb945e294dc49051548928391e07f5fa9afec29483f0f8"
+    },
+    {
+      "path": "src/PiSharp.Core/Harness/CubicleClient.cs",
+      "lines": 115,
+      "sha256": "7c1aed182d0f7554aa09b2e6ea558b8ef9911c485722a1ad676a5ba09a33bba4"
+    },
+    {
+      "path": "src/PiSharp.Core/Harness/CubicleSteering.cs",
+      "lines": 95,
+      "sha256": "59e51f29c8be019088d4e19485c4663a4cb528e757ff455f20292dbf68fd5df6"
+    },
+    {
+      "path": "src/PiSharp.Core/Harness/CubicleTracer.cs",
+      "lines": 439,
+      "sha256": "d075e73e4958deadf60c96f0a8d66556adb748b3ef84c5a8030ef7f9cd25e3f4"
+    },
+    {
+      "path": "src/PiSharp.Core/Harness/TaskEffort.cs",
+      "lines": 147,
+      "sha256": "493a3b01eb81e8a5ea3cc69b82d68ba9b28ed69df3f2290b393dc56eb7574aa2"
+    },
+    {
+      "path": "src/PiSharp.Core/Json/CoreJsonContext.cs",
+      "lines": 46,
+      "sha256": "b425da4515a4c9ab039f8213b9e077d9caff8438134d4fb35fa95c92fd253abc"
+    },
+    {
+      "path": "src/PiSharp.Core/Mcp/BoundedReader.cs",
+      "lines": 67,
+      "sha256": "40fed1a8661709bd5294f9ccc4e57a4533b7106aeedaf23928c7d6b681c69481"
+    },
+    {
+      "path": "src/PiSharp.Core/Mcp/JsonRpcPeer.cs",
+      "lines": 272,
+      "sha256": "2745403e298634f0f1fdb03eb06a3f640fe024b1ee2ae659d0d442c2b6cc92df"
+    },
+    {
+      "path": "src/PiSharp.Core/Mcp/McpAgentTool.cs",
+      "lines": 104,
+      "sha256": "118196b209dee2b6f820427bdde811b85213134f7505208a42b229403237436b"
+    },
+    {
+      "path": "src/PiSharp.Core/Mcp/McpClient.cs",
+      "lines": 421,
+      "sha256": "f18cb53ca681882c591c2777b608ab3b05cd2acac988d7dabffabbd79361a36b"
+    },
+    {
+      "path": "src/PiSharp.Core/Mcp/McpConfig.cs",
+      "lines": 186,
+      "sha256": "d4f3f75903d7042317e6c14f60e34285d33e3cf4c2a7bdda59284f4649e98a13"
+    },
+    {
+      "path": "src/PiSharp.Core/Mcp/McpManager.cs",
+      "lines": 305,
+      "sha256": "456bcc7ebdcebc3a8331b8ba325f9662537da2177b08bb9ee2b14abec8391644"
+    },
+    {
+      "path": "src/PiSharp.Core/Mcp/McpServer.cs",
+      "lines": 81,
+      "sha256": "96eb126a2f80fbb70d781947fddf3492914060447591042baca044439281e1ec"
+    },
+    {
+      "path": "src/PiSharp.Core/Mcp/McpTransport.cs",
+      "lines": 516,
+      "sha256": "4459b12b7a66cebbd23ed18d0d11bd82a6dc19cc61490c446f7577c9f4b07593"
+    },
+    {
+      "path": "src/PiSharp.Core/Mcp/WebMcpTransport.cs",
+      "lines": 87,
+      "sha256": "f301d5a10d932e03422760d733971d591cf49ce91c0f0a28f03e4003e33373f5"
+    },
+    {
+      "path": "src/PiSharp.Core/Messages/AssistantMessageEvent.cs",
+      "lines": 41,
+      "sha256": "77d96a385b69535c918050c7a1cb14a686a5b90ff2750098118bd53514a01b73"
+    },
+    {
+      "path": "src/PiSharp.Core/Messages/ContentParts.cs",
+      "lines": 29,
+      "sha256": "9340eb4b2bfd24240d541e42787b4f4cc4bf6346889177b96395e8a9684794e5"
+    },
+    {
+      "path": "src/PiSharp.Core/Messages/ImageValidation.cs",
+      "lines": 186,
+      "sha256": "e7a5ff4580781001b2f2e77bb6743c43b969504ca4ab6cb974307ea50f147bb9"
+    },
+    {
+      "path": "src/PiSharp.Core/Messages/Messages.cs",
+      "lines": 109,
+      "sha256": "623301b6ace73ef8e3feabc3e2eede4fe163f2c051bbc83e534257726142219f"
+    },
+    {
+      "path": "src/PiSharp.Core/Messages/Usage.cs",
+      "lines": 38,
+      "sha256": "a757921199df568216cd0fb69f62b02afda81d1f32e8d6a020f81797b39819c9"
+    },
+    {
+      "path": "src/PiSharp.Core/Models/ModelConfig.cs",
+      "lines": 140,
+      "sha256": "fe164a6099c28f72a221efcd8e6b64d6cedeb7235269bb548216693f730e0477"
+    },
+    {
+      "path": "src/PiSharp.Core/Notebook/ArtifactStore.cs",
+      "lines": 204,
+      "sha256": "18a2316989ba80cd8deb0d1e89a2ae20bc42205c9a5c68f12477109934570ddd"
+    },
+    {
+      "path": "src/PiSharp.Core/Notebook/NotebookContext.cs",
+      "lines": 466,
+      "sha256": "fe64d7f4dd8907ab076659b1042f54101ca19b1d8df9c2d80537109d3b591a37"
+    },
+    {
+      "path": "src/PiSharp.Core/Notebook/NotebookImport.cs",
+      "lines": 78,
+      "sha256": "58bb2771912cc6f4b566f7eae93c788f7f21c963435e0d69f7e8015989192670"
+    },
+    {
+      "path": "src/PiSharp.Core/Notebook/NotebookLessons.cs",
+      "lines": 82,
+      "sha256": "ee001f898a66235cbbd684dfb2879bebd2152ca3f2eaaeb753af0e7e6d780e39"
+    },
+    {
+      "path": "src/PiSharp.Core/Notebook/NotebookSearch.cs",
+      "lines": 212,
+      "sha256": "75e5656c36c0a914e07df054485b7ce74b1bafddf35bac6abd522301404e1fc3"
+    },
+    {
+      "path": "src/PiSharp.Core/Notebook/NotebookSemanticIndex.cs",
+      "lines": 127,
+      "sha256": "39b0f976b8c3d1aefad8a707627fd21e3df7dd17f14a0114aa66bada81559679"
+    },
+    {
+      "path": "src/PiSharp.Core/Notebook/NotebookShare.cs",
+      "lines": 148,
+      "sha256": "c54dd3b71e081e43a8a75ff0b3cc5875615b127e75bca4498f4716bb6e335028"
+    },
+    {
+      "path": "src/PiSharp.Core/Notebook/NotebookSources.cs",
+      "lines": 73,
+      "sha256": "a2c30896e531f5a779d736affd49013f59ece610c262a19e92a7916db08ab492"
+    },
+    {
+      "path": "src/PiSharp.Core/Notebook/NotebookStore.cs",
+      "lines": 767,
+      "sha256": "c96ad94f6f5b61424211fec31a3fe31cd2a3f753118ec2f616c967b1ba458424"
+    },
+    {
+      "path": "src/PiSharp.Core/Notebook/NotebookSync.cs",
+      "lines": 81,
+      "sha256": "325f81b11edf8d2aee3ebf1ef35de17a1699e63e3e461d4ca3dd2dc5b12b0746"
+    },
+    {
+      "path": "src/PiSharp.Core/Notebook/NotebookTool.cs",
+      "lines": 293,
+      "sha256": "35a252c1ebc58ec1b1a2dc87874e757578ff23d227a090a502ed66409d723827"
+    },
+    {
+      "path": "src/PiSharp.Core/Notebook/NotebookUsage.cs",
+      "lines": 154,
+      "sha256": "9b9842353781551cae011006bfcfb04e7f6e849dba9bc6478f1258f5704b6d57"
+    },
+    {
+      "path": "src/PiSharp.Core/Notebook/PlanTool.cs",
+      "lines": 132,
+      "sha256": "3012bc35495c4c5b22ddd2a7157290213d6dec0983425adf984fb38347feba0d"
+    },
+    {
+      "path": "src/PiSharp.Core/Notebook/TaskBudget.cs",
+      "lines": 128,
+      "sha256": "46adfe0f4bac8bebf0d1ab5d3c93deab7db75cbcc257040f696ddb958a82721a"
+    },
+    {
+      "path": "src/PiSharp.Core/Notebook/WorkspaceEvidence.cs",
+      "lines": 54,
+      "sha256": "d4b6377de139a4cb734dde93474de7768533f3dcc20d672da96f3696fd06597b"
+    },
+    {
+      "path": "src/PiSharp.Core/PiSharp.Core.csproj",
+      "lines": 12,
+      "sha256": "a372aa0a0d16c498a2fa9d93e15fa4f19a7d2447dadd559a1e230c4526f6c8cb"
+    },
+    {
+      "path": "src/PiSharp.Core/Processes/ProcessRunner.cs",
+      "lines": 55,
+      "sha256": "9f546aa307b128e7621a3c807f78fdd88efa20555c987f72dd4da1fea2536dcf"
+    },
+    {
+      "path": "src/PiSharp.Core/Session/AgentSession.cs",
+      "lines": 726,
+      "sha256": "8d77d8a98e47d5b98c61d06f01dd51268f121679d944b5649eb394f71a221f58"
+    },
+    {
+      "path": "src/PiSharp.Core/Session/CompactionHooks.cs",
+      "lines": 48,
+      "sha256": "f15a1870df656ed1d6dbd9b4ff91beb69c5c8b638550010a7b8c3d08cfde15e5"
+    },
+    {
+      "path": "src/PiSharp.Core/Session/SessionConvert.cs",
+      "lines": 45,
+      "sha256": "9a1ab7106e707f23a370d45a35db4fccd5d6c7c7035597db2ab9461d8a681861"
+    },
+    {
+      "path": "src/PiSharp.Core/Session/SessionEntries.cs",
+      "lines": 85,
+      "sha256": "c21ad9f755871ceeb2052bd678ee2b00f3c572d71cde8fcbf16de0f96836029f"
+    },
+    {
+      "path": "src/PiSharp.Core/Session/SessionManager.cs",
+      "lines": 643,
+      "sha256": "a2f9e423173682a970747b5426a5177ef18e784774813244dbfee23d68cb3683"
+    },
+    {
+      "path": "src/PiSharp.Core/Session/TokenEstimate.cs",
+      "lines": 178,
+      "sha256": "e0f2f12ef696b1acb28bf6b4e96a2de2c8fc9b24e1258fde3e6f45979dd39a95"
+    },
+    {
+      "path": "src/PiSharp.Core/Skills/Frontmatter.cs",
+      "lines": 130,
+      "sha256": "161885563da16c9e076b41a3ffc80c9f6c1c4c17fe3fa853a9d2a03c940a9200"
+    },
+    {
+      "path": "src/PiSharp.Core/Skills/PromptTemplate.cs",
+      "lines": 318,
+      "sha256": "a2d8e3c4ed7ac98a851d72b4b21a12080d3e5c02e17c8475662a47a647b42b5c"
+    },
+    {
+      "path": "src/PiSharp.Core/Skills/Skill.cs",
+      "lines": 381,
+      "sha256": "f66c801bd46e534ba22c64ba8658e04782cdf5762e573dad9b76b7b382daf890"
+    },
+    {
+      "path": "src/PiSharp.Core/Skills/SkillInstaller.cs",
+      "lines": 190,
+      "sha256": "20e98eb61e5582c09446ccde7f30e6191485487f5de5adb2b00682f4c13e9ac6"
+    },
+    {
+      "path": "src/PiSharp.Core/Verification/BackwardReviewer.cs",
+      "lines": 119,
+      "sha256": "9a47ba98d35f7a370dba0de4a326c7ff9657a8dfb964187ea08e7d2eb35155de"
+    },
+    {
+      "path": "src/PiSharp.Core/Verification/DoneCheck.cs",
+      "lines": 83,
+      "sha256": "4991e869afab5874ed68bca309883e0d7ae2e466da4d71a55f0d156fef150d05"
+    },
+    {
+      "path": "src/PiSharp.Core/Verification/DoneCheckProvenance.cs",
+      "lines": 77,
+      "sha256": "5db1d8d8445edf7c82bf7959155230befda394f24df6aa943cb8da6c7014454f"
+    },
+    {
+      "path": "src/PiSharp.Core/Verification/DoneCheckSource.cs",
+      "lines": 84,
+      "sha256": "6dbfc589413c82e2feb52379c527f872d568ba9d57642e3c47b273c969ed229a"
+    },
+    {
+      "path": "src/PiSharp.Core/Verification/PlanCheck.cs",
+      "lines": 51,
+      "sha256": "95e0b5a793bfe39d4ecf568fc444bdb00d3235705cf04e341b2f5a2d143b6c6e"
+    },
+    {
+      "path": "src/PiSharp.Core/Verification/RubricReviewer.cs",
+      "lines": 239,
+      "sha256": "5d643da2bf918ed50c9ab5910e47581975464729f46d2180af53ca6e31aa65ac"
+    },
+    {
+      "path": "src/PiSharp.Core/Verification/VerificationRecords.cs",
+      "lines": 122,
+      "sha256": "7ebce0e678fde60b40a3d9c70f2ec3a564f6f3d7844511306a6b6a3fb041f0ee"
+    },
+    {
+      "path": "src/PiSharp.Core/Verification/VerificationStopGate.cs",
+      "lines": 230,
+      "sha256": "865e07a54a0ecd64dfddd941fdf8b9aaf0f5f8a12d690c2bec30ac3c0c332b6f"
+    },
+    {
+      "path": "src/PiSharp.Core/Verification/Verifier.cs",
+      "lines": 302,
+      "sha256": "ba98238ed5b90229c41e0235403966d54a57a8a9fb5241f8ff017aa85bcbae08"
+    },
+    {
+      "path": "src/PiSharp.Llm/Auth/SubscriptionConnectionStore.cs",
+      "lines": 166,
+      "sha256": "136f2da493f9987fe34eddd836a48f42fcd5e69c9a21a0517bf18a0702081664"
+    },
+    {
+      "path": "src/PiSharp.Llm/Auth/SubscriptionOAuth.cs",
+      "lines": 306,
+      "sha256": "479843aa0854c865e3dd58d8c3bff3b79e80acded2fd08db2f371a7122b063cd"
+    },
+    {
+      "path": "src/PiSharp.Llm/CacheStats.cs",
+      "lines": 107,
+      "sha256": "e9a4d76d93e33ecac68d83135ce975d8aedc5882d2cf161c9a8d8b2af3b46aed"
+    },
+    {
+      "path": "src/PiSharp.Llm/ContextCeilingVerifier.cs",
+      "lines": 238,
+      "sha256": "c7dbf84f337fa851fdeca7bd8e24dd0d34e9981baa4179d0defacc0629f00f99"
+    },
+    {
+      "path": "src/PiSharp.Llm/Http/RetryPolicy.cs",
+      "lines": 123,
+      "sha256": "95eaa50196cf293bc362d896f6ee37bf671097d73d723aab550fc83896e8fc10"
+    },
+    {
+      "path": "src/PiSharp.Llm/Http/SseReader.cs",
+      "lines": 68,
+      "sha256": "ac5fae177fb87042d1d160f227f09bfc0742bbadebe0e2a1cc12c8a34a45b3f7"
+    },
+    {
+      "path": "src/PiSharp.Llm/Json/StreamingJson.cs",
+      "lines": 351,
+      "sha256": "5516a6ca75f64155c67e2b9cb9f16f3d6afb2e0c724bf1b925e9eab419407109"
+    },
+    {
+      "path": "src/PiSharp.Llm/NotebookEmbeddingsClient.cs",
+      "lines": 54,
+      "sha256": "b805963c963c74e6f1e6ed876682047848721e9fd6c2792d8d54c01889af1219"
+    },
+    {
+      "path": "src/PiSharp.Llm/OpenAi/ChunkAssembler.cs",
+      "lines": 372,
+      "sha256": "ec96d6b518d633a148ebc827f5d15794248789a79abcc94b239d298de8b15b6f"
+    },
+    {
+      "path": "src/PiSharp.Llm/OpenAi/ConstrainedSampling.cs",
+      "lines": 264,
+      "sha256": "9bfc73e8b1baa82dfafc0b6a9b089b81b464c9d2edc1d7322e3fca7d18f0542f"
+    },
+    {
+      "path": "src/PiSharp.Llm/OpenAi/DegenerateOutput.cs",
+      "lines": 70,
+      "sha256": "9192af0394bf06fa464eb9f6289f70c1b8c2104f9979a541f36e48b947b45b5f"
+    },
+    {
+      "path": "src/PiSharp.Llm/OpenAi/MessageTransformer.cs",
+      "lines": 148,
+      "sha256": "38452bea54d91825fb989705d2de668e90eda1d71f8e1753677f99c661edb652"
+    },
+    {
+      "path": "src/PiSharp.Llm/OpenAi/OpenAiCompletionsClient.cs",
+      "lines": 702,
+      "sha256": "0ac1aad0fbaf3f9516eb9c86d9686ba43fff1125ba559892f25cbcff8254fba4"
+    },
+    {
+      "path": "src/PiSharp.Llm/OpenAi/RequestBuilder.cs",
+      "lines": 353,
+      "sha256": "ccc6bb79a71a8ad1a59f51302657d3c788ae32dac261765402db7ed8ca161b90"
+    },
+    {
+      "path": "src/PiSharp.Llm/OverflowDetector.cs",
+      "lines": 137,
+      "sha256": "ebe8a0b682b4d0ffbde2f26221daf875cc89b68cfb59247dcafb2766fe99cc35"
+    },
+    {
+      "path": "src/PiSharp.Llm/PiSharp.Llm.csproj",
+      "lines": 13,
+      "sha256": "cf93bf1b02326c7a2888ee31fc157769d30d52fda4163e5488d6cb9c197ec924"
+    },
+    {
+      "path": "src/PiSharp.Llm/Responses/ResponsesAssembler.cs",
+      "lines": 220,
+      "sha256": "621a80281191b947ef52467f5940c8c573b46813eeaad07e3e6b0724c9a21006"
+    },
+    {
+      "path": "src/PiSharp.Llm/Responses/ResponsesRequest.cs",
+      "lines": 179,
+      "sha256": "c9a23ba8680a6899082de3ac7106436ad592a526476b83e462d1dc447f1deb64"
+    },
+    {
+      "path": "src/PiSharp.Llm/Responses/SubscriptionResponsesClient.cs",
+      "lines": 314,
+      "sha256": "0a2a54c1d4cbbc610dc2344c614b815351159aed090846ab0d8e46a2a42967ba"
+    },
+    {
+      "path": "src/PiSharp.Llm/SubscriptionBrokerTrust.cs",
+      "lines": 76,
+      "sha256": "762575be099c6cafefc1c37008096cd1924292a2dbfca2119a66e26b39ee5219"
+    },
+    {
+      "path": "src/PiSharp.Llm/SubscriptionRouter.cs",
+      "lines": 88,
+      "sha256": "79fbeb16afa8f877e65f3497fcf34bcaa544383d4bdceabdddb5f3d1ada8ce39"
+    },
+    {
+      "path": "src/PiSharp.Tools/BashTool.cs",
+      "lines": 851,
+      "sha256": "7b5829a9922dc2fccab4cdeba396378ba0fdfa57d32beb9dcb3411b12ce1dce2"
+    },
+    {
+      "path": "src/PiSharp.Tools/BuiltinTool.cs",
+      "lines": 40,
+      "sha256": "b70878c5cc212ec6c126edb71e0d92e85f4cd02a0558a9fc2ef9219247cfd4c4"
+    },
+    {
+      "path": "src/PiSharp.Tools/BuiltinTools.cs",
+      "lines": 44,
+      "sha256": "971af59b182307b7a46ee5802dbb4eb1a6f1abfb531c8b1ef613b641e85b6c6f"
+    },
+    {
+      "path": "src/PiSharp.Tools/CheckpointListTool.cs",
+      "lines": 78,
+      "sha256": "60b1161f4ffb48e9a7c4adba7bf4e6b2ac24dcff1f545ea2cf02d79ae34e7a11"
+    },
+    {
+      "path": "src/PiSharp.Tools/CheckpointSelector.cs",
+      "lines": 30,
+      "sha256": "d4f316e736fa91671c41152fc71f7b0cb7529858f3c56dee5017769d25ea1ac2"
+    },
+    {
+      "path": "src/PiSharp.Tools/ContextRemainingTool.cs",
+      "lines": 62,
+      "sha256": "b7a01fd7460d9bfd3c954b0ef72a6b9ee262a43dcf1a37a185b0561a4a664243"
+    },
+    {
+      "path": "src/PiSharp.Tools/Desktop/AtspiHelper.cs",
+      "lines": 213,
+      "sha256": "75486608ffe253c27ca72f55b36cbd1ca88cd712e21ce89c8699d595d0a16132"
+    },
+    {
+      "path": "src/PiSharp.Tools/Desktop/CapturePublisher.cs",
+      "lines": 45,
+      "sha256": "f1a22cb290accdcb71de42d01f01592f078db8e5200ae559161b7c25075da2ce"
+    },
+    {
+      "path": "src/PiSharp.Tools/Desktop/DesktopRunner.cs",
+      "lines": 61,
+      "sha256": "3935673dfeee46c6426fb5bbccee351b24ede9f09cb9af91c321d476e4a022b7"
+    },
+    {
+      "path": "src/PiSharp.Tools/Desktop/DesktopToolkit.cs",
+      "lines": 498,
+      "sha256": "1346d170df36590ec42b6f191dab98feea6034bc29bdabba16e32a39f11788e2"
+    },
+    {
+      "path": "src/PiSharp.Tools/EditDiff.cs",
+      "lines": 447,
+      "sha256": "1bf247623a78e5e7aab30412fea2f43e5e29888397d101eaa6e5dcb418b7498d"
+    },
+    {
+      "path": "src/PiSharp.Tools/EditTool.cs",
+      "lines": 144,
+      "sha256": "d5f1749dc34cf69c3d0a31a11d9ff08ff5e930940bb0d9556e9a0bb0e951c99b"
+    },
+    {
+      "path": "src/PiSharp.Tools/ExploreTool.cs",
+      "lines": 195,
+      "sha256": "6cb6a192f6ebb5fe3da518f40e4ae95a826ad47849da72e9dc871ced397dfd0f"
+    },
+    {
+      "path": "src/PiSharp.Tools/FileMutationQueue.cs",
+      "lines": 70,
+      "sha256": "b9cf03d4f691913151544fbef3a007744c309305b6b505231897cb26fc04a527"
+    },
+    {
+      "path": "src/PiSharp.Tools/FileReadTracker.cs",
+      "lines": 44,
+      "sha256": "b368f3ace77de67a2850bf7f929294bcc5c85c9c9aeb69f60f1769dde32b7f5b"
+    },
+    {
+      "path": "src/PiSharp.Tools/FindTool.cs",
+      "lines": 102,
+      "sha256": "ce96f500273bcf57222d47d3bdd19fdc21de0c7284229d856657a807aa46ab27"
+    },
+    {
+      "path": "src/PiSharp.Tools/GitIgnore.cs",
+      "lines": 258,
+      "sha256": "9c87f5b30dbbb8ba3e941f86416b3cca833079bf21207416acc006c306df0a50"
+    },
+    {
+      "path": "src/PiSharp.Tools/Glob.cs",
+      "lines": 114,
+      "sha256": "2200e2dd5dbcb70ff9f3525097577779a21d3ab86a5072bcb2c3d81377883f4b"
+    },
+    {
+      "path": "src/PiSharp.Tools/GrepTool.cs",
+      "lines": 288,
+      "sha256": "20ffecc8855be321ebd8bb817f340135eff953240ee894334d21b1e0e4d4b8ad"
+    },
+    {
+      "path": "src/PiSharp.Tools/ImageSniffer.cs",
+      "lines": 213,
+      "sha256": "3edbc23152235a535b193b42f5701257b4b521b5c1879c4bd8561a6a82cf152a"
+    },
+    {
+      "path": "src/PiSharp.Tools/ImageWarnings.cs",
+      "lines": 28,
+      "sha256": "8b11de5cba8ea3e13d59476c2b9029c51aab02ce96751ad4501f1dd3c18cc4a3"
+    },
+    {
+      "path": "src/PiSharp.Tools/JobTool.cs",
+      "lines": 304,
+      "sha256": "2f088d48699599e2a99c3936f008fe9aa5807683fc3e6f3840afbf7da8127ba9"
+    },
+    {
+      "path": "src/PiSharp.Tools/LineDiff.cs",
+      "lines": 267,
+      "sha256": "9ada8621f676ec998602dac837a4bd372b822ea2a1da65fce81d53fb296030f1"
+    },
+    {
+      "path": "src/PiSharp.Tools/LsTool.cs",
+      "lines": 97,
+      "sha256": "de58948fe48621252673a863d40ff41d0720272ba7d5acb2c7f1a7eef0043333"
+    },
+    {
+      "path": "src/PiSharp.Tools/OutputAccumulator.cs",
+      "lines": 213,
+      "sha256": "d4a940518f5a7f415fffd10d0a6812601d04d512be178df25a12eb2025a08736"
+    },
+    {
+      "path": "src/PiSharp.Tools/PatchTool.cs",
+      "lines": 496,
+      "sha256": "71228055cf768ea8997f6ab7f5539bc89cf763e0901362579fb7a920caadf383"
+    },
+    {
+      "path": "src/PiSharp.Tools/PiSharp.Tools.csproj",
+      "lines": 16,
+      "sha256": "d086893c722c32f19fc0da632959eee63f1ce5cbde61d55c1608aebf25289a5f"
+    },
+    {
+      "path": "src/PiSharp.Tools/ReadTool.cs",
+      "lines": 189,
+      "sha256": "e28439a61b2fbb947ee02b29964cad368475d1e43e8cff99cbed7b5bd1980c0c"
+    },
+    {
+      "path": "src/PiSharp.Tools/ReviewTool.cs",
+      "lines": 91,
+      "sha256": "554f2eb611591191b8bc09b17bca02c8fa063550fcc9440b7e6cb836fce276e1"
+    },
+    {
+      "path": "src/PiSharp.Tools/RewindTool.cs",
+      "lines": 105,
+      "sha256": "a11ef86460d6bc4c410d083023d1c059e7aaffdf379245df267e34bacf13f20e"
+    },
+    {
+      "path": "src/PiSharp.Tools/RunTelemetry.cs",
+      "lines": 77,
+      "sha256": "9558875c1e5938384d44829db22536be20a014eac4f0addb608295819cf5c533"
+    },
+    {
+      "path": "src/PiSharp.Tools/SessionOutput.cs",
+      "lines": 44,
+      "sha256": "a30ea234480f0e96202290877c11de56260756d5c6c6c244eb3f8b5e49583c40"
+    },
+    {
+      "path": "src/PiSharp.Tools/ShellEnvironmentPolicy.cs",
+      "lines": 33,
+      "sha256": "9cd060fc871e01fb2210f09957a642b1d35f636c00835160917dd01e25b8d7bd"
+    },
+    {
+      "path": "src/PiSharp.Tools/TaskTool.cs",
+      "lines": 343,
+      "sha256": "ccb6198964a9d4855d08eb785692684f12e8ce736ec7ecdcb1e119616a218443"
+    },
+    {
+      "path": "src/PiSharp.Tools/ToolPaths.cs",
+      "lines": 62,
+      "sha256": "48f1c75d954f562dd49aceacf8b66e2de295258b135c2d2ae3b5ada764ec5d19"
+    },
+    {
+      "path": "src/PiSharp.Tools/ToolsJson.cs",
+      "lines": 106,
+      "sha256": "6ea75ac54cfe2e2be982f2261c06eca686c43592f848e70e6b68ff0eff57201f"
+    },
+    {
+      "path": "src/PiSharp.Tools/Truncation.cs",
+      "lines": 254,
+      "sha256": "b8a3fb994f216a3f6a37c32f94a01599bb409e8b0549cd5c0e78d09743fa8747"
+    },
+    {
+      "path": "src/PiSharp.Tools/TurnDiff.cs",
+      "lines": 140,
+      "sha256": "2184fd3feec5d3cddffece79c2f5ac522826812479f2b15c0c253310f3928efd"
+    },
+    {
+      "path": "src/PiSharp.Tools/WriteStdinTool.cs",
+      "lines": 90,
+      "sha256": "c1d6a6cfd72b2afc19218914d1f64128107231fd859ab83ff0263a34ced5e182"
+    },
+    {
+      "path": "src/PiSharp.Tools/WriteTool.cs",
+      "lines": 62,
+      "sha256": "e88a106adc4a2d035dfeb8223ff5e13220b11ab5fb42623d3fbb633ac657a1dd"
+    },
+    {
+      "path": "tools/PiSharp.Browser/PiSharp.Browser.csproj",
+      "lines": 7,
+      "sha256": "a6ceeaa24ed33394c70d3abd5a41f6f3fcd05c33dffbed5021fee29fce535271"
+    },
+    {
+      "path": "tools/PiSharp.Browser/Program.cs",
+      "lines": 146,
+      "sha256": "c3e6dac5dcc85dacf4b8560b963481b47fedfe7026c44d20d1aa99a46547c43a"
+    },
+    {
+      "path": "tools/PiSharp.MemoryEval/DeterministicChecks.cs",
+      "lines": 47,
+      "sha256": "0ae412d3f3497b78348b70583910f61c423c8f64b8335154b125c2e0d0c17eda"
+    },
+    {
+      "path": "tools/PiSharp.MemoryEval/EvalSuite.cs",
+      "lines": 85,
+      "sha256": "ea4ebe83805d9303f827fc585294b80f6a466771eda948eccbc9c4457b002b2d"
+    },
+    {
+      "path": "tools/PiSharp.MemoryEval/Evals/baselines/memory-recall.json",
+      "lines": 19,
+      "sha256": "95a0e9a7082455ad4d356779f86f51bb0bb0ac5c41743d217816dbad260de427"
+    },
+    {
+      "path": "tools/PiSharp.MemoryEval/Evals/memory-recall.json",
+      "lines": 187,
+      "sha256": "30d28147f837bd3e14cff152e5ad32acc10c4eb3bab480c04ecee7e6ec634cb9"
+    },
+    {
+      "path": "tools/PiSharp.MemoryEval/Judge.cs",
+      "lines": 154,
+      "sha256": "172c9745610644ed5304f279a81e1e64a0789b32f966f0757701e13fa2456233"
+    },
+    {
+      "path": "tools/PiSharp.MemoryEval/JudgeProfile.cs",
+      "lines": 69,
+      "sha256": "f0f81b9891eeabe37383c659a1bfc422a4e0e64008d81dede1035159b6b0f4a3"
+    },
+    {
+      "path": "tools/PiSharp.MemoryEval/MemoryEvalJsonContext.cs",
+      "lines": 20,
+      "sha256": "76e6c13141aaeffb37457496a1c20a356212c5f9bc6c2ba90b9d0c4fb7ceab04"
+    },
+    {
+      "path": "tools/PiSharp.MemoryEval/PiSharp.MemoryEval.csproj",
+      "lines": 28,
+      "sha256": "e21941c6e4fc4878b05e39a95867fdd97f9f8478b9922d6022b608d4cb113106"
+    },
+    {
+      "path": "tools/PiSharp.MemoryEval/PipelineEvaluation.cs",
+      "lines": 173,
+      "sha256": "23dedccb2d0b08fb7c0ef2186574acc90ba9902584e919cee431cbaabb0dd647"
+    },
+    {
+      "path": "tools/PiSharp.MemoryEval/Profiles/miniclaude_judge.json",
+      "lines": 9,
+      "sha256": "89a609f84e9afea64414bbd9b2cf45e609a0fcdf01d2d679a10439d3bcd0c685"
+    },
+    {
+      "path": "tools/PiSharp.MemoryEval/Program.cs",
+      "lines": 114,
+      "sha256": "f2c9f0dd4456da2ce84c5adb99786a56ed6c5559dcb49fe24c9d4f1939fe42c6"
+    },
+    {
+      "path": "tools/PiSharp.MemoryEval/README.cs",
+      "lines": 11,
+      "sha256": "a4b477674004e70d011f41725163a8b38364b7acb5c26298579fc05522fac1b7"
+    },
+    {
+      "path": "tools/PiSharp.MemoryEval/RunReport.cs",
+      "lines": 131,
+      "sha256": "e0d50f8aef280919cdd050309e9ce62b995672b634d9cff4bb99b79b9ce64307"
+    },
+    {
+      "path": "tools/PiSharp.NotebookCanary/PiSharp.NotebookCanary.csproj",
+      "lines": 4,
+      "sha256": "24f186c0ce0f9202b0f39a0fdcd84535e1cab3ed19d38436f4b053d99e52e02d"
+    },
+    {
+      "path": "tools/PiSharp.NotebookCanary/Program.cs",
+      "lines": 52,
+      "sha256": "0d690974e792a4e46399492ebf864b89573fe50a8e61cb3b0feb46684d4f48df"
+    },
+    {
+      "path": "tools/PiSharp.RuntimeBench/PiSharp.RuntimeBench.csproj",
+      "lines": 4,
+      "sha256": "9676667c84197056f39f92eee3355081af346b7da8ca19e9ba12e4b43be6a6e6"
+    },
+    {
+      "path": "tools/PiSharp.RuntimeBench/Program.cs",
+      "lines": 45,
+      "sha256": "4764ce979a230f013867f9908bb11603648676b309ddcecd07b2b0d8fd3499aa"
+    },
+    {
+      "path": "tools/PiSharp.SkillStore/PiSharp.SkillStore.csproj",
+      "lines": 14,
+      "sha256": "659b7d3ca05e71a0c9615c0e3ce3be1761e6e6437a3e432f5d26c650773a1765"
+    },
+    {
+      "path": "tools/PiSharp.SkillStore/Program.cs",
+      "lines": 12,
+      "sha256": "aaf432a58741eeb8924705db5bd3428bc5b3195713563b4fcbac061292ddb0cc"
+    },
+    {
+      "path": "tools/PiSharp.SkillStore/SkillStoreHost.cs",
+      "lines": 349,
+      "sha256": "d56a56a9740dc085590d1b6826326bd7177d437acf68186a4cfa7377ccaabd92"
+    },
+    {
+      "path": "tools/PiSharp.WebMcp/PiSharp.WebMcp.csproj",
+      "lines": 6,
+      "sha256": "d490c1cd49a4b3b6171823c4103df4e904b247a9eb0c6188c6311ac4f22dbb24"
+    },
+    {
+      "path": "tools/PiSharp.WebMcp/Program.cs",
+      "lines": 90,
+      "sha256": "6ef2ca16df782a7dede31f150a62b39d869e3694d930f3fc89dca00363d23b55"
+    },
+    {
+      "path": "tools/PiSharp.WebMcp/WebTools.cs",
+      "lines": 170,
+      "sha256": "76ee25860049c610d5c07c4102edd144097694504fa17695b23fad738b10f985"
+    },
+    {
+      "path": "tools/probes/check-hh3-session.py",
+      "lines": 55,
+      "sha256": "533b7adbdf0356fca2f07f28d8eedbc8eb698ea0b0b4f1a3df9eccf6faef2091"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Agent/AgentLoopTests.cs",
+      "lines": 1324,
+      "sha256": "d9bbd4cd37408809008e1684e1dfda25fc72a40048a1cd69932e89bbfb9f6025"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Agent/AuditLifecycleTests.cs",
+      "lines": 135,
+      "sha256": "ed03429a9b0be0c9faa74a1ed5f3c6641676b341885db8e996500c0c42fdd761"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Agent/AuditRegressionTests.cs",
+      "lines": 259,
+      "sha256": "dfc9b36d127ebcfecf384498749113f1ed4f19d57c99a88de80b0088adf81e99"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Agent/CommandHookRunnerTests.cs",
+      "lines": 99,
+      "sha256": "4fc2ff2d685e23f430ba2dd20d60849a9a5b1bd6e40c5ed3fa8255717d2d8e30"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Agent/Fakes.cs",
+      "lines": 131,
+      "sha256": "ef556ac995f3818a9cffc2ebc40d6acca9b138ada828b6fc257aeae226b51036"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Agent/GuardCountersTests.cs",
+      "lines": 310,
+      "sha256": "785878dfa8a39a6bb5c62e77a5bf1fa96ebe0e650fc1ceba2d1308a49ebe98f6"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Agent/GuardDistilTests.cs",
+      "lines": 346,
+      "sha256": "f254e88dff8316e99a708f738acccc8930320d84548abceb4fafebebb5d6e8ff"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Agent/ParallelSafeToolsTests.cs",
+      "lines": 61,
+      "sha256": "4d45912a997e406e2c1eafdbc7d7f815ecca6045147c4528a9a0dc50747b7845"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Agent/TextToolCallParserTests.cs",
+      "lines": 96,
+      "sha256": "78e7486b19bca2b9664fa4cbb8631a7bdd77d2b16d6b81a092499ff599c8c937"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Agent/ToolArgumentValidatorTests.cs",
+      "lines": 298,
+      "sha256": "37d0db1cf62b758c15e4601a4b7a7c5141f30b01f6d1189e9b138348ff3c0986"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Agent/ToolCatalogTests.cs",
+      "lines": 74,
+      "sha256": "90939024d86d09f97aed8d634fb38dad67bce017d23c048bac0d0e95429c86be"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Agent/ToolEfficiencyTests.cs",
+      "lines": 102,
+      "sha256": "02ad6543fb28de12fcc40a09d58dd472561daa09e012b91d30606cb8648c4a30"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Agent/ToolFrictionTests.cs",
+      "lines": 211,
+      "sha256": "1b71ff9dda2dfb34acaff78e215dc1fa2a8ffae9cb564a68d9112064b6a75c6d"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Agent/ToolGuardTests.cs",
+      "lines": 202,
+      "sha256": "bb1679ee744aa7a3b7b2477b8f3ce4ff2e4b758d4c6507091da439a16b014650"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Checkpoints/CheckpointStoreTests.cs",
+      "lines": 704,
+      "sha256": "333f4fbf331cb07a7ee8c9f80135c9baa833c51508d01ac272105a5120bb9a8c"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Checkpoints/GreenHintTests.cs",
+      "lines": 172,
+      "sha256": "03901e4f2998d6c4dd2a3c7c61f42937841c60d2079a587d673959ddc907367a"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Cli/ArgsTests.cs",
+      "lines": 62,
+      "sha256": "cb73cd8ba2ec1720861f33cdf7fc740bdc02dd4ce7356e336ccfc45a0ee3e858"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Cli/AttachmentsTests.cs",
+      "lines": 112,
+      "sha256": "1e5da19480976d3ea2dcc435e5dc6d716c56ee2b41dfabecb3dfe073f76bb503"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Cli/CliHostTests.cs",
+      "lines": 645,
+      "sha256": "fd254afdd596111150f0e5c13529cf729d25b77aa4c096f7b4becc8e88258e86"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Cli/ConsoleRenderingTests.cs",
+      "lines": 194,
+      "sha256": "fee9772946c19ff96fad2e8266e45388288dead7666c90d3369765872426f261"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Cli/GuardCommandTests.cs",
+      "lines": 201,
+      "sha256": "8e8600463ccc045147851964b8c6c8e4b96f34662ab568423fc572f7d1781ae7"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Cli/JsonEventTests.cs",
+      "lines": 56,
+      "sha256": "858834026e800988131ef540e67ce6c6de88752d19c16db390f3743de4fa01ee"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Cli/SeatAssignmentSwitchTests.cs",
+      "lines": 458,
+      "sha256": "90be10854f72dfb2b901933fd945a800451d0c2432a7b962f0d30dbbde4ee829"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Cli/SelfUpdaterTests.cs",
+      "lines": 146,
+      "sha256": "819864bb64862f4368e5625e964f00435711093b4b18c7b3c50818aad5a5a9ed"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Cli/SlashCommandTests.cs",
+      "lines": 96,
+      "sha256": "348851e6d59d43ec8576ded71f8a7d9eaad804bfbde7f31a2819d40b79c6afdb"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Cli/SubscriptionCompactionTests.cs",
+      "lines": 81,
+      "sha256": "c84a0f1096883265dfa95c4b71294fb01a0f9d4a8a6870e2683c4150c0a729dc"
+    },
+    {
+      "path": "tests/PiSharp.Tests/CodeIntel/AsyncAttachLifecycleTests.cs",
+      "lines": 609,
+      "sha256": "368951120cd5e19aeb411809c768e43401f05a18da45e49dd716feb8bb1c6930"
+    },
+    {
+      "path": "tests/PiSharp.Tests/CodeIntel/CodeIntelFeedbackTests.cs",
+      "lines": 413,
+      "sha256": "fd4243538608c683c94d6e65ac7fdc5486037967a2db961870cdd53d0e198002"
+    },
+    {
+      "path": "tests/PiSharp.Tests/CodeIntel/CodeIntelOptionsBindingTests.cs",
+      "lines": 29,
+      "sha256": "8d37fec8c7a7bbbcdc2e5ed92e233db1e5930b9f297117f8e87b8d7a2b92fa3a"
+    },
+    {
+      "path": "tests/PiSharp.Tests/CodeIntel/CodeIntelReadToolsTests.cs",
+      "lines": 643,
+      "sha256": "91e45534055283711ad4e849a5a0810c0bb2369be901c7efaa5f1bf4fd5a1d06"
+    },
+    {
+      "path": "tests/PiSharp.Tests/CodeIntel/CodeIntelTests.cs",
+      "lines": 499,
+      "sha256": "8743b3049cbf8e9ecd412398b3a4fe7c63e3ca6ff15d2583735399da3b083eb1"
+    },
+    {
+      "path": "tests/PiSharp.Tests/CodeIntel/LsReadinessTimeoutTests.cs",
+      "lines": 165,
+      "sha256": "9d70458b7205f575e48b23bdc888d3f0ccc8c03969033192025242bdf3b37103"
+    },
+    {
+      "path": "tests/PiSharp.Tests/CodeIntel/McpSessionTests.cs",
+      "lines": 78,
+      "sha256": "8894174ee20b2d5b99a63f2812196eba616c0d2382399e6293389cfa2ba1595a"
+    },
+    {
+      "path": "tests/PiSharp.Tests/CodeIntel/WorkspaceManagerLauncherTests.cs",
+      "lines": 30,
+      "sha256": "51b694327703367cfcfca76ec0981f730257a24610d22ddac173d1a1dbdb36d0"
+    },
+    {
+      "path": "tests/PiSharp.Tests/CodeIntel/WorkspaceManagerMirrorTests.cs",
+      "lines": 97,
+      "sha256": "4cf6db9417a7b97645a95ccef94b65143aa923bc6eda8aaa223f93c47f890dc8"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Compaction/CompactionTemplateTests.cs",
+      "lines": 135,
+      "sha256": "bdc6fbfbd99e37ff1604acfc2882975adc932a35ab15202cd885f2f4209ac052"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Compaction/CompactorTests.cs",
+      "lines": 284,
+      "sha256": "347b752a67e06650115cc8bb427075643af4f13cc2e1c17986dc627c7b9d8581"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Config/FactorySettingsTests.cs",
+      "lines": 132,
+      "sha256": "03d1d0d5c593526c8754b1da66d0090c18a010359383b04bf3f1e716d021df50"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Config/FrontmatterTests.cs",
+      "lines": 41,
+      "sha256": "d0edc24fd1413078cf1ee22d1371827e63164c3c6475bf24dc12e59eed0378cf"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Config/ModelsFileTests.cs",
+      "lines": 126,
+      "sha256": "7a4883cbd9a74db2c538c1e7c76b26e0f729dac45e0430f6b2f1693f809bd3e2"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Config/PromptTemplateTests.cs",
+      "lines": 50,
+      "sha256": "3b14295a77669030b32d6454a87816a7c53a70841537ca7de6b73795dacbb53f"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Config/SettingsTests.cs",
+      "lines": 155,
+      "sha256": "01932e8e13881f4812f4f926e05399a28f1e23de3aa912227178e4d8ab7078ed"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Config/SkillsTests.cs",
+      "lines": 94,
+      "sha256": "6f4674b4e519f08e2b775eec9d57cd5474a91783b9cb54c50d4eb130528a3174"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Config/SystemPromptTests.cs",
+      "lines": 88,
+      "sha256": "2dfddc2820d12df817e435a26df808060e98e7c5a4b3e23dd3f7d082a17a47c0"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Factory/EpicBudgetTests.cs",
+      "lines": 45,
+      "sha256": "df822024da2d77130353391e873880058d6f5d70367091725190d53ca8172f4f"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Factory/FactoryBacklogSwitchTests.cs",
+      "lines": 266,
+      "sha256": "9c7444812ba849b1c4f48f4e635d36e60a2c3eded773a8b2d8f0e66dfd88fa47"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Factory/FactoryClientTests.cs",
+      "lines": 1041,
+      "sha256": "ef769cb7ca25eaa5cfd78e1d1904b418a6419b0fe4d569c410c96317294b110c"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Factory/FactorySteeringTests.cs",
+      "lines": 4332,
+      "sha256": "09e76a32e5cf97a774bc39f0df1266d6aed9f3feaacbcaeaa32a226b0892cbd2"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Factory/HandInGateTests.cs",
+      "lines": 115,
+      "sha256": "bac21b7058f2966e5d797d9d18541ed2b6e3e9c292068f5b9519ed644c5ce9cc"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Factory/SeatMigratorTests.cs",
+      "lines": 207,
+      "sha256": "60ca35b730793365ea79cb9b08ae93f67d3045744c619e5735ca3cd0b82ede3f"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Factory/StatusGateToolTests.cs",
+      "lines": 70,
+      "sha256": "9b79151f2dbe1397e844ad3697e2444776cc9d0b7c13827f67b355a8dab39cf5"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Guard/ActionReviewerTests.cs",
+      "lines": 77,
+      "sha256": "9cab6fdd394a1f744a99c0dd01c3937a265d8383bf00435ba5242cad7b654649"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Guard/CorrectionCaptureTests.cs",
+      "lines": 109,
+      "sha256": "1ea695e0daaffe3ff8b0b696a2bc4fd8711fda58001e252af3e5a9bf8d8e5de9"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Harness/CubicleCliTests.cs",
+      "lines": 227,
+      "sha256": "5fdf669b231f4953092d9d24b7cf15dadc2d08f3472c320bb4f4110f1faff25f"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Harness/CubicleClientTests.cs",
+      "lines": 121,
+      "sha256": "eaa0d439654dbcf3e99a225c66a92cf37413a5e1018e041137a66cd2f9e24b2b"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Harness/CubicleConfigTests.cs",
+      "lines": 81,
+      "sha256": "7ee87bd63b384ca765bd121244ac51eeeaa9e43e4691d929b9f1afa0f73dc021"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Harness/CubicleEnvironmentCollection.cs",
+      "lines": 5,
+      "sha256": "6e697b6b64130ea23783ad18818acdd96ed3011e3b7578f618be7b131cb9a9a4"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Harness/CubicleSteeringTests.cs",
+      "lines": 133,
+      "sha256": "90054767bd6d8e00b930f7d917cde1aa7039abbeffcbee57db4712c7c9ae2dd2"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Harness/CubicleStub.cs",
+      "lines": 156,
+      "sha256": "6b1e1d9e002aa3fa53292a38bfb860b5cb4655de4a5ee03372e2554d818617c3"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Harness/CubicleTracerTests.cs",
+      "lines": 475,
+      "sha256": "2755b6fe1788bdcd81e2b00b5163c11e02a5d15488044c6ce0d9ad329d864386"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Harness/FactoryCliTests.cs",
+      "lines": 777,
+      "sha256": "087d342d5dbc9021cad7f66615e6b472a0f5292207bf9172c8511dc91d1f42b4"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/CacheStatsTests.cs",
+      "lines": 200,
+      "sha256": "ff9b83b5c38d7aafe96029b81b8fcb0d1687b815fdbba6d41a5ef599cc2333d1"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/ChunkAssemblerTests.cs",
+      "lines": 173,
+      "sha256": "409506ab56516aca86cbfab4c61eec1dbdd66792c951bcf13f48d75a25f6663c"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/CodexContextTests.cs",
+      "lines": 91,
+      "sha256": "c1b29c1a1bf34559b8ebc9faa1f64d5699baec50c561e27e9ef0571cf0f072a0"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/ConstrainedSamplingTests.cs",
+      "lines": 106,
+      "sha256": "951d276898d192641c9ce2b44fceb92ff04395e47fe7b63568155fc499980de2"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/ContextCeilingVerifierTests.cs",
+      "lines": 201,
+      "sha256": "d1a3d648d49acce14de71d2f58975af0d65e40b345f41408528898c7f2abd002"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/ContextOverflowResendTests.cs",
+      "lines": 66,
+      "sha256": "111f0a8fda22b51cfc4eb2c320bfd3abcb44edc21f743cd6a43d5f670b0acc08"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/DegenerateOutputTests.cs",
+      "lines": 289,
+      "sha256": "d9f4a91d10f67a3a1176d2ce8e51c30661898a7d498e9f05e2f6376cc8c71241"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/HttpHelpersTests.cs",
+      "lines": 198,
+      "sha256": "52150a1f19d1abbb41d8183c79c94f481dec53fb26b890da825cb023143e1233"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/LiveLlm.cs",
+      "lines": 213,
+      "sha256": "96664245b4af3a5de5a1096142b816f51cc4c6596e6d0171a2d3bd6b920869b8"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/LiveLlmSkipTests.cs",
+      "lines": 37,
+      "sha256": "377ec7e40df76d4d583c2976435ab800d5af818631a7665c77a044bca24a536f"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/LiveLlmTests.cs",
+      "lines": 347,
+      "sha256": "535f4a06204e7ad65462942135f7cca4140bc0c46cf61b291b45205f309be185"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/LocalProviderCompatibilityTests.cs",
+      "lines": 65,
+      "sha256": "8560241b2317cb0231c1cccfeee0434bbe02dc5c55b13641e6b010ba5c12eef6"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/NotebookEmbeddingsClientTests.cs",
+      "lines": 69,
+      "sha256": "810fdc57ed12b30e93f70a6280f2923cb190337faae1856769a53e0cceb0b8ef"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/RequestBuilderTests.cs",
+      "lines": 249,
+      "sha256": "190d6a6dbead0bc6930a1f1f4740f017750a9d4f089d0bce15b722d5bc9a48a2"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/StalledBodyTests.cs",
+      "lines": 341,
+      "sha256": "b2fdf8856fa6a321e3daa1e47ab21fafd4160c19c8a219a278406b0f028c7136"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/StreamRetryTests.cs",
+      "lines": 442,
+      "sha256": "b9edf46c80f01d518dd25e955087ee2ceda5e87bcb4a6657ff26f434af2d7af8"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/StreamingJsonTests.cs",
+      "lines": 81,
+      "sha256": "8a452e549b36a9b30e6569801c15350ec3abd23ae0d1e47639fa8d60bb4164fb"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/SubscriptionBrokerCaTests.cs",
+      "lines": 241,
+      "sha256": "c4f0efc62f99f5d4420f18a47a9e513779702aaf669b075ea9f874fa7b500d1e"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/SubscriptionConnectionStoreTests.cs",
+      "lines": 53,
+      "sha256": "6a18da362224a59370a224fb4acd203b652dc83a4b93643a90b7bcf4fdfc85cf"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/SubscriptionOAuthTests.cs",
+      "lines": 249,
+      "sha256": "ba98783193f3ea8c9c62a7e01b4dae00d8a6b66e1b81660a47f88bf58e7f610e"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Llm/SubscriptionResponsesTests.cs",
+      "lines": 443,
+      "sha256": "6b5f6638399d994195ee754981dc9f5ef253b71ffeef3f42c2647fdb3a3256e8"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Mcp/HttpTransportTests.cs",
+      "lines": 132,
+      "sha256": "73499957382ce409726dd487308598003939b7da7355ebe8c14d032d8cb3485d"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Mcp/JsonRpcTests.cs",
+      "lines": 81,
+      "sha256": "9d010776af735f5841972f33263a9ab283004c085da92ba8d8d52830c41ef293"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Mcp/McpClientTests.cs",
+      "lines": 280,
+      "sha256": "de17c101a237f95ae55ab65aa2bb0743fc69fa9a72142089c5347daf76a6a5f9"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Mcp/McpConfigTests.cs",
+      "lines": 119,
+      "sha256": "9e56224c7178d8afe2d7ee145145d523fe8cff7ca141860bb3ba4544f44bdd3b"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Mcp/McpContentMappingTests.cs",
+      "lines": 103,
+      "sha256": "d2d06de535e731d47b93958d4f12889beb1817a8f93fb22d21f31604e480250f"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Mcp/McpManagerTests.cs",
+      "lines": 205,
+      "sha256": "416902c1c47e96397ae747b16c6c32e4a60ef28a52f99db0ee1458e54273e9cc"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Mcp/McpStaleSessionRecoveryTests.cs",
+      "lines": 272,
+      "sha256": "b012b45083f4f5841fdd46a434526354d3fbce8d86afa7326b65f562d96d5fbd"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Mcp/Phase6SkillRetrievalTests.cs",
+      "lines": 73,
+      "sha256": "929dfeddd8b5d22cef79758f7f7083804a38f41a0ad2bf30b26a9118225ed17b"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Mcp/StdioSkillStoreTests.cs",
+      "lines": 33,
+      "sha256": "5f3b8c946802b259b39dbdbc65c81e377dab33527a7f43aed1d256afb1987b1d"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Mcp/WebMcpTransportTests.cs",
+      "lines": 50,
+      "sha256": "976612b910d9a0705daf88883f0c5b1e737eb264174c349a74db68c9e77ae706"
+    },
+    {
+      "path": "tests/PiSharp.Tests/MemoryEval/MemoryEvalHarnessTests.cs",
+      "lines": 159,
+      "sha256": "5410558f7d7d2d89cbc7f2b81721df4cfbbddac068fb7fc9f42a86b4534e237f"
+    },
+    {
+      "path": "tests/PiSharp.Tests/MemoryEval/PipelineEvaluationTests.cs",
+      "lines": 55,
+      "sha256": "887abb9a0bcc96149fee58bced02f8b23d98a198e6bed728958acc7745a7d83e"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Notebook/BudgetReminderTests.cs",
+      "lines": 261,
+      "sha256": "da186b3279a2ad4b2a16856ed5b669e253f96eded3c44acb54c410857534e21a"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Notebook/EfficiencyMemoryTests.cs",
+      "lines": 158,
+      "sha256": "624de8e7f27d30fae279f40ed0db69f879f36cb35f3a8775c8752c55fbdd4e48"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Notebook/MemoryTests.cs",
+      "lines": 474,
+      "sha256": "f80726b9a679418ef48715d4fc5549a0580af176f8dcca17d35377fdf9cb9e5d"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Notebook/NotebookShareTests.cs",
+      "lines": 318,
+      "sha256": "5c459e5eedb5f80aabaf81c6c9626a20898bcb526b859736b63f9a5dc5f8d8a7"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Notebook/NotebookSyncTests.cs",
+      "lines": 112,
+      "sha256": "93c320b1bed6336d92482d64deb74f02ce421c0f8c4ad613526a4f4ab64a36ee"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Notebook/NotebookTests.cs",
+      "lines": 134,
+      "sha256": "19f67198d4a6d8bba9198f79f387c0b65045f560b0d016a166efe04c1c78061b"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Notebook/NotebookUsageTests.cs",
+      "lines": 183,
+      "sha256": "ca923f9ab207905db6bfc2b56ab473aa9254fbaaa8b83e588c167086ec272ddc"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Notebook/OptimizationTests.cs",
+      "lines": 166,
+      "sha256": "25fae4a2eba3cb47546733aed1c717736410ee4f80a359bc4d513eb54556587c"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Notebook/PlanCheckGatingTests.cs",
+      "lines": 162,
+      "sha256": "e465e7bf7ce43d17b0bbab1b4249bd7df60bd0b2d8d3d0277762fb82888cff9f"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Notebook/PlanRecitationTests.cs",
+      "lines": 187,
+      "sha256": "3cfbb8cd0e5855052facf84f3ddadedd1891c4193eb19d899fb57b48d49f0b3e"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Notebook/PlanStepTests.cs",
+      "lines": 220,
+      "sha256": "b0dd5beca6d645abe2c7cd3927b456748e53750ae1f915f18db138b7d655d2b9"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Notebook/PlanToolTests.cs",
+      "lines": 59,
+      "sha256": "f349087e8a98b38d995d17c514f96a554c877a2cc24e132ea23a11917c804a55"
+    },
+    {
+      "path": "tests/PiSharp.Tests/PiSharp.Tests.csproj",
+      "lines": 31,
+      "sha256": "f3d07fca93df3f5655a15ef3993923ee2b8bfbe8536a3611ea33571c928e029a"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Session/AgentSessionTests.cs",
+      "lines": 301,
+      "sha256": "ce4ad9ca19572b2a55d6b18a74b64d771aa9c629a65991766890ec803b689cd2"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Session/CompactionHooksTests.cs",
+      "lines": 455,
+      "sha256": "4b92570775b662eacb40121184aa355ce2c024a37cbfd0e5bf54fed0d15070d4"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Session/CompactionModelSwitchTests.cs",
+      "lines": 148,
+      "sha256": "55db85291986d6b69857a2e99a5b2c7c5baf2d1d7ac70b25f196d2a0756c7128"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Session/SessionManagerTests.cs",
+      "lines": 118,
+      "sha256": "d75f0e4c44649640588873cfabdd54cb945f310b5ab518cd7b191755c9edf216"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Session/TokenEstimateTests.cs",
+      "lines": 88,
+      "sha256": "b4fce4bebe45eb45aac2fa7f6d053ec73bf80c01381817e4c2584e11dff9d301"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Skills/FrontmatterTests.cs",
+      "lines": 39,
+      "sha256": "3232b0b4ff66da156355f1b8c0a780ea0ca43b16f830690db90ff4bc6d7073e3"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Skills/PromptTemplateTests.cs",
+      "lines": 57,
+      "sha256": "e0db56bd46467988e1fc61ae1e9214c571286937833ff2a2fadc0963cba1f2d4"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Skills/SkillInstallerTests.cs",
+      "lines": 63,
+      "sha256": "b2a0ea9b4d936c4b4156b08b1ab1c29abfcb1315baf4aa88a0d78b85fc506b03"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Skills/SkillLoaderTests.cs",
+      "lines": 78,
+      "sha256": "433526de6f006088df8f8e5e23e8bd7615729a7f1400b31e7efe16e974e4a80d"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/BashToolTests.cs",
+      "lines": 324,
+      "sha256": "4d8cb85fcaa96fbd9713c93960b4ce7a6c6585cb39f60d185a61557b4d9b97f9"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/BuiltinToolsTests.cs",
+      "lines": 23,
+      "sha256": "8aa9a5b7fba58c0ab8de30f70d8b9767b2ab418c682ee5a07505434e2662e7f4"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/CheckpointListToolTests.cs",
+      "lines": 239,
+      "sha256": "f110d0b844dcd6d945dbf0849a9934a103b94c2179100212448fefef54080fc8"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/CheckpointSelectorTests.cs",
+      "lines": 45,
+      "sha256": "f05fa29bb4db9531cb398f8a0bcae0bc67686705ba8700478c50f3cbc02b8aec"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/CodexHelpersTests.cs",
+      "lines": 160,
+      "sha256": "46c8ceffe3ba9812a36275cb922b689b55f6692c9e72579eb362ebbbac4294d4"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/CodexToolsTests.cs",
+      "lines": 140,
+      "sha256": "9398c953995e2bbf235851991e954554ebdd73980d28b7b315f447c6044ec007"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/DesktopToolkitTests.cs",
+      "lines": 387,
+      "sha256": "887cede48dc93900ea590604c8057a341866a5653b7830070afca4a3b6f3e1dd"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/EditDiffTests.cs",
+      "lines": 153,
+      "sha256": "d44e63d32de5562b59c11e868e23ae42c28a63407f0f5b32735bd8a45ba82658"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/EditToolTests.cs",
+      "lines": 77,
+      "sha256": "12b33a48c203f37cef7b9e49188cec2f1726cc7519b383eece2477c275b23261"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/ExploreToolTests.cs",
+      "lines": 205,
+      "sha256": "4ce6e58df4694b008c95fc8e86c779a40970003978d1862cd2f81744a0f1f534"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/GitIgnoreTests.cs",
+      "lines": 93,
+      "sha256": "2ee762a682a7dacc9a1156f05fc31effbaaeb40b6c2a9f74f022f926793d5963"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/GrepFindTests.cs",
+      "lines": 235,
+      "sha256": "a8a0c072615d147aeb950b63869ac4afadf478a2fc636919ecee7657694acbd1"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/ImageDimensionsTests.cs",
+      "lines": 217,
+      "sha256": "e3e26c30aee67d13d7968d5a2124a6d9344025b5667203e76a74cfaae8fda6ec"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/ImageFixtures.cs",
+      "lines": 70,
+      "sha256": "898af41f9e85650d15a686243b8762044ca29c4428fce3ce686bf538718a2467"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/ImageSnifferTests.cs",
+      "lines": 71,
+      "sha256": "02f3f63439b8da420221dede409e1da9667035e0eb2c2bca07959fe276f3b86a"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/ImageWarningsTests.cs",
+      "lines": 65,
+      "sha256": "b632ccb99a4e6c15e1664e3b2de47959f22274c785d89a03abe92257a9fefbdb"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/InvalidImageTests.cs",
+      "lines": 239,
+      "sha256": "1b24340db307094206c40c9da1c4b57bf8e80904b784d4a115f7a3cc3fff833b"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/JobToolTests.cs",
+      "lines": 242,
+      "sha256": "4921b08175d4a02faceeb8fb34a09960f54e11b701e571eaad26e26996cc6170"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/LineDiffTests.cs",
+      "lines": 61,
+      "sha256": "75f4a9acdd52f6c3371e162fe15082ca0504813ad9f8427cfad8564fe8c3aa2a"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/NestedProcessGroupCancelTests.cs",
+      "lines": 457,
+      "sha256": "aca3adc40684b3c506d29acd2b8c11555b7309c6f4c1fa86bc54ba52532c05c8"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/OutputAccumulatorTests.cs",
+      "lines": 47,
+      "sha256": "717bffed0d0fc2aa21dea21cd3693da232157db6638efe9714e849693c73952a"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/PatchToolTests.cs",
+      "lines": 233,
+      "sha256": "918d45108a9c050785361f2d1ea4189d6a6f1b6c5c19945f6cc421d01a4ff68a"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/ReadGuardTests.cs",
+      "lines": 120,
+      "sha256": "d922522ffa05b3eb0a2cfd75cf8fadacb7c5746685f87fdfa0ec17a65818f2ee"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/ReadWriteLsTests.cs",
+      "lines": 165,
+      "sha256": "4a098b9d23d18cdfa9dcafefea793d521ec0415abb53aa25870abfe21708d855"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/RewindToolTests.cs",
+      "lines": 193,
+      "sha256": "7633ba7f8995ae4a9575e366cfd43739cb631288849fe96b9337b1f8d7955c94"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/ShellEnvironmentPolicyTests.cs",
+      "lines": 43,
+      "sha256": "9dd6b56ea1764fdd266aa9e4106467ff0128bc6b52880bf1b2df2c1797a9fd40"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/TempWorkspace.cs",
+      "lines": 49,
+      "sha256": "7369596b6a683b3db49f7535341cdc715fc138ecafa9f50060cc8320fa26e081"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/ToolPathsTests.cs",
+      "lines": 49,
+      "sha256": "c5f4bc72789c3af29d0f48bda793677dcb92f1d5e68245f4708d5e1b50e8d8be"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/TruncationTests.cs",
+      "lines": 109,
+      "sha256": "bf8b1cb2d0f0f63a8b1c79958e1b467c225e54d7782437648dc81fdd84e92508"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/TurnDiffTests.cs",
+      "lines": 207,
+      "sha256": "9dde64643d425fc893c0c844db142856f005066b4b7833bcbacf4ae782263688"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Tools/WriteStdinTests.cs",
+      "lines": 100,
+      "sha256": "572d39950e2f7de77210cd23ff24e5eab5eb0dd7803bca797369f10869aa4dea"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Verification/BackwardReviewerTests.cs",
+      "lines": 144,
+      "sha256": "f716f004b2ed60dff685664491d24f19e31885d75fba5851cbe9f5b0b5b81a5a"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Verification/DoneCheckProvenanceTests.cs",
+      "lines": 65,
+      "sha256": "43341a935a51075de5e336f45c83f4d6175aa952123c9079cfead65ac899a595"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Verification/RubricReviewerTests.cs",
+      "lines": 242,
+      "sha256": "e7361f7b15ae28371cbded394d87dd63b9c053a57db85f8704136ad5cedb4007"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Verification/VerificationStopGateTests.cs",
+      "lines": 50,
+      "sha256": "e2317e8820a713e3fbc985859f52dd21531deed2ed9cc2184a2c65ad07b2d000"
+    },
+    {
+      "path": "tests/PiSharp.Tests/Verification/VerifierTests.cs",
+      "lines": 236,
+      "sha256": "2701fab8ee2417713e5cd1c5dca024c00eda734d457c9d37fa403ff0df9d71c6"
+    },
+    {
+      "path": "tests/PiSharp.Tests/WebMcp/WebToolsTests.cs",
+      "lines": 90,
+      "sha256": "9d7ccef60efdf1c045f3067bff35c787cc473b6a0b1a987c15d8641977bb670f"
+    },
+    {
+      "path": "tests/browser-smoke.py",
+      "lines": 107,
+      "sha256": "a527c8cdbe658e0e03f0604b874f1783aebcf5f308b2e42867938c8e7ca762e9"
+    },
+    {
+      "path": "tests/context-profile-eval.py",
+      "lines": 87,
+      "sha256": "c481ed057528f0cee86688006d1d8865ce4c3187a9e4f8cafd70b0a0f4a8a7e9"
+    },
+    {
+      "path": "tests/continuity-eval.py",
+      "lines": 53,
+      "sha256": "1560c2d489e676e3d52e97789649556505dc794c1adbfa9225f08a71a470fc62"
+    },
+    {
+      "path": "tests/fixtures/DesktopFixture/DesktopFixture.csproj",
+      "lines": 13,
+      "sha256": "0bb0d46e46df405863ba55518d370361bcd3c307adad5b8b415d231d20d17bee"
+    },
+    {
+      "path": "tests/fixtures/DesktopFixture/Program.cs",
+      "lines": 33,
+      "sha256": "3b99ff1b907ee4f222ce36ec200eae05b797812698f7d45fa87188bec6bbbb04"
+    },
+    {
+      "path": "tests/model-concurrency-probe.py",
+      "lines": 25,
+      "sha256": "d376b070a4aba90a5a1aece279cfc4b804ae002beb0f49333da1820eba07d539"
+    },
+    {
+      "path": "tests/notebook-latency.py",
+      "lines": 16,
+      "sha256": "38ccaa732891094ed14cfe16b4751f186c6c7cf321c04f86d0d96c33f7c6d43b"
+    },
+    {
+      "path": "tests/probes/test_check_hh3_session.py",
+      "lines": 43,
+      "sha256": "935c8e00797be13642591d8da546debd76760ea57866c388b13f2c0952231a44"
+    },
+    {
+      "path": "tests/visual-repair-eval.py",
+      "lines": 53,
+      "sha256": "5b53d1fca75037d66d9ec713b712843a1450c0dc56fcdd6fe07fd196b6ef8b56"
+    },
+    {
+      "path": "scripts/build-actor.sh",
+      "lines": 38,
+      "sha256": "94d91ad65455007b437b533a3d6dc193b52210f99351e7bb33c1e4c425497791"
+    },
+    {
+      "path": "scripts/bump-actor-build.sh",
+      "lines": 49,
+      "sha256": "fe407e84fc84019a92d7b755387f63f3dacf6444210457899b682d4e181b0b40"
+    },
+    {
+      "path": "scripts/install-sandbox.sh",
+      "lines": 115,
+      "sha256": "bf7e5c32187f41d64af5e80e4579e37fc3aad65e793d4ee093ebb1b1d7c011ef"
+    },
+    {
+      "path": "scripts/package-actor.sh",
+      "lines": 51,
+      "sha256": "7f0cfe9d895a9864ee6c0634ca4a2d59c49221ba86f8c513737a6c18d89fa2da"
+    },
+    {
+      "path": "scripts/package.sh",
+      "lines": 34,
+      "sha256": "146481a7b2ddad7b4fd060d3656680f96476e80a0e3ccc19972a45dccf5ae585"
+    },
+    {
+      "path": "scripts/publish-aot.sh",
+      "lines": 22,
+      "sha256": "837b17b5bb5bff7bc40a3363f5ca786cb71958b7be1605ce89f6e37c48d12314"
+    },
+    {
+      "path": "scripts/publish.sh",
+      "lines": 24,
+      "sha256": "84cc669fe1436f1c0a7f4306f8a565ab6960cd10f6d0466e66210a2b27ed3792"
+    }
+  ]
+}

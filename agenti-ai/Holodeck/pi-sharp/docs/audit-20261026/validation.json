@@ -1,0 +1,77 @@
+{
+  "status": "completed locally",
+  "baseline": "f20e634b5101288fcbe787590cfbddf1c27d1ddc",
+  "branch": "codex-1/audit-remediation",
+  "build": {
+    "configuration": "Release",
+    "scope": "complete solution; final source",
+    "warnings": 0,
+    "errors": 0,
+    "log": "build.log",
+    "aot_compatibility_analyzers": true,
+    "native_aot_publish": false
+  },
+  "notebook_canary_build": {
+    "warnings": 0,
+    "errors": 0,
+    "executed": false,
+    "log": "canary-build.log"
+  },
+  "full_suite": {
+    "passed": 1587,
+    "failed": 0,
+    "skipped": 9,
+    "total": 1596,
+    "duration": "5m25s",
+    "log": "full-tests.log",
+    "scope": "Complete Release suite before two final defensive corrections: malformed acceptance-metadata exception handling and invalid-settings display fallbacks. The final targeted run covers those corrections and the affected audit, verification, factory and CLI contracts."
+  },
+  "final_targeted_suite": {
+    "passed": 110,
+    "failed": 0,
+    "skipped": 0,
+    "duration": "5s",
+    "log": "final-targeted-tests.log",
+    "scope": "Final source: Audit, RubricReviewer, HandInGate, FactoryClientTests, SlashCommandTests"
+  },
+  "process_lifecycle_recheck": {
+    "passed": 8,
+    "failed": 0,
+    "log": "process-lifecycle-recheck.log"
+  },
+  "cli_smoke": {
+    "help_exit_code": 0,
+    "version_exit_code": 0,
+    "configuration": "Release",
+    "version": "pi-sharp 0.5.0 (unreleased local source)"
+  },
+  "intermediate_failure": {
+    "failed": 1,
+    "passed": 1586,
+    "skipped": 9,
+    "total": 1596,
+    "configuration": "Debug",
+    "test": "ForeignReadEndHoldersAreNeverCollected_WriteEndIsTheOwnershipProof",
+    "log": "intermediate-debug-tests.log",
+    "follow_up": "Passed alone, with the full process-lifecycle group, and in the Release full suite; cause remains unconfirmed."
+  },
+  "benchmarks": {
+    "file": "benchmark.json",
+    "records": [
+      100,
+      1000,
+      10000,
+      100000
+    ],
+    "no_models_or_factory_calls": true,
+    "shared_host_with_validation": true
+  },
+  "not_exercised": [
+    "Windows execution",
+    "native AOT publish",
+    "live providers",
+    "live factory transitions",
+    "browser/desktop canary",
+    "update hand-over or deployment"
+  ]
+}

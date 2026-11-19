@@ -1,0 +1,14 @@
+{
+  "Id": "hh-0.2.0",
+  "Name": "Human HH-0.2.0",
+  "Description": "One continuing person: private thought across conversations, a phone, hands that act on intentions, and semantic memory.",
+  "Launch": {
+    "Command": "${Library}/HH-0.2.0/runtime/Person",
+    "Args": [
+      "",
+      "${Library}/HH-0.2.0"
+    ]
+  },
+  "Settings": "settings.json",
+  "SettingsSchema": "settings.schema.json"
+}

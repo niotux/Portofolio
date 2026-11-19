@@ -1,0 +1,14 @@
+{
+  "Id": "hh-0.1.1",
+  "Name": "Human HH-0.1.1",
+  "Description": "Human development version HH-0.1.1: live prompts from the shared catalog, edited with the humans-prompts tools.",
+  "Launch": {
+    "Command": "${Library}/HH-0.1.1/runtime/Person",
+    "Args": [
+      "",
+      "${Library}/HH-0.1.1"
+    ]
+  },
+  "Settings": "settings.json",
+  "SettingsSchema": "settings.schema.json"
+}

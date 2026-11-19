@@ -1,0 +1,14 @@
+{
+  "Id": "hh-0.2.2",
+  "Name": "Human HH-0.2.2",
+  "Description": "HH-0.2.2: HH-0.2.1 with a fresh glance at the phone (time, open conversation, who can be reached, unread) before every thought.",
+  "Launch": {
+    "Command": "${Library}/HH-0.2.2/runtime/Person",
+    "Args": [
+      "",
+      "${Library}/HH-0.2.2"
+    ]
+  },
+  "Settings": "settings.json",
+  "SettingsSchema": "settings.schema.json"
+}

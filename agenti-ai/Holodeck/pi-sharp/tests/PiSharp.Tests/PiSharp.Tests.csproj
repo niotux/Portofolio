@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>PiSharp.Tests</RootNamespace>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\PiSharp.Core\PiSharp.Core.csproj" />
+    <ProjectReference Include="..\..\src\PiSharp.Tools\PiSharp.Tools.csproj" />
+    <ProjectReference Include="..\..\src\PiSharp.CodeIntel\PiSharp.CodeIntel.csproj" />
+    <ProjectReference Include="..\..\src\PiSharp.Llm\PiSharp.Llm.csproj" />
+    <ProjectReference Include="..\..\src\PiSharp.Cli\PiSharp.Cli.csproj" />
+    <ProjectReference Include="..\..\tools\PiSharp.SkillStore\PiSharp.SkillStore.csproj" />
+    <ProjectReference Include="..\..\tools\PiSharp.MemoryEval\PiSharp.MemoryEval.csproj" />
+    <ProjectReference Include="..\..\tools\PiSharp.WebMcp\PiSharp.WebMcp.csproj" />
+  </ItemGroup>
+
+</Project>

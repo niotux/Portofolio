@@ -1,0 +1,37 @@
+[Unit]
+Description=AI Factory Code Intelligence MCP
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ai-factory-codeintel
+Group=ai-factory-codeintel
+WorkingDirectory=/opt/ai-factory-codeintel/current
+Environment=ASPNETCORE_URLS=http://0.0.0.0:8084
+Environment=CODEINTEL__KBURL=http://192.168.8.81:8081
+Environment=CODEINTEL__WORKSPACEROOT=/var/lib/ai-factory-codeintel/workspaces
+Environment=service__MaxLive=2
+Environment=DOTNET_CLI_TELEMETRY_OPTOUT=1
+EnvironmentFile=-/etc/ai-factory/codeintel.env
+ExecStart=/usr/bin/dotnet /opt/ai-factory-codeintel/current/PiSharp.CodeIntel.dll
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=30
+StateDirectory=ai-factory-codeintel
+StateDirectoryMode=0750
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/ai-factory-codeintel
+MemoryHigh=1536M
+MemoryMax=2G
+OOMScoreAdjust=1000
+OOMPolicy=kill
+CPUQuota=200%
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

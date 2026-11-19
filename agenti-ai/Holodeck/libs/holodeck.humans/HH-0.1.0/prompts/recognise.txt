@@ -1,0 +1,3 @@
+Who {name} is: {self}
+
+{name} has just started a new chat with someone {name} has talked to before. Below are {name}'s memories of those earlier chats with them. Write, as {name}, in the first person, what {name} remembers about this person: who they said they are, what they told {name} about themselves, and how things went between them. Two to four plain sentences. This is memory, not a reply; nobody is being spoken to. Use only what these memories hold and add nothing.

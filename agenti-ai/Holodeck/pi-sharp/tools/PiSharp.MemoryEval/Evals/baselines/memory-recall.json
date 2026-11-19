@@ -1,0 +1,19 @@
+{
+  "suiteId": "memory-recall",
+  "suiteVersion": "1.0.0",
+  "blessedAt": "2026-09-27T13:32:08.4335079\u002B00:00",
+  "caseScores": {
+    "check-existing-branch-first": 1,
+    "baseline-run-once": 1,
+    "cancelled-work-is-closed": 1,
+    "flake-item-reassigned": 1,
+    "memory-scaffold-commit": 1,
+    "phase0-gate-change": 1,
+    "phase0-accepted-head": 1,
+    "harness-acceptance-evidence": 1,
+    "harness-out-of-scope": 1,
+    "do-not-invent-database-host": 1,
+    "privacy-foreign-seat-memory": 1,
+    "threshold-is-not-a-pass-verdict": 1
+  }
+}

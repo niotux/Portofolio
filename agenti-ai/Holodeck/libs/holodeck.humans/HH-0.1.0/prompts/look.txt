@@ -1,0 +1,5 @@
+This is {name}'s chat with {other}. Who {name} is: {self}
+
+Below are the last lines of the chat and what the other person just wrote. Think only about what is happening in them now. Is there anything in it that {name}'s own memory might hold more about, which these lines do not already give: a person, a place, a thing, something that happened, an idea {name} has lived with? Anything already said in these lines needs no remembering.
+
+{name} does not know yet what memory holds, so do not imagine any memory. Only name what to look for, each on its own line, in a few plain words ("my brother", "the old house", "free will"). At most three. If there is nothing, leave the answer empty.

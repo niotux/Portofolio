@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/PiSharp.Cli/PiSharp.Cli.csproj" />
+    <Project Path="src/PiSharp.Core/PiSharp.Core.csproj" />
+    <Project Path="src/PiSharp.Llm/PiSharp.Llm.csproj" />
+    <Project Path="src/PiSharp.Tools/PiSharp.Tools.csproj" />
+    <Project Path="src/PiSharp.CodeIntel/PiSharp.CodeIntel.csproj" />
+  </Folder>
+  <Folder Name="/tools/">
+    <Project Path="tools/PiSharp.RuntimeBench/PiSharp.RuntimeBench.csproj" />
+    <Project Path="tools/PiSharp.MemoryEval/PiSharp.MemoryEval.csproj" />
+    <Project Path="tools/PiSharp.Browser/PiSharp.Browser.csproj" />
+    <Project Path="tools/PiSharp.SkillStore/PiSharp.SkillStore.csproj" />
+    <Project Path="tools/PiSharp.WebMcp/PiSharp.WebMcp.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/PiSharp.Tests/PiSharp.Tests.csproj" />
+  </Folder>
+</Solution>

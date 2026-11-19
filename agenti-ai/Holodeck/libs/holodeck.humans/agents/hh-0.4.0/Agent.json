@@ -1,0 +1,14 @@
+{
+  "Id": "hh-0.4.0",
+  "Name": "Human HH-0.4.0",
+  "Description": "HH-0.4.0: a continuing person who keeps what is on their mind (promises, waiting, unfinished things) and can set a phone alarm.",
+  "Launch": {
+    "Command": "${Library}/HH-0.4.0/runtime/Person",
+    "Args": [
+      "",
+      "${Library}/HH-0.4.0"
+    ]
+  },
+  "Settings": "settings.json",
+  "SettingsSchema": "settings.schema.json"
+}

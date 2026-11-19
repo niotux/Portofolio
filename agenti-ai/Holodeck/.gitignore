@@ -1,0 +1,15 @@
+**/bin/
+**/obj/
+.env
+data/
+artifacts/
+*.user
+*.log
+libs/holodeck.show-writing/runtime/
+libs/holodeck.check/
+libs/holodeck.creative-studio/runtime/
+libs/holodeck.creative-studio/.publish.*/
+libs/holodeck.humans/runtime/
+libs/holodeck.humans/.publish.*/
+libs/holodeck.show-writing/prompts/
+libs/holodeck.show-writing/runtime.json

@@ -1,0 +1,69 @@
+{
+  "Prompts": [
+    {
+      "Id": "conversation",
+      "File": "conversation.txt",
+      "Description": "Conversation"
+    },
+    {
+      "Id": "hands",
+      "File": "hands.txt",
+      "Description": "Hands"
+    },
+    {
+      "Id": "reply",
+      "File": "reply.txt",
+      "Description": "Reply"
+    },
+    {
+      "Id": "compact",
+      "File": "compact.txt",
+      "Description": "Compact"
+    },
+    {
+      "Id": "delivery",
+      "File": "delivery.txt",
+      "Description": "Delivery"
+    },
+    {
+      "Id": "uncertain",
+      "File": "uncertain.txt",
+      "Description": "Uncertain"
+    },
+    {
+      "Id": "failed",
+      "File": "failed.txt",
+      "Description": "Failed"
+    },
+    {
+      "Id": "context-limit",
+      "File": "context-limit.txt",
+      "Description": "Context limit"
+    },
+    {
+      "Id": "tool-search",
+      "File": "tool-search.txt",
+      "Description": "Tool search"
+    },
+    {
+      "Id": "tool-open",
+      "File": "tool-open.txt",
+      "Description": "Tool open"
+    },
+    {
+      "Id": "tool-remember",
+      "File": "tool-remember.txt",
+      "Description": "Tool remember"
+    },
+    {
+      "Id": "tool-generate",
+      "File": "tool-generate.txt",
+      "Description": "Tool generate"
+    },
+    {
+      "Id": "continue-tools",
+      "File": "continue-tools.txt",
+      "Description": "Continue focused actions from completed experiences"
+    }
+  ]
+}

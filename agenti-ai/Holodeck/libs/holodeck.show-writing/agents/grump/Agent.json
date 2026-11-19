@@ -1,0 +1,14 @@
+{
+  "Id": "grump",
+  "Name": "Victor",
+  "Description": "A man in a foul mood. Your direction: make him smile.",
+  "Launch": {
+    "Command": "${Dependency:holodeck.humans}/runtime/Person",
+    "Args": [
+      "grump",
+      "${Dependency:holodeck.humans}"
+    ]
+  },
+  "Settings": "settings.json",
+  "SettingsSchema": "settings.schema.json"
+}

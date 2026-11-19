@@ -1,0 +1,1 @@
+Search the notebook with a short descriptive query about what you need to remember. Results contain grounded prose and local handles for opening linked references or revising entries. Search only this conversation's notebook.

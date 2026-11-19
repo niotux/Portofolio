@@ -1,0 +1,14 @@
+{
+  "Id": "curious",
+  "Name": "Ana",
+  "Description": "A curious, warm person who wants to get to know you. Your direction: just be yourself and see if she really gets to know you.",
+  "Launch": {
+    "Command": "${Dependency:holodeck.humans}/runtime/Person",
+    "Args": [
+      "curious",
+      "${Dependency:holodeck.humans}"
+    ]
+  },
+  "Settings": "settings.json",
+  "SettingsSchema": "settings.schema.json"
+}

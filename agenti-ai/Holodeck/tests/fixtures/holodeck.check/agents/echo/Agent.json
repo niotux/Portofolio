@@ -1,0 +1,11 @@
+{
+  "Id": "echo",
+  "Name": "Library Echo",
+  "Description": "Echoes notes and files using the room HTTP contract.",
+  "Launch": {
+    "Command": "python3",
+    "Args": [
+      "${Agent}/agent.py"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "purpose": {
+      "type": "string",
+      "title": "Prompt purpose"
+    },
+    "content": {
+      "type": "string",
+      "title": "Prompt content",
+      "x-ui": {
+        "control": "multiline"
+      }
+    }
+  },
+  "required": [
+    "purpose",
+    "content"
+  ],
+  "additionalProperties": false
+}

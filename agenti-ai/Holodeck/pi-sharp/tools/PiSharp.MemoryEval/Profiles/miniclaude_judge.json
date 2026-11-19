@@ -1,0 +1,9 @@
+{
+  "name": "miniclaude_judge",
+  "baseUrl": "http://192.168.1.101:8000/v1",
+  "model": "miniclaude",
+  "temperature": 0.1,
+  "thinking": "off",
+  "maxOutputTokens": 1024,
+  "apiKey": null
+}

@@ -1,0 +1,22 @@
+{
+  "RecentTurns": 6,
+  "KeepTurns": 6,
+  "CompactPercent": 75,
+  "ContextTokens": 8192,
+  "PerCue": 4,
+  "QuietTurns": 6,
+  "KnownMemories": 8,
+  "MaxRecallCharacters": 16000,
+  "PollSeconds": 2,
+  "FormationAttempts": 3,
+  "Embedding": {
+    "BaseUrl": "http://192.168.2.2/ai/embed/v1/",
+    "Name": "Qwen/Qwen3-Embedding-4B-GGUF:Q8_0",
+    "Dimensions": 1024,
+    "TimeoutSeconds": 120
+  },
+  "ThoughtTokens": 160,
+  "MinSimilarity": 0.38,
+  "SpeechTemperature": 0.6,
+  "UtilityTemperature": 0.3
+}

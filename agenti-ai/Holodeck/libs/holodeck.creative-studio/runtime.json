@@ -1,0 +1,23 @@
+{
+  "PollSeconds": 5,
+  "DatabaseTimeoutSeconds": 45,
+  "MaxToolRounds": 4,
+  "SearchResults": 3,
+  "MaxPromptCharacters": 32000,
+  "MaxToolResultCharacters": 5000,
+  "MaxNotebookCharacters": 6000,
+  "RenderWaitSeconds": 1800,
+  "Context": {
+    "MaxCharacters": 16000,
+    "RecentMessages": 8,
+    "MaxNoteCharacters": 6000,
+    "MaxImages": 1,
+    "MaxImageBytes": 8388608
+  },
+  "ReconcileSeconds": 15,
+  "KeepRecentMessages": 4,
+  "OutputReserveCharacters": 4000,
+  "MaxReferenceEdge": 768,
+  "PreviewTimeoutSeconds": 15,
+  "ReferenceDescriptionCharacters": 200
+}

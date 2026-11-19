@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "properties": {
+    "purpose": {
+      "type": "string",
+      "title": "Prompt purpose"
+    }
+  },
+  "required": [
+    "purpose"
+  ],
+  "additionalProperties": false
+}

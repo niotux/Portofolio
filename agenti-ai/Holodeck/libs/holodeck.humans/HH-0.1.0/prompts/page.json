@@ -1,0 +1,12 @@
+{
+  "Header": "{name}'s chat with {other}. {name}'s private thoughts are in brackets; the other person never sees them.",
+  "Self": "Who {name} is: {self}",
+  "Personality": "What {name} is like: {personality}",
+  "Other": "Them",
+  "Summary": "[{name} remembers how this chat began:",
+  "Recognise": "[{name} knows them, and remembers:",
+  "Remember": "[{name} remembers:",
+  "Thought": "[{name} thinks:",
+  "ThoughtAfterRecall": "[With that in mind, {name} thinks:",
+  "Close": "]"
+}

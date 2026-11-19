@@ -1,0 +1,14 @@
+{
+  "Id": "hh-0.4.1",
+  "Name": "Human HH-0.4.1",
+  "Description": "HH-0.4.1: HH-0.4.0 whose phone clock follows where the person lives.",
+  "Launch": {
+    "Command": "${Library}/HH-0.4.1/runtime/Person",
+    "Args": [
+      "",
+      "${Library}/HH-0.4.1"
+    ]
+  },
+  "Settings": "settings.json",
+  "SettingsSchema": "settings.schema.json"
+}

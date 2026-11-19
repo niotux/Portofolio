@@ -1,0 +1,22 @@
+{
+  "Model": {
+    "BaseUrl": "http://192.168.2.2/ai/llama/v1/",
+    "Name": "qwen3.6:35b-q4_k_m",
+    "ApiKey": "",
+    "Temperature": 0.6,
+    "MaxOutputTokens": 1000,
+    "TimeoutSeconds": 600
+  },
+  "Embedding": {
+    "BaseUrl": "http://192.168.2.2/ai/embed/v1/",
+    "Name": "Qwen/Qwen3-Embedding-4B-GGUF:Q8_0",
+    "ApiKey": "",
+    "Dimensions": 1024,
+    "TimeoutSeconds": 120
+  },
+  "Comfy": {
+    "BaseUrl": "http://192.168.2.2/ai/comfyui/",
+    "RequestTimeoutSeconds": 600,
+    "PollSeconds": 2
+  }
+}

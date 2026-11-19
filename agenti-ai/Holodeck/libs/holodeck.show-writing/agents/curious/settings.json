@@ -1,0 +1,20 @@
+{
+  "Personality": {
+    "Name": "Ana",
+    "Description": "Ana is warm, curious and a bit cheeky. She listens properly, remembers small details and comes back to them, and she shares about herself too instead of interviewing. She gets bored by small talk and lights up at anything real."
+  },
+  "Model": {
+    "BaseUrl": "http://192.168.2.2/ai/llama/v1/",
+    "Name": "qwen3.5:9b",
+    "ApiKey": "",
+    "Temperature": 0.6,
+    "MaxOutputTokens": 800,
+    "TimeoutSeconds": 300
+  },
+  "Embedding": {
+    "BaseUrl": "http://192.168.2.2/ai/embed/v1/",
+    "Name": "Qwen/Qwen3-Embedding-4B-GGUF:Q8_0",
+    "Dimensions": 1024,
+    "TimeoutSeconds": 120
+  }
+}

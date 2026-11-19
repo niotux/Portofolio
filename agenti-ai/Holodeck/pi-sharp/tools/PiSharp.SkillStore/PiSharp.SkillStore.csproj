@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PiSharp.SkillStore</RootNamespace>
+    <AssemblyName>PiSharp.SkillStore</AssemblyName>
+    <IsAotCompatible>true</IsAotCompatible>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\PiSharp.Core\PiSharp.Core.csproj" />
+  </ItemGroup>
+
+</Project>

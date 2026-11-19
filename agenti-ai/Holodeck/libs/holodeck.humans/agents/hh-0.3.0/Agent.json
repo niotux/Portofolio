@@ -1,0 +1,14 @@
+{
+  "Id": "hh-0.3.0",
+  "Name": "Human HH-0.3.0",
+  "Description": "HH-0.3.0: the model speaks as the person in a first-person transcript of their life, instead of continuing a page about them.",
+  "Launch": {
+    "Command": "${Library}/HH-0.3.0/runtime/Person",
+    "Args": [
+      "",
+      "${Library}/HH-0.3.0"
+    ]
+  },
+  "Settings": "settings.json",
+  "SettingsSchema": "settings.schema.json"
+}

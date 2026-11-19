@@ -1,0 +1,59 @@
+{
+  "Id": "anima-turbo",
+  "Name": "Anima Turbo",
+  "Description": "Anime and illustration from a written brief. This first workflow does not accept reference conditioning.",
+  "Family": "anime-image",
+  "GraphFile": "graph.json",
+  "License": "circlestone-labs-non-commercial-license",
+  "Bindings": {
+    "Prompt": "11",
+    "NegativePrompt": "12",
+    "Size": "28",
+    "Sampler": "19",
+    "Output": "1"
+  },
+  "Size": {
+    "DefaultWidth": 768,
+    "DefaultHeight": 768,
+    "Minimum": 512,
+    "Maximum": 1024,
+    "Multiple": 16
+  },
+  "SupportsReferences": false,
+  "RequiredNodes": [
+    "UNETLoader",
+    "CLIPLoader",
+    "VAELoader",
+    "CLIPTextEncode",
+    "KSampler",
+    "EmptyLatentImage",
+    "VAEDecode",
+    "SaveImage"
+  ],
+  "Artifacts": [
+    {
+      "Path": "diffusion_models/anima-turbo-v1.1.safetensors",
+      "Repository": "circlestone-labs/Anima",
+      "Revision": "f973fc41ec7545364ac9776c2440285f43ff2a30",
+      "Sha256": "fba11953276b57edf59d1dc4f1857ac05aa079c56f982b4d7c20298d57d3f7eb",
+      "Bytes": 4182230656,
+      "Url": "https://huggingface.co/circlestone-labs/Anima/resolve/f973fc41ec7545364ac9776c2440285f43ff2a30/split_files/diffusion_models/anima-turbo-v1.1.safetensors"
+    },
+    {
+      "Path": "text_encoders/qwen_3_06b_base.safetensors",
+      "Repository": "circlestone-labs/Anima",
+      "Revision": "f973fc41ec7545364ac9776c2440285f43ff2a30",
+      "Sha256": "cd2a512003e2f9f3cd3c32a9c3573f820bb28c940f73c57b1ddaa983d9223eba",
+      "Bytes": 1192135096,
+      "Url": "https://huggingface.co/circlestone-labs/Anima/resolve/f973fc41ec7545364ac9776c2440285f43ff2a30/split_files/text_encoders/qwen_3_06b_base.safetensors"
+    },
+    {
+      "Path": "vae/qwen_image_vae.safetensors",
+      "Repository": "circlestone-labs/Anima",
+      "Revision": "f973fc41ec7545364ac9776c2440285f43ff2a30",
+      "Sha256": "a70580f0213e67967ee9c95f05bb400e8fb08307e017a924bf3441223e023d1f",
+      "Bytes": 253806246,
+      "Url": "https://huggingface.co/circlestone-labs/Anima/resolve/f973fc41ec7545364ac9776c2440285f43ff2a30/split_files/vae/qwen_image_vae.safetensors"
+    }
+  ]
+}

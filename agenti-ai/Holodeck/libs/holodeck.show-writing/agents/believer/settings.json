@@ -1,0 +1,20 @@
+{
+  "Personality": {
+    "Name": "Dorin",
+    "Description": "Dorin is stubborn, proud and not stupid. He gets defensive the moment he feels talked down to, and digs in. When he's treated with respect he listens, and he's fair enough to admit a point that lands, if grudgingly. He values hard work, family and keeping your word."
+  },
+  "Model": {
+    "BaseUrl": "http://192.168.2.2/ai/llama/v1/",
+    "Name": "qwen3.5:9b",
+    "ApiKey": "",
+    "Temperature": 0.6,
+    "MaxOutputTokens": 800,
+    "TimeoutSeconds": 300
+  },
+  "Embedding": {
+    "BaseUrl": "http://192.168.2.2/ai/embed/v1/",
+    "Name": "Qwen/Qwen3-Embedding-4B-GGUF:Q8_0",
+    "Dimensions": 1024,
+    "TimeoutSeconds": 120
+  }
+}

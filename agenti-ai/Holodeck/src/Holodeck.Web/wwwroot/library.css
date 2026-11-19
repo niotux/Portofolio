@@ -1,0 +1,64 @@
+.library-app{display:flex;flex-direction:column;flex:1;min-height:0;min-width:0;container-type:inline-size}
+.library-app .library-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 18px;border-bottom:1px solid var(--border);flex:none}
+.library-app .library-title{display:flex;flex-direction:column;gap:8px;min-width:0}
+.library-app .library-header h2{font-size:18px;overflow-wrap:anywhere}
+.library-app .library-header-actions{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.library-app .small{font-size:12px;padding:6px 10px}
+.library-app .library-project-context{display:flex;gap:10px;align-items:baseline;min-width:0;font-size:12px}
+.library-app .library-project-context strong{font-weight:500;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.library-app .library-layout{display:grid;grid-template-columns:270px minmax(0,1fr);flex:1;min-height:0}
+.library-app .library-sidebar{padding:12px;background:var(--bg);border-right:1px solid var(--border);overflow:auto;min-width:0}
+.library-app .library-search{font-size:12px;padding:8px;margin-bottom:16px}
+.library-app .library-list{display:flex;flex-direction:column;gap:24px}
+.library-app .library-group{display:flex;flex-direction:column;gap:4px;min-width:0}
+.library-app .library-group>h3{font-size:11px;font-weight:500;color:var(--muted);padding:0 6px 8px}
+.library-app .library-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;border:1px solid transparent;padding:4px}
+.library-app .library-row.selected{background:var(--surface);border-color:var(--border)}
+.library-app .library-entry{display:flex;flex-direction:column;align-items:flex-start;gap:5px;text-align:left;min-width:0;padding:6px;border:0;background:transparent;white-space:normal}
+.library-app .library-entry-name{font-size:12px;font-weight:500;overflow-wrap:anywhere}
+.library-app .library-entry-version{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.library-app .library-row.selected .library-entry-name{color:var(--accent)}
+.library-app .library-reference-action{font-size:11px;padding:5px 7px;background:transparent}
+.library-app .library-unavailable{grid-column:1 / -1;color:var(--danger);font-size:11px;padding:0 6px 4px}
+.library-app .library-main{display:flex;flex-direction:column;overflow:auto;min-width:0;padding:20px;gap:16px}
+.library-app .library-content-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.library-app .library-heading-copy{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0}
+.library-app .library-heading-copy h2{font-size:20px;overflow-wrap:anywhere}
+.library-app .library-version{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.library-app .library-description{font-size:12px;line-height:1.6;overflow-wrap:anywhere}
+.library-app .library-tabs{display:flex;gap:20px;border-bottom:1px solid var(--border);flex:none;margin-top:4px}
+.library-app .library-tab{display:flex;align-items:center;gap:9px;border:0;border-bottom:2px solid transparent;background:transparent;padding:10px 2px;font-size:13px}
+.library-app .library-tab[aria-selected=true]{border-bottom-color:var(--accent);color:var(--accent)}
+.library-app .library-tab-count{display:inline-grid;place-items:center;min-width:20px;padding:1px 5px;background:var(--raised);color:var(--muted);font-size:10px;border:1px solid var(--border);font-variant-numeric:tabular-nums}
+.library-app .library-definition-list{display:flex;flex-direction:column;min-width:0;flex:1}
+.library-app .library-definition{display:flex;flex-direction:column;align-items:flex-start;gap:7px;text-align:left;white-space:normal;padding:12px 8px;background:transparent;border:1px solid transparent;border-bottom-color:var(--border);overflow-wrap:anywhere}
+.library-app .library-definition strong{font-size:13px;font-weight:500}
+.library-app .library-definition small{font-size:12px;line-height:1.5}
+.library-app .library-definition.selected{background:var(--raised);border-color:var(--border)}
+.library-app .library-definition-detail{display:flex;flex-direction:column;gap:10px;padding:14px 8px 0;border-top:1px solid var(--border);font-size:12px;overflow-wrap:anywhere}
+.library-app .library-definition-detail p{line-height:1.6}
+.library-app .library-definition-detail details{margin:0}
+.library-app .library-definition-detail summary{font-size:11px;color:var(--muted);cursor:pointer;margin-bottom:8px}
+.library-app .library-definition-detail code{font-size:11px;overflow-wrap:anywhere}
+.library-app .library-definition-detail > button{align-self:flex-start}
+.library-app .library-empty{margin:auto;padding:24px;text-align:center;color:var(--muted);font-size:13px}
+.library-app .library-note{padding:8px 6px;font-size:12px;line-height:1.5}
+.library-app .library-error{color:var(--danger);font-size:12px;line-height:1.6;overflow-wrap:anywhere}
+.library-app .library-diagnostics{margin:0;border-top:1px solid var(--border);padding-top:14px}
+.library-app .library-diagnostics summary{font-size:12px;color:var(--danger);cursor:pointer;margin:0}
+.library-app .library-issue{padding-top:12px;overflow-wrap:anywhere}
+.library-app .library-issue strong{font-size:12px}
+.library-app .library-issue p{font-size:11px;margin-top:5px;line-height:1.5}
+@container (max-width:600px){
+  .library-app .library-layout{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr)}
+  .library-app .library-sidebar{border-right:0;border-bottom:1px solid var(--border);padding:8px 12px;max-height:230px}
+  .library-app .library-search{margin-bottom:10px}
+  .library-app .library-list{gap:14px}
+  .library-app .library-group{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:4px}
+  .library-app .library-group>h3,.library-app .library-group>.library-note{grid-column:1 / -1;padding-bottom:3px}
+  .library-app .library-main{padding:14px;gap:12px}
+  .library-app .library-header{padding:12px;align-items:flex-start}
+  .library-app .library-header-actions{max-width:130px}
+  .library-app .library-header h2{font-size:16px}
+  .library-app .library-content-heading{flex-wrap:wrap}
+}

@@ -1,0 +1,14 @@
+{
+  "Id": "hh-0.2.1",
+  "Name": "Human HH-0.2.1",
+  "Description": "HH-0.2.1: the continuing person of HH-0.2.0 with a phone that buzzes for every message, and conversations that can be muted.",
+  "Launch": {
+    "Command": "${Library}/HH-0.2.1/runtime/Person",
+    "Args": [
+      "",
+      "${Library}/HH-0.2.1"
+    ]
+  },
+  "Settings": "settings.json",
+  "SettingsSchema": "settings.schema.json"
+}

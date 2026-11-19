@@ -1,0 +1,104 @@
+{
+  "baseline": "f20e634b5101288fcbe787590cfbddf1c27d1ddc",
+  "source_fingerprint": "57c32da51efde25468275052717d1b52d984420677a5c7cef3e21d5a1dae001d",
+  "original_findings": [
+    {
+      "id": "F1",
+      "original_priority": "P1",
+      "status": "fixed locally; regression tested",
+      "resolution": "Typed Stop / Continue / Poll decisions schedule verification repair before idle polling. Legacy false retains poll semantics.",
+      "source": "src/PiSharp.Core/Agent/AgentLoop.cs",
+      "tests": [
+        "VerificationRefusalStartsRepairWithoutAnExternalWake"
+      ]
+    },
+    {
+      "id": "F2",
+      "original_priority": "P1",
+      "status": "fixed locally; regression tested",
+      "resolution": "Passing-record reuse requires available fingerprints plus exact check/provenance identity; changed definitions during a run invalidate the result.",
+      "source": "src/PiSharp.Core/Verification/VerificationStopGate.cs",
+      "tests": [
+        "MissingFingerprintsNeverReuseAPassingCheck",
+        "EvidenceIdentityChangesWithTheChecksAndTheirProvenance"
+      ]
+    },
+    {
+      "id": "F3",
+      "original_priority": "P1",
+      "status": "fixed locally; regression tested",
+      "resolution": "Opaque compaction truncates the transcript only for its originating model/provider. Context estimates follow that compatibility rule.",
+      "source": "src/PiSharp.Core/Compaction/ServerCompaction.cs",
+      "tests": [
+        "SwitchingModelsReplaysTheTranscript",
+        "existing CompactionModelSwitchTests"
+      ]
+    },
+    {
+      "id": "F4",
+      "original_priority": "P1",
+      "status": "fixed locally; regression tested",
+      "resolution": "A bounded session log owns monotonic produced/delivered positions. Polls consume unread output once; budgeted chunks preserve the remainder, and retention loss is explicit. Shell stdout/stderr decode independently.",
+      "source": "src/PiSharp.Tools/SessionOutput.cs",
+      "tests": [
+        "SessionPollReturnsOutputAlreadyBufferedBeforeTheCall",
+        "SmallOutputBudgetsKeepUndeliveredTextForTheNextPoll",
+        "SessionRetentionReportsLostOutputAndDoesNotReplayDeliveredText"
+      ]
+    },
+    {
+      "id": "F5",
+      "original_priority": "P1",
+      "status": "fixed locally; regression tested",
+      "resolution": "Cancellation and deadline cleanup share a finite bound; late faults remain observed. Mutations wait until late execution stops, including already prepared calls in the batch. File-lock waits honor cancellation.",
+      "source": "src/PiSharp.Core/Agent/AgentLoop.cs",
+      "tests": [
+        "CancellingANoncooperativeToolHasABoundedReturn",
+        "LateCancelledWorkBlocksNewMutationsUntilItActuallyStops",
+        "AlreadyCancelledFileWritesDoNotWaitForTheLock"
+      ]
+    },
+    {
+      "id": "F6",
+      "original_priority": "P2",
+      "status": "fixed locally; regression tested",
+      "resolution": "MCP line framing retains a UTF-8 Decoder across reads and flushes at frame/EOF boundaries, preserving the frame size bound.",
+      "source": "src/PiSharp.Core/Mcp/BoundedReader.cs",
+      "tests": [
+        "McpFramingPreservesUnicodeAtEveryReadSize",
+        "McpDecoderHandlesAPendingEmojiBeforeAFullAsciiBuffer"
+      ]
+    },
+    {
+      "id": "F7",
+      "original_priority": "P2",
+      "status": "fixed locally; regression tested",
+      "resolution": "Checkpoint identity preserves Linux path case and validates an existing shadow store worktree before rewriting configuration.",
+      "source": "src/PiSharp.Core/Checkpoints/CheckpointStore.cs",
+      "tests": [
+        "CaseDistinctCheckoutsRestoreIndependently",
+        "LinuxCaseDistinctWorkspacesHaveDistinctCheckpointIdentities"
+      ]
+    },
+    {
+      "id": "F8",
+      "original_priority": "P2",
+      "status": "fixed locally; regression tested",
+      "resolution": "Hand-in validation requires exact canonical acceptance coverage, unique known IDs, passing evidence and the current revision for ID-based submissions. Missing epic facts refuse the gated transition.",
+      "source": "src/PiSharp.Core/Factory/HandInGate.cs",
+      "tests": [
+        "HandInsRequireExactCanonicalCoverage",
+        "CriterionIdsRequireTheCurrentRevision",
+        "HandInGateTests"
+      ]
+    }
+  ],
+  "remaining": [
+    "architecture extraction",
+    "representative retrieval/scaling evaluation",
+    "server-side acceptance CAS",
+    "platform/live-service canaries",
+    "configuration generation",
+    "intermittent Linux pipe fixture failure"
+  ]
+}

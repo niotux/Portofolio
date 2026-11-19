@@ -1,0 +1,12 @@
+{
+  "FormatVersion": 1,
+  "Id": "holodeck.check",
+  "Version": "1.0.0",
+  "Name": "Holodeck Check",
+  "Description": "Test fixtures for the browser and MCP checks; installed into libs/ only while a check runs.",
+  "Dependencies": [],
+  "Runtime": {
+    "Image": "holodeck-library:1",
+    "Processes": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "purpose": {
+      "type": "string",
+      "title": "Prompt purpose"
+    },
+    "revision": {
+      "type": "string",
+      "title": "Revision"
+    }
+  },
+  "required": [
+    "purpose",
+    "revision"
+  ],
+  "additionalProperties": false
+}

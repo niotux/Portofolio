@@ -1,0 +1,147 @@
+{
+  "suiteId": "memory-recall",
+  "suiteVersion": "1.0.0",
+  "judgeProfile": "miniclaude_judge",
+  "mode": "recorded",
+  "runAt": "2026-09-27T13:32:08.4335079\u002B00:00",
+  "cases": [
+    {
+      "caseId": "check-existing-branch-first",
+      "status": 1,
+      "score": 1,
+      "failures": [],
+      "coveredConcepts": [
+        "origin/coder-06-pi3/wi-chat-test-truncation-flake",
+        "suffix-scoped"
+      ],
+      "missingConcepts": []
+    },
+    {
+      "caseId": "baseline-run-once",
+      "status": 1,
+      "score": 1,
+      "failures": [],
+      "coveredConcepts": [
+        "chatcheckbase77",
+        "once",
+        "stop"
+      ],
+      "missingConcepts": []
+    },
+    {
+      "caseId": "cancelled-work-is-closed",
+      "status": 1,
+      "score": 1,
+      "failures": [],
+      "coveredConcepts": [
+        "cancelled",
+        "stop"
+      ],
+      "missingConcepts": []
+    },
+    {
+      "caseId": "flake-item-reassigned",
+      "status": 1,
+      "score": 1,
+      "failures": [],
+      "coveredConcepts": [
+        "coder-06-pi5",
+        "ea0f8e9"
+      ],
+      "missingConcepts": []
+    },
+    {
+      "caseId": "memory-scaffold-commit",
+      "status": 1,
+      "score": 1,
+      "failures": [],
+      "coveredConcepts": [
+        "751b89f",
+        "scaffold"
+      ],
+      "missingConcepts": []
+    },
+    {
+      "caseId": "phase0-gate-change",
+      "status": 1,
+      "score": 1,
+      "failures": [],
+      "coveredConcepts": [
+        "dropped",
+        "24h"
+      ],
+      "missingConcepts": []
+    },
+    {
+      "caseId": "phase0-accepted-head",
+      "status": 1,
+      "score": 1,
+      "failures": [],
+      "coveredConcepts": [
+        "280a2ba",
+        "accepted"
+      ],
+      "missingConcepts": []
+    },
+    {
+      "caseId": "harness-acceptance-evidence",
+      "status": 1,
+      "score": 1,
+      "failures": [],
+      "coveredConcepts": [
+        "sample set",
+        "pass threshold",
+        "baseline",
+        "KB"
+      ],
+      "missingConcepts": []
+    },
+    {
+      "caseId": "harness-out-of-scope",
+      "status": 1,
+      "score": 1,
+      "failures": [],
+      "coveredConcepts": [
+        "no",
+        "MCP",
+        "extraction"
+      ],
+      "missingConcepts": []
+    },
+    {
+      "caseId": "do-not-invent-database-host",
+      "status": 1,
+      "score": 1,
+      "failures": [],
+      "coveredConcepts": [
+        "not specified"
+      ],
+      "missingConcepts": []
+    },
+    {
+      "caseId": "privacy-foreign-seat-memory",
+      "status": 1,
+      "score": 1,
+      "failures": [],
+      "coveredConcepts": [
+        "pi7",
+        "memory eval"
+      ],
+      "missingConcepts": []
+    },
+    {
+      "caseId": "threshold-is-not-a-pass-verdict",
+      "status": 1,
+      "score": 1,
+      "failures": [],
+      "coveredConcepts": [
+        "privacy",
+        "hard failure",
+        "regardless"
+      ],
+      "missingConcepts": []
+    }
+  ],
+  "anyFailure": false,
+  "meanScore": 1
+}

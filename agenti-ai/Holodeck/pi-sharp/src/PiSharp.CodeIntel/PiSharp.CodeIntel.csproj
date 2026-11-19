@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <RootNamespace>PiSharp.CodeIntel</RootNamespace>
+    <IsPackable>false</IsPackable>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PiSharp.Core\PiSharp.Core.csproj" />
+  </ItemGroup>
+
+</Project>

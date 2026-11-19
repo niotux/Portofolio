@@ -1,0 +1,14 @@
+{
+  "Id": "collaborator",
+  "Name": "Writing collaborator",
+  "Description": "A Person-based conversational mind: notice, semantic recall, retained first-person thoughts, exchange formation and automatic context compaction. Model outputs are prose only.",
+  "Launch": {
+    "Command": "${Dependency:holodeck.humans}/runtime/Person",
+    "Args": [
+      "collaborator",
+      "${Dependency:holodeck.humans}"
+    ]
+  },
+  "Settings": "settings.json",
+  "SettingsSchema": "settings.schema.json"
+}

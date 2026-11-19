@@ -1,0 +1,1695 @@
+/* LCARS theme. The shared LCARS library (loaded by appearance.js only in this theme) draws the parts; this file
+   recolours AStudio through its own custom properties, places the shell in the library's full frame and maps
+   AStudio's classes onto the library's look. Every rule is scoped to the theme, so the other themes never see it. */
+
+:root[data-theme=lcars]
+{
+  color-scheme: dark;
+  --surface: #000;
+  --bg: #000;
+  --raised: color-mix(in srgb, var(--lcars-violet) 16%, #000);
+  --border: color-mix(in srgb, var(--lcars-violet) 40%, #000);
+  --muted: var(--lcars-lilac);
+  --text: var(--lcars-tan);
+  --accent: var(--lcars-orange);
+  --accent-text: #000;
+  --danger: var(--lcars-rose);
+  --grid: transparent;
+  --prose-font: Inter, ui-sans-serif, system-ui, sans-serif;
+  --lcars-rail: 176px;
+  --lcars-inner: 36px;
+  --lcars-bar-top: 40px;
+  --lcars-bar-bottom: 26px;
+  font-family: var(--lcars-font);
+  font-size: 15px;
+  letter-spacing: 0.03em;
+}
+
+/* Shell: the body is the library's full frame. Main menu and workspace share its corners and rail column. */
+
+:root[data-theme=lcars] body
+{
+  padding: 12px;
+  background: #000;
+}
+
+:root[data-theme=lcars] .shell-lcars
+{
+  display: flex;
+}
+
+:root[data-theme=lcars] body:not(.booting) .shell-menu-bar,
+:root[data-theme=lcars] body.booting .shell-rail
+{
+  display: none;
+}
+
+:root[data-theme=lcars] .shell-rail > *
+{
+  font-size: 0.85rem;
+}
+
+/* Main menu: the menu rail is the frame rail, its tabs are rail blocks, the section panel is the frame content. */
+
+:root[data-theme=lcars] #boot
+{
+  display: contents;
+}
+
+:root[data-theme=lcars] .boot-rail
+{
+  grid-area: rail;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--lcars-gap);
+  padding: var(--lcars-gap) 0;
+  border: 0;
+  background: none;
+}
+
+/* The top rail block leads back a level: PC services from the main menu, the main menu from a project. */
+:root[data-theme=lcars] :is(.boot-home, .rail-main-menu)
+{
+  --lcars-color: var(--lcars-peach);
+  align-self: stretch;
+  min-height: 96px;
+  padding: 4px 10px;
+  border: 0;
+  border-radius: 0;
+  color: var(--lcars-ink);
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+}
+
+:root[data-theme=lcars] :is(.boot-home, .rail-main-menu):hover
+{
+  background: var(--lcars-color);
+}
+
+/* The app's name in the console's large orange type, over the section panel. */
+:root[data-theme=lcars] .boot-title
+{
+  margin: 0 0 6px;
+  color: var(--lcars-orange);
+  font-family: var(--lcars-font);
+  font-size: clamp(2.2rem, 7vw, 4.6rem);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+:root[data-theme=lcars] .boot-tab
+{
+  --lcars-color: color-mix(in srgb, var(--lcars-violet) 70%, #000);
+  min-height: 52px;
+  padding: 4px 10px;
+  border: 0;
+  border-radius: 0;
+  font-size: 0.95rem;
+}
+
+:root[data-theme=lcars] .boot-tab[aria-selected=true]
+{
+  --lcars-color: var(--lcars-orange);
+}
+
+:root[data-theme=lcars] .boot-panel
+{
+  grid-area: content;
+  padding: 4px 0 4px 18px;
+}
+
+:root[data-theme=lcars] .boot-panel-body
+{
+  border: 0;
+  box-shadow: none;
+  background: #000;
+}
+
+/* Project explorer: AI-directory rows. A label pill names each entry (orange projects, lilac folders), then its kind,
+   a detail and the joined Rename/Move/Delete pill. */
+:root[data-theme=lcars] .explorer-bar
+{
+  gap: var(--lcars-gap);
+}
+
+/* Action pills centre their text both ways. */
+:root[data-theme=lcars] :is(.explorer-new, .explorer-tools button)
+{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 1;
+}
+
+:root[data-theme=lcars] .explorer-new
+{
+  --lcars-color: var(--lcars-orange);
+  height: var(--lcars-pill);
+  min-width: 9rem;
+  padding: 0 20px;
+  font-size: 1rem;
+}
+
+:root[data-theme=lcars] .explorer-new-folder
+{
+  --lcars-color: var(--lcars-lilac);
+}
+
+:root[data-theme=lcars] .explorer-search
+{
+  height: var(--lcars-pill);
+  margin-left: 12px;
+}
+
+/* Folder path: a band like the section bands, cut into one segment per level, the current level lit orange. */
+:root[data-theme=lcars] .explorer-path
+{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--lcars-gap);
+  margin-top: 16px;
+}
+
+:root[data-theme=lcars] :is(.explorer-segment, .explorer-path-end)
+{
+  --lcars-color: color-mix(in srgb, var(--lcars-lilac) 75%, #000);
+  height: 34px;
+  background: var(--lcars-color);
+}
+
+:root[data-theme=lcars] .explorer-segment
+{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  min-width: 7rem;
+  max-width: 18rem;
+  padding: 0 14px 5px;
+  border: 0;
+  border-radius: 0;
+  overflow: hidden;
+  color: var(--lcars-ink);
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+}
+
+:root[data-theme=lcars] .explorer-segment:first-child
+{
+  padding-left: 24px;
+  border-radius: 999px 0 0 999px;
+}
+
+:root[data-theme=lcars] .explorer-segment[aria-current]
+{
+  --lcars-color: var(--lcars-orange);
+}
+
+:root[data-theme=lcars] .explorer-segment:hover
+{
+  filter: brightness(1.15);
+}
+
+:root[data-theme=lcars] .explorer-path-end
+{
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+/* Move dialog: a small explorer of folder pills under its own path band. */
+:root[data-theme=lcars] .explorer-move-dialog .subtitle
+{
+  margin: -8px 0 4px;
+}
+
+:root[data-theme=lcars] .explorer-destinations
+{
+  gap: var(--lcars-gap);
+  margin-top: 16px;
+}
+
+:root[data-theme=lcars] .explorer-list
+{
+  gap: var(--lcars-gap);
+  border: 0;
+}
+
+:root[data-theme=lcars] .explorer-row
+{
+  grid-template-columns: minmax(12rem, 22rem) 5rem minmax(0, 1fr) auto;
+  padding: 0;
+  border: 0;
+}
+
+:root[data-theme=lcars] .explorer-name
+{
+  --lcars-color: var(--lcars-orange);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: var(--lcars-pill);
+  padding: 0 14px 0 24px;
+  border: 0;
+  border-radius: calc(var(--lcars-pill) / 2) 0 0 calc(var(--lcars-pill) / 2);
+  background: var(--lcars-color);
+  color: var(--lcars-ink);
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+:root[data-theme=lcars] .explorer-folder .explorer-name
+{
+  --lcars-color: var(--lcars-lilac);
+}
+
+:root[data-theme=lcars] .explorer-name:hover
+{
+  background: var(--lcars-color);
+  filter: brightness(1.15);
+}
+
+:root[data-theme=lcars] .explorer-kind
+{
+  color: var(--lcars-sky);
+  font-size: 0.9rem;
+}
+
+:root[data-theme=lcars] .explorer-folder .explorer-kind
+{
+  color: var(--lcars-lilac);
+}
+
+:root[data-theme=lcars] .explorer-detail
+{
+  color: var(--lcars-tan);
+  font-size: 0.9rem;
+}
+
+:root[data-theme=lcars] .explorer-tools button
+{
+  height: var(--lcars-pill);
+  min-width: 6rem;
+  padding: 0 18px;
+  border: 0;
+  font-size: 0.95rem;
+}
+
+:root[data-theme=lcars] .explorer-tools button + button
+{
+  border-left: 0;
+}
+
+/* Workspace: the taskbar is the top bar, the status bar the bottom bar, the desktop the frame content. */
+
+:root[data-theme=lcars] .taskbar
+{
+  grid-area: bar;
+  align-items: stretch;
+  gap: var(--lcars-gap);
+  height: auto;
+  padding: 0 0 0 var(--lcars-gap);
+  border: 0;
+  background: none;
+}
+
+:root[data-theme=lcars] .brand
+{
+  --lcars-color: var(--lcars-orange);
+  align-items: center;
+  min-height: 0;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 0;
+  background: var(--lcars-color);
+  color: var(--lcars-ink);
+  font-size: 1rem;
+  letter-spacing: 0.14em;
+}
+
+:root[data-theme=lcars] .brand[aria-expanded=true]
+{
+  --lcars-color: var(--lcars-tan);
+}
+
+:root[data-theme=lcars] .brand b
+{
+  display: none;
+}
+
+/* The project name breaks the bar: large console capitals in the gap, then the bar continues. */
+:root[data-theme=lcars] .project-name
+{
+  display: flex;
+  align-items: center;
+  max-width: 420px;
+  padding: 0 12px;
+  background: none;
+  color: var(--lcars-orange);
+  font-size: 2.2rem;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* The library supplies the original sound controls; the menu slot interrupts the top strip. */
+:root[data-theme=lcars] .shell-menu-bar > .sound-control
+{
+  flex: 0 0 auto;
+  background: #000;
+}
+
+:root[data-theme=lcars] #tasks
+{
+  align-items: stretch;
+  gap: var(--lcars-gap);
+  height: auto;
+}
+
+:root[data-theme=lcars] #tasks::after
+{
+  content: "";
+  flex: 1 0 24px;
+  background: color-mix(in srgb, var(--lcars-lilac) 80%, #000);
+}
+
+:root[data-theme=lcars] .task
+{
+  --lcars-color: color-mix(in srgb, var(--lcars-violet) 75%, #000);
+  height: auto;
+  min-height: 0;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 0;
+  background: var(--lcars-color);
+  color: var(--lcars-ink);
+}
+
+:root[data-theme=lcars] .task.active
+{
+  --lcars-color: var(--lcars-orange);
+  border: 0;
+  background: var(--lcars-color);
+}
+
+:root[data-theme=lcars] .task-icon
+{
+  color: var(--lcars-ink);
+}
+
+:root[data-theme=lcars] .task.busy::after
+{
+  background: var(--lcars-ink);
+}
+
+:root[data-theme=lcars] #arrange
+{
+  --lcars-color: var(--lcars-peach);
+  min-height: 0;
+  padding: 0 24px 0 14px;
+  border-radius: 0 999px 999px 0;
+  font-size: 0.95rem;
+}
+
+:root[data-theme=lcars] .statusbar
+{
+  grid-area: bar-bottom;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: var(--lcars-gap);
+  height: auto;
+  padding: 0 0 0 var(--lcars-gap);
+  border: 0;
+  background: none;
+  color: var(--lcars-ink);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+:root[data-theme=lcars] .statusbar > span
+{
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  background: var(--lcars-tan);
+}
+
+:root[data-theme=lcars] .statusbar > span:first-child
+{
+  flex: 1;
+  background: var(--lcars-violet);
+}
+
+/* The desktop sits right beside the rail and reaches from just under the top bar to just above the bottom bar. A
+   window's rounded corners nest inside the elbows' inner curves, so windows never cut into them. */
+:root[data-theme=lcars] #desktop
+{
+  grid-column: 2 / 4;
+  grid-row: 2 / 5;
+  margin: 10px 0 10px var(--lcars-gap);
+  background: none;
+}
+
+/* The holodeck backdrop fills the whole space between the bars, behind the elbows' curves (the library cuts them out). */
+:root[data-theme=lcars] body:not(.booting)::before
+{
+  content: "";
+  grid-column: 2 / 4;
+  grid-row: 2 / 5;
+  margin-left: var(--lcars-gap);
+  background-color: #050403;
+  background-image: radial-gradient(ellipse at 50% 45%, transparent 35%, rgba(0, 0, 0, 0.65)), linear-gradient(var(--holo-line) 1px, transparent 1px), linear-gradient(90deg, var(--holo-line) 1px, transparent 1px);
+  background-size: 100% 100%, 48px 48px, 48px 48px;
+  background-position: 0 0, -1px -1px, -1px -1px;
+}
+
+:root[data-theme=lcars] .desktop-mark,
+:root[data-theme=lcars] .desktop-mark small
+{
+  color: color-mix(in srgb, var(--lcars-orange) 22%, #000);
+  font-family: var(--lcars-font);
+  letter-spacing: 0.05em;
+}
+
+/* Outside a phone the rail holds Main menu, so the taskbar does not. */
+:root[data-theme=lcars] .bar-main-menu
+{
+  display: none;
+}
+
+/* Built-in applets above, library applets below a flat band. */
+:root[data-theme=lcars] .start-divider
+{
+  height: 6px;
+  margin: 6px 0;
+  background: var(--lcars-violet);
+}
+
+/* The start menu hangs from the top bar, beside the rail. AStudio places it by id, so the menu part is restated. */
+
+:root[data-theme=lcars] #start-menu
+{
+  top: calc(12px + var(--lcars-bar-top) + var(--lcars-gap));
+  left: calc(12px + var(--lcars-rail) + var(--lcars-gap));
+  border: 0;
+  border-top: 12px solid var(--lcars-orange);
+  border-left: 14px solid var(--lcars-orange);
+  border-bottom: 6px solid var(--lcars-orange);
+  border-radius: 30px 0 0 0 / 28px 0 0 0;
+  border-bottom-left-radius: 30px 22px;
+  background: #000;
+  box-shadow: none;
+}
+
+/* Windows: the library window bracket, lit when active. */
+
+:root[data-theme=lcars] .applet-window
+{
+  --lcars-color: color-mix(in srgb, var(--lcars-lilac) 70%, #000);
+  border: 3px solid transparent;
+  border-top-right-radius: 20px;
+  background-clip: padding-box;
+  /* Follows the painted window, so it also darkens the transparent border instead of leaving a bright strip. */
+  box-shadow: none;
+  filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.85));
+}
+
+:root[data-theme=lcars] .applet-window.active
+{
+  --lcars-color: var(--lcars-orange);
+}
+
+:root[data-theme=lcars] .window-titlebar
+{
+  height: 34px;
+  padding-left: 6px;
+  border: 0;
+}
+
+:root[data-theme=lcars] .window-icon
+{
+  color: var(--lcars-ink);
+}
+
+:root[data-theme=lcars] .window-title
+{
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+:root[data-theme=lcars] .window-controls
+{
+  gap: var(--lcars-gap);
+  padding-left: var(--lcars-gap);
+  border-radius: 0 17px 0 0;
+  background: #000;
+}
+
+:root[data-theme=lcars] .window-controls button
+{
+  --lcars-color: var(--lcars-tan);
+  position: relative;
+  width: 46px;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: var(--lcars-color);
+  color: var(--lcars-ink);
+  font-size: 0;
+}
+
+/* The close button caps the band with a full round end; below its curve the black strip meets the black body. */
+:root[data-theme=lcars] .window-controls button:last-child
+{
+  --lcars-color: var(--lcars-rose);
+  border-radius: 0 17px 17px 0;
+}
+
+/* Window control icons, drawn in ink at one size and weight instead of the text glyphs. */
+:root[data-theme=lcars] .window-controls button::before,
+:root[data-theme=lcars] .window-controls button::after
+{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-sizing: border-box;
+  background: var(--lcars-ink);
+}
+
+:root[data-theme=lcars] .window-controls button:last-child::before,
+:root[data-theme=lcars] .window-controls button:last-child::after
+{
+  left: calc(50% - 3px);
+}
+
+:root[data-theme=lcars] .window-controls button[aria-label="Minimize window"]::before
+{
+  width: 12px;
+  height: 3px;
+  transform: translate(-50%, 3px);
+}
+
+:root[data-theme=lcars] .window-controls button[aria-label="Maximize window"]::before
+{
+  width: 12px;
+  height: 12px;
+  border: 3px solid var(--lcars-ink);
+  background: none;
+  transform: translate(-50%, -50%);
+}
+
+:root[data-theme=lcars] .window-controls button[aria-label="Close window"]::before,
+:root[data-theme=lcars] .window-controls button[aria-label="Close window"]::after
+{
+  width: 15px;
+  height: 3px;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+:root[data-theme=lcars] .window-controls button[aria-label="Close window"]::after
+{
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+:root[data-theme=lcars] .dialog-form,
+:root[data-theme=lcars] .notification
+{
+  box-shadow: none;
+}
+
+/* Controls. Plain buttons are library pills; AStudio's row-like buttons keep their own shape and get a quiet hover. */
+
+:root[data-theme=lcars] button:hover
+{
+  background: var(--lcars-color);
+}
+
+:root[data-theme=lcars] button.danger
+{
+  --lcars-color: var(--lcars-rose);
+  color: var(--lcars-ink);
+}
+
+:root[data-theme=lcars] :is(.file-open, .start-item, .accordion-header, .definition-choice, .draft-choice, .conversation-project-choice, .project-app .management-job-open, .breadcrumb button, .graph-link, .conversation-entry, .channel-member button, .library-app .library-entry, .library-app .library-definition, .library-app .library-reference-action, .project-app .project-agent, .conversations-app .attachment button)
+{
+  --lcars-color: var(--raised);
+  min-height: 0;
+  border-radius: 0;
+  color: var(--text);
+  text-transform: none;
+}
+
+/* Row choices in pickers read as list entries: a name, then a description. */
+:root[data-theme=lcars] :is(.definition-choice, .draft-choice, .conversation-project-choice)
+{
+  border-left: 8px solid var(--lcars-violet);
+  background: color-mix(in srgb, var(--lcars-violet) 8%, #000);
+}
+
+:root[data-theme=lcars] :is(.definition-choice, .draft-choice, .conversation-project-choice) strong
+{
+  color: var(--lcars-orange);
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+:root[data-theme=lcars] :is(.definition-choice, .draft-choice, .conversation-project-choice) small
+{
+  color: var(--lcars-tan);
+  font-family: var(--prose-font);
+  letter-spacing: 0;
+}
+
+/* Tabs: the library's segmented pill, restated for AStudio's tab rows, which style their buttons by class. */
+
+:root[data-theme=lcars] :is(.tabs, .conversation-tabs, .library-app .library-tabs, .project-app .project-agent-tabs)
+{
+  align-items: center;
+  gap: var(--lcars-gap);
+  padding-bottom: 8px;
+  border-bottom: 0;
+}
+
+:root[data-theme=lcars] :is(.tabs button, .conversation-tabs button, .library-app .library-tab, .project-app .project-agent-tab)
+{
+  --lcars-color: color-mix(in srgb, var(--lcars-violet) 60%, #000);
+  min-height: 30px;
+  padding: 5px 18px;
+  border: 0;
+  border-radius: 0;
+  background: var(--lcars-color);
+  color: var(--lcars-ink);
+  text-transform: uppercase;
+}
+
+:root[data-theme=lcars] :is(.tabs button, .conversation-tabs button, .library-app .library-tab, .project-app .project-agent-tab):first-child
+{
+  padding-left: 22px;
+  border-radius: 999px 0 0 999px;
+}
+
+:root[data-theme=lcars] :is(.tabs button, .conversation-tabs button, .library-app .library-tab, .project-app .project-agent-tab):last-child
+{
+  padding-right: 22px;
+  border-radius: 0 999px 999px 0;
+}
+
+:root[data-theme=lcars] :is(.tabs button, .conversation-tabs button, .library-app .library-tab, .project-app .project-agent-tab):only-child
+{
+  border-radius: 999px;
+}
+
+:root[data-theme=lcars] :is(.tabs button.selected, .conversation-tabs button[aria-pressed=true], .library-app .library-tab[aria-selected=true], .project-app .project-agent-tab.selected)
+{
+  --lcars-color: var(--lcars-orange);
+  color: var(--lcars-ink);
+}
+
+:root[data-theme=lcars] .library-app .library-tab-count
+{
+  min-width: 22px;
+  padding: 1px 7px;
+  border: 0;
+  border-radius: 999px;
+  background: #000;
+  color: var(--lcars-tan);
+}
+
+/* Channels: messages are LCARS labels, capped on the sender's side in the sender's colour; the composer's actions
+   stand beside the message box as one capped block. */
+
+:root[data-theme=lcars] .conversations-app .bubble
+{
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: var(--lcars-gap);
+  max-width: min(84%, 720px);
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+
+:root[data-theme=lcars] .conversations-app .bubble.mine
+{
+  grid-template-columns: minmax(0, 1fr) auto;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+/* The sender label: a coloured block with a rounded outer end, name and time in ink. */
+:root[data-theme=lcars] .conversations-app .bubble-meta
+{
+  grid-column: 1;
+  grid-row: 1 / span 4;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 0;
+  min-width: 104px;
+  margin: 0;
+  padding: 6px 12px 7px 20px;
+  border-radius: 20px 0 0 20px;
+  background: var(--tag, var(--lcars-violet));
+}
+
+:root[data-theme=lcars] .conversations-app .bubble.mine .bubble-meta
+{
+  grid-column: 2;
+  align-items: flex-start;
+  padding: 6px 20px 7px 12px;
+  border-radius: 0 20px 20px 0;
+  background: var(--lcars-orange);
+}
+
+:root[data-theme=lcars] .conversations-app .bubble-meta strong,
+:root[data-theme=lcars] .conversations-app .bubble.mine .bubble-meta strong
+{
+  color: var(--lcars-ink);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+:root[data-theme=lcars] .conversations-app .bubble-meta time
+{
+  color: var(--lcars-ink);
+  opacity: 0.7;
+}
+
+:root[data-theme=lcars] .conversations-app :is(.bubble-text, .bubble-files)
+{
+  grid-column: 2;
+  margin: 0;
+  padding: 9px 16px;
+  background: color-mix(in srgb, var(--tag, var(--lcars-violet)) 13%, #000);
+  color: var(--lcars-tan);
+}
+
+:root[data-theme=lcars] .conversations-app .bubble.mine :is(.bubble-text, .bubble-files)
+{
+  grid-column: 1;
+  background: color-mix(in srgb, var(--lcars-orange) 13%, #000);
+}
+
+/* Agent activity: one compact strip when collapsed, a lamp cap, the agent's name, then what it reports doing. */
+:root[data-theme=lcars] .conversations-app .agent-thoughts
+{
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  font-size: 0.8rem;
+}
+
+:root[data-theme=lcars] .conversations-app .agent-thoughts details
+{
+  margin: 0;
+}
+
+:root[data-theme=lcars] .conversations-app .agent-thoughts summary
+{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 22px;
+  margin: 0;
+  padding: 0;
+  color: var(--lcars-lilac);
+  letter-spacing: 0.08em;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+:root[data-theme=lcars] .conversations-app .agent-thoughts summary::-webkit-details-marker
+{
+  display: none;
+}
+
+:root[data-theme=lcars] .conversations-app .agent-thoughts summary::before
+{
+  content: "";
+  flex: none;
+  width: 48px;
+  height: 14px;
+  border-radius: 999px 0 0 999px;
+  background: color-mix(in srgb, var(--lcars-lilac) 55%, #000);
+}
+
+:root[data-theme=lcars] .conversations-app .agent-thoughts.active summary::before
+{
+  background: var(--lcars-gold);
+  animation: lcars-blink 1.4s steps(1, end) infinite;
+}
+
+:root[data-theme=lcars] .conversations-app .agent-thoughts details[open] summary::before
+{
+  background: var(--lcars-orange);
+  animation: none;
+}
+
+:root[data-theme=lcars] .conversations-app .agent-thoughts summary strong
+{
+  margin: 0;
+  color: var(--lcars-tan);
+  font-weight: 500;
+}
+
+:root[data-theme=lcars] .conversations-app .agent-thought-state
+{
+  float: none;
+  margin: 0;
+  overflow: hidden;
+  color: var(--lcars-lilac);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+:root[data-theme=lcars] .conversations-app .agent-thought-body
+{
+  margin: 4px 0 6px 58px;
+  padding: 0 12px;
+  border-left: 4px solid color-mix(in srgb, var(--lcars-lilac) 45%, #000);
+}
+
+@media (prefers-reduced-motion: reduce)
+{
+  :root[data-theme=lcars] .conversations-app .agent-thoughts.active summary::before
+  {
+    animation: none;
+  }
+}
+
+:root[data-theme=lcars] .conversations-app .composer
+{
+  align-items: stretch;
+  gap: var(--lcars-gap);
+}
+
+:root[data-theme=lcars] .conversations-app .composer textarea
+{
+  min-height: 72px;
+}
+
+:root[data-theme=lcars] .conversations-app .composer-actions
+{
+  flex-direction: column;
+  gap: var(--lcars-gap);
+  width: 104px;
+}
+
+:root[data-theme=lcars] .conversations-app .composer-actions button
+{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex: 1;
+  min-height: 0;
+  padding: 0 18px 4px 10px;
+  border: 0;
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+:root[data-theme=lcars] .conversations-app .composer-actions button:first-child
+{
+  --lcars-color: var(--lcars-violet);
+  border-radius: 0 20px 0 0;
+}
+
+:root[data-theme=lcars] .conversations-app .composer-actions button:last-child
+{
+  --lcars-color: var(--lcars-orange);
+  border-radius: 0 0 20px 0;
+}
+
+/* Window identity: the title bar carries the window's console code; the applet's name heads the window body. */
+
+:root[data-theme=lcars] .window-title
+{
+  font-size: 0;
+}
+
+:root[data-theme=lcars] .window-title::after
+{
+  content: attr(data-code);
+  font-size: 1rem;
+  letter-spacing: 0.14em;
+}
+
+:root[data-theme=lcars] .window-heading
+{
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px 6px;
+  border-radius: 14px 0 0 0;
+  background: #000;
+}
+
+:root[data-theme=lcars] .window-heading h2
+{
+  margin: 0;
+  color: var(--lcars-orange);
+  font-size: 1.9rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+:root[data-theme=lcars] .window-heading-band
+{
+  flex: 1;
+  height: 10px;
+  border-radius: 0 999px 999px 0;
+  background: var(--lcars-color);
+}
+
+:root[data-theme=lcars] .applet-window .window-body
+{
+  border-top-left-radius: 0;
+}
+
+/* Applet titles the heading now carries. */
+:root[data-theme=lcars] :is(.library-app .library-title h2, .project-app .project-heading-copy .eyebrow, .applet-window[data-applet=appearance] .content > :is(.eyebrow, h2))
+{
+  display: none;
+}
+
+:root[data-theme=lcars] .project-app .project-heading-copy h2
+{
+  color: var(--lcars-lilac);
+  font-size: 1.2rem;
+}
+
+:root[data-theme=lcars] .desktop-mark
+{
+  display: none;
+}
+
+:root[data-theme=lcars] .task.minimized
+{
+  background: transparent;
+  color: var(--lcars-color);
+  box-shadow: inset 0 0 0 2px var(--lcars-color);
+  opacity: 1;
+}
+
+:root[data-theme=lcars] .task.minimized .task-icon
+{
+  color: var(--lcars-color);
+}
+
+/* Section labels: bands with a rounded leading end, label in ink at the far end. */
+:root[data-theme=lcars] :is(.library-app .library-group > h3, .project-app .project-roster-heading h3, .conversation-side-heading h3, .section-title h3, .boot-recent > h3, .phone-band)
+{
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: flex-end;
+  min-height: 22px;
+  margin: 0;
+  padding: 2px 12px 2px 18px;
+  border-radius: 999px 0 0 999px;
+  background: color-mix(in srgb, var(--lcars-lilac) 75%, #000);
+  color: var(--lcars-ink);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Sidebar and list entries: blocks with a coloured cap, lit when selected. */
+:root[data-theme=lcars] :is(.project-app .project-agent, .conversation-entry, .library-app .library-entry, .library-app .library-definition)
+{
+  margin-bottom: var(--lcars-gap);
+  border: 0;
+  border-left: 10px solid color-mix(in srgb, var(--lcars-violet) 55%, #000);
+  border-radius: 16px 0 0 16px;
+  background: color-mix(in srgb, var(--lcars-violet) 8%, #000);
+}
+
+:root[data-theme=lcars] :is(.project-app .project-agent.selected, .conversation-entry[aria-pressed=true], .library-app .library-row.selected .library-entry, .library-app .library-definition.selected)
+{
+  border-left-color: var(--lcars-orange);
+  background: color-mix(in srgb, var(--lcars-orange) 14%, #000);
+}
+
+:root[data-theme=lcars] .library-app .library-row
+{
+  border: 0;
+  background: none;
+}
+
+/* Section bands keep a little space from the entries under them. */
+:root[data-theme=lcars] :is(.library-app .library-group > h3, #boot .boot-recent > h3)
+{
+  flex: none;
+  margin-bottom: 8px;
+  border: 0;
+}
+
+/* Recent projects: a sidebar under its band, split from the explorer by a thin line, entries as library panels. */
+:root[data-theme=lcars] .boot-recent
+{
+  gap: var(--lcars-gap);
+  padding: 20px 14px 20px 20px;
+}
+
+:root[data-theme=lcars] .boot-recent-card
+{
+  --lcars-color: color-mix(in srgb, var(--lcars-violet) 8%, #000);
+  height: auto;
+  min-height: 0;
+  padding: 10px 12px;
+  border: 0;
+  border-left: 10px solid color-mix(in srgb, var(--lcars-violet) 55%, #000);
+  border-radius: 0;
+  background: var(--lcars-color);
+  color: var(--text);
+  text-transform: none;
+}
+
+:root[data-theme=lcars] .boot-recent-card:hover
+{
+  --lcars-color: color-mix(in srgb, var(--lcars-orange) 14%, #000);
+  border-left-color: var(--lcars-orange);
+}
+
+:root[data-theme=lcars] .boot-recent-card strong
+{
+  color: var(--lcars-orange);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+:root[data-theme=lcars] .boot-recent-card small
+{
+  color: var(--lcars-sky);
+  font-size: 0.8rem;
+}
+
+:root[data-theme=lcars] .project-app .project-avatar
+{
+  border: 0;
+  border-radius: 999px;
+  background: var(--lcars-tan);
+  color: var(--lcars-ink);
+}
+
+:root[data-theme=lcars] .project-app .status-dot
+{
+  width: 20px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+:root[data-theme=lcars] .project-app .project-facts dt
+{
+  color: var(--lcars-lilac);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+:root[data-theme=lcars] .project-app .project-facts dd
+{
+  color: var(--lcars-sky);
+}
+
+:root[data-theme=lcars] .conversations-app .chat-title
+{
+  color: var(--lcars-orange);
+  font-size: 1.4rem;
+}
+
+:root[data-theme=lcars] .channel-member
+{
+  border: 0;
+  border-radius: 999px;
+  padding: 0 6px 0 12px;
+  background: var(--lcars-violet);
+  color: var(--lcars-ink);
+}
+
+:root[data-theme=lcars] .channel-members .channel-member button
+{
+  min-height: 0;
+  padding: 2px 4px;
+  background: none;
+  color: var(--lcars-ink);
+}
+
+/* Field labels in console capitals. */
+:root[data-theme=lcars] :is(.field > span, .project-app .settings-caption label, .project-app .settings-group legend)
+{
+  color: var(--lcars-lilac);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+:root[data-theme=lcars] .setting-color
+{
+  border: 0;
+  border-left: 8px solid var(--lcars-violet);
+  background: color-mix(in srgb, var(--lcars-violet) 10%, #000);
+}
+
+:root[data-theme=lcars] :is(.setting-color, select):disabled
+{
+  opacity: 0.4;
+}
+
+/* Messages span the whole feed. */
+:root[data-theme=lcars] .conversations-app .bubble,
+:root[data-theme=lcars] .conversations-app .bubble.mine
+{
+  width: 100%;
+  max-width: none;
+}
+
+/* Files in messages: the name as a readout, size, then a split pill of Download and Copy. */
+:root[data-theme=lcars] .conversations-app .bubble-image
+{
+  min-height: 0;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+}
+
+:root[data-theme=lcars] .conversations-app .bubble-image img
+{
+  border: 0;
+  border-radius: 12px 0 0 12px;
+}
+
+:root[data-theme=lcars] .conversations-app .file-chip
+{
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--lcars-sky);
+  text-transform: none;
+}
+
+:root[data-theme=lcars] .conversations-app .file-size
+{
+  color: var(--lcars-lilac);
+}
+
+:root[data-theme=lcars] .conversations-app .file-actions button
+{
+  min-height: 22px;
+  padding: 2px 12px;
+  border-radius: 0;
+  font-size: 0.75rem;
+}
+
+:root[data-theme=lcars] .conversations-app .file-actions .file-download
+{
+  --lcars-color: var(--lcars-violet);
+  border-radius: 999px 0 0 999px;
+}
+
+:root[data-theme=lcars] .conversations-app .file-actions .file-copy
+{
+  --lcars-color: var(--lcars-tan);
+  border-radius: 0 999px 999px 0;
+}
+
+/* Files waiting in the composer: pills with a red remove cap. */
+:root[data-theme=lcars] .conversations-app .composer .attachment
+{
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--lcars-violet) 25%, #000);
+  color: var(--lcars-tan);
+  line-height: 24px;
+}
+
+:root[data-theme=lcars] .conversations-app .composer .attachment::before
+{
+  content: "";
+  width: 14px;
+  background: var(--lcars-violet);
+}
+
+:root[data-theme=lcars] .conversations-app .composer .attachment button
+{
+  --lcars-color: var(--lcars-rose);
+  min-height: 0;
+  margin-left: 10px;
+  padding: 0 10px 0 8px;
+  border-radius: 0;
+  background: var(--lcars-color);
+  color: var(--lcars-ink);
+}
+
+/* Channels sidebar: the band reads Open channels and ends in a New half pill. */
+:root[data-theme=lcars] .conversation-side-heading
+{
+  align-items: stretch;
+  gap: var(--lcars-gap);
+}
+
+:root[data-theme=lcars] .conversation-side-heading .channel-new
+{
+  --lcars-color: var(--lcars-orange);
+  min-height: 0;
+  padding: 0 16px 0 10px;
+  border-radius: 0 999px 999px 0;
+  font-size: 0.8rem;
+}
+
+/* Library Explorer: each library is an entry joined to an Add or Remove half pill of one width. */
+:root[data-theme=lcars] .library-app .library-project-context
+{
+  display: none;
+}
+
+:root[data-theme=lcars] .library-app .library-row
+{
+  align-items: stretch;
+  gap: var(--lcars-gap);
+  margin-bottom: var(--lcars-gap);
+  padding: 0;
+}
+
+:root[data-theme=lcars] .library-app .library-row .library-entry
+{
+  margin-bottom: 0;
+}
+
+:root[data-theme=lcars] .library-app .library-row .library-reference-action
+{
+  --lcars-color: var(--lcars-orange);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 88px;
+  padding: 0 16px 6px 8px;
+  border-radius: 0 999px 999px 0;
+  background: var(--lcars-color);
+  color: var(--lcars-ink);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+:root[data-theme=lcars] .library-app .library-row .library-reference-action.remove
+{
+  --lcars-color: var(--lcars-rose);
+}
+
+/* File Viewer */
+:root[data-theme=lcars] .viewer-toolbar
+{
+  gap: var(--lcars-gap);
+  border: 0;
+  background: none;
+}
+
+:root[data-theme=lcars] .viewer-name
+{
+  color: var(--lcars-sky);
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+}
+
+:root[data-theme=lcars] .viewer-toolbar button:last-child
+{
+  --lcars-color: var(--lcars-tan);
+}
+
+:root[data-theme=lcars] .viewer-text
+{
+  font-family: ui-monospace, SFMono-Regular, monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0;
+  color: var(--lcars-tan);
+}
+
+/* Type: headings in console capitals; long prose in a readable face. */
+
+:root[data-theme=lcars] h2
+{
+  color: var(--lcars-orange);
+  font-size: 1.6rem;
+}
+
+:root[data-theme=lcars] h3
+{
+  color: var(--lcars-lilac);
+}
+
+:root[data-theme=lcars] :is(.message-text, .bubble-text, .agent-thought-body, .project-read-text, .project-read-assessment p, textarea)
+{
+  font-family: var(--prose-font);
+  letter-spacing: 0;
+}
+
+@media (max-width: 700px)
+{
+  /* Project explorer: the name pill takes the full width, the Rename/Move/Delete pill sits under it at the right. */
+  :root[data-theme=lcars] .explorer-bar
+  {
+    flex-wrap: wrap;
+  }
+
+  :root[data-theme=lcars] .explorer-new
+  {
+    flex: 1;
+    min-width: 0;
+    padding: 0 12px;
+  }
+
+  :root[data-theme=lcars] .explorer-search
+  {
+    flex-basis: 100%;
+    margin-left: 0;
+  }
+
+  :root[data-theme=lcars] .explorer-list
+  {
+    gap: 12px;
+  }
+
+  :root[data-theme=lcars] .explorer-row
+  {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+
+  :root[data-theme=lcars] .explorer-name
+  {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  :root[data-theme=lcars] .explorer-tools
+  {
+    justify-self: end;
+  }
+
+  :root[data-theme=lcars] .explorer-tools button
+  {
+    height: 30px;
+    min-width: 4.5rem;
+    padding: 0 12px;
+    font-size: 0.8rem;
+  }
+
+  :root[data-theme=lcars] .boot-title
+  {
+    font-size: 2.2rem;
+  }
+
+  :root[data-theme=lcars]
+  {
+    --lcars-rail: 68px;
+    --lcars-inner: 22px;
+    --lcars-bar-top: 36px;
+    --lcars-bar-bottom: 18px;
+    --lcars-gap: 4px;
+  }
+
+  :root[data-theme=lcars] body
+  {
+    padding: 6px;
+  }
+
+  :root[data-theme=lcars] :is(.boot-tab, .boot-home, .shell-rail > *)
+  {
+    font-size: 0.7rem;
+  }
+
+  :root[data-theme=lcars] .brand b
+  {
+    display: grid;
+    width: auto;
+    height: auto;
+    background: none;
+    color: var(--lcars-ink);
+    font-size: 1.1rem;
+  }
+
+  :root[data-theme=lcars] .project-name
+  {
+    display: none;
+  }
+
+  :root[data-theme=lcars] .statusbar
+  {
+    font-size: 0.65rem;
+  }
+
+
+  :root[data-theme=lcars] #start-menu
+  {
+    top: calc(6px + var(--lcars-bar-top) + var(--lcars-gap));
+    left: calc(6px + var(--lcars-rail) + var(--lcars-gap));
+    width: calc(100vw - var(--lcars-rail) - 16px);
+  }
+}
+
+/* Short screens (a phone held sideways): a thinner frame and shorter menu blocks so the main menu fits the height. */
+@media (max-height: 520px)
+{
+  :root[data-theme=lcars]
+  {
+    --lcars-rail: 110px;
+    --lcars-inner: 22px;
+    --lcars-bar-top: 36px;
+    --lcars-bar-bottom: 14px;
+    --lcars-gap: 4px;
+  }
+
+  :root[data-theme=lcars] body
+  {
+    padding: 6px;
+  }
+
+  :root[data-theme=lcars] :is(.boot-tab, .boot-home, .rail-main-menu)
+  {
+    min-height: 32px;
+    font-size: 0.75rem;
+  }
+
+  :root[data-theme=lcars] .boot-title
+  {
+    font-size: 2.2rem;
+  }
+
+  :root[data-theme=lcars] .boot-panel .content
+  {
+    padding-top: 8px;
+  }
+
+  :root[data-theme=lcars] .boot-panel .page-heading
+  {
+    margin-bottom: 10px;
+  }
+}
+
+/* Phone: a slim rail frames one applet at a time; the start button is the Home pill and the project home lists open
+   applets as label pills and the others as rail-like blocks. */
+:root[data-theme=lcars] body.phone:not(.booting)
+{
+  --lcars-rail: 22px;
+  --lcars-inner: 18px;
+}
+
+:root[data-theme=lcars] body.phone:not(.booting) .shell-rail > *
+{
+  min-height: 24px;
+  padding: 0;
+  font-size: 0;
+}
+
+:root[data-theme=lcars] body.phone .brand
+{
+  padding: 0 18px;
+}
+
+:root[data-theme=lcars] body.phone .brand :is(b, span)
+{
+  display: none;
+}
+
+:root[data-theme=lcars] body.phone .brand::after
+{
+  content: "Home";
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+:root[data-theme=lcars] body.phone .taskbar .sound-control
+{
+  padding-right: 0;
+}
+
+:root[data-theme=lcars] body.phone #desktop
+{
+  margin: 8px 0 8px var(--lcars-gap);
+}
+
+:root[data-theme=lcars] body.phone #phone-home
+{
+  gap: 10px;
+  padding: 6px 4px 16px 10px;
+}
+
+:root[data-theme=lcars] .phone-home-title
+{
+  margin: 0 0 4px;
+  color: var(--lcars-orange);
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+:root[data-theme=lcars] #phone-home .phone-band
+{
+  flex: none;
+  margin: 6px 0 2px;
+  border: 0;
+}
+
+:root[data-theme=lcars] .phone-applets
+{
+  gap: var(--lcars-gap);
+}
+
+:root[data-theme=lcars] .phone-tile
+{
+  --lcars-color: var(--lcars-lilac);
+  min-height: 88px;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 0;
+  align-items: flex-end;
+  background: var(--lcars-color);
+  color: var(--lcars-ink);
+  text-align: right;
+  text-transform: uppercase;
+}
+
+:root[data-theme=lcars] .phone-tile:hover
+{
+  background: var(--lcars-color);
+  filter: brightness(1.15);
+}
+
+:root[data-theme=lcars] .phone-applets > :nth-child(4n + 1) { --lcars-color: var(--lcars-orange); }
+:root[data-theme=lcars] .phone-applets > :nth-child(4n + 2) { --lcars-color: var(--lcars-violet); }
+:root[data-theme=lcars] .phone-applets > :nth-child(4n + 3) { --lcars-color: var(--lcars-tan); }
+:root[data-theme=lcars] .phone-applets > :nth-child(4n) { --lcars-color: var(--lcars-lilac); }
+:root[data-theme=lcars] .phone-applets > .phone-tile-main-menu { --lcars-color: var(--lcars-peach); }
+
+:root[data-theme=lcars] .phone-tile strong
+{
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+:root[data-theme=lcars] .phone-tile small
+{
+  color: color-mix(in srgb, var(--lcars-ink) 70%, transparent);
+  font-size: 0.7rem;
+  text-transform: none;
+}
+
+:root[data-theme=lcars] .phone-open-row
+{
+  gap: var(--lcars-gap);
+}
+
+:root[data-theme=lcars] .phone-open-row .phone-tile
+{
+  --lcars-color: var(--lcars-orange);
+  min-height: var(--lcars-pill);
+  height: var(--lcars-pill);
+  padding: 0 14px 0 22px;
+  border-radius: calc(var(--lcars-pill) / 2) 0 0 calc(var(--lcars-pill) / 2);
+  align-items: flex-end;
+}
+
+:root[data-theme=lcars] .phone-close
+{
+  --lcars-color: var(--lcars-rose);
+  height: var(--lcars-pill);
+  min-width: 5rem;
+  padding: 0 16px;
+  border-radius: 0 999px 999px 0;
+  justify-content: center;
+}
+
+/* A phone applet: its title band starts with a Back pill and ends with the close control. */
+:root[data-theme=lcars] body.phone .window-back
+{
+  --lcars-color: var(--lcars-peach);
+  align-self: stretch;
+  height: auto;
+  min-height: 0;
+  min-width: 0;
+  margin: 0 4px 0 -6px;
+  padding: 0 14px 0 18px;
+  border: 0;
+  border-radius: 999px 0 0 999px;
+  background: var(--lcars-color);
+  color: var(--lcars-ink);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+:root[data-theme=lcars] body.phone .window-heading h2
+{
+  font-size: 1.6rem;
+}
+
+/* Phone: the pill that returns from a chosen item to its list. */
+:root[data-theme=lcars] body.phone .list-back
+{
+  --lcars-color: var(--lcars-peach);
+  height: 30px;
+  min-height: 0;
+  min-width: 0;
+  margin-bottom: 8px;
+  padding: 0 16px 0 20px;
+  border: 0;
+  border-radius: 999px 0 0 999px;
+  background: var(--lcars-color);
+  color: var(--lcars-ink);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+:root[data-theme=lcars] body.phone .conversations-app .composer-actions
+{
+  width: 88px;
+}
+

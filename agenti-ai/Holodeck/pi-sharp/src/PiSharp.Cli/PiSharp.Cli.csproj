@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>PiSharp.Cli</RootNamespace>
+    <AssemblyName>pi-sharp</AssemblyName>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <IsAotCompatible>true</IsAotCompatible>
+    <Version>0.5.0</Version>
+    <InformationalVersion>0.5.0</InformationalVersion>
+    <!-- Phase 8 default: framework-dependent linux-x64. Native AOT stays possible
+         (decision 6) but is not the sandbox ship format; see docs/05 and docs/08. -->
+    <SelfContained>false</SelfContained>
+    <PublishSingleFile>false</PublishSingleFile>
+    <PublishTrimmed>false</PublishTrimmed>
+    <PublishReadyToRun>false</PublishReadyToRun>
+  </PropertyGroup>
+
+  <!-- Explicit opt-in verification configuration. The normal Release publish
+       stays framework-dependent; scripts/publish-aot.sh selects this gate. -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Aot'">
+    <Optimize>true</Optimize>
+    <SelfContained>true</SelfContained>
+    <PublishTrimmed>true</PublishTrimmed>
+    <PublishAot>true</PublishAot>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PiSharp.Core\PiSharp.Core.csproj" />
+    <ProjectReference Include="..\PiSharp.Tools\PiSharp.Tools.csproj" />
+    <ProjectReference Include="..\PiSharp.Llm\PiSharp.Llm.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="PiSharp.Tests" />
+  </ItemGroup>
+
+</Project>

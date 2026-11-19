@@ -1,0 +1,106 @@
+{
+  "Tools": [
+    {
+      "Name": "search_notebook",
+      "Prompt": "tool-search",
+      "Parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "Name": "open_reference",
+      "Prompt": "tool-open",
+      "Parameters": {
+        "type": "object",
+        "properties": {
+          "reference": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "reference"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "Name": "remember",
+      "Prompt": "tool-remember",
+      "Parameters": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "entry": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "text"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "Name": "generate_image",
+      "Prompt": "tool-generate",
+      "Parameters": {
+        "type": "object",
+        "properties": {
+          "workflow": {
+            "type": "string",
+            "enum": [
+              "anima-turbo"
+            ]
+          },
+          "prompt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "negativePrompt": {
+            "type": "string"
+          },
+          "width": {
+            "type": "integer"
+          },
+          "height": {
+            "type": "integer"
+          },
+          "seed": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "workflow",
+          "prompt"
+        ],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

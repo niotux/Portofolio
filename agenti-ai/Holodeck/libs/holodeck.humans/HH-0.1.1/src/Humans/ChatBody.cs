@@ -1,0 +1,3 @@
+namespace Humans;
+
+public sealed record ChatBody(string Model, List<Message> Messages, double Temperature, [property: System.Text.Json.Serialization.JsonPropertyName("max_completion_tokens")] int MaxTokens, bool Stream, [property: System.Text.Json.Serialization.JsonPropertyName("reasoning_effort")] string ReasoningEffort, [property: System.Text.Json.Serialization.JsonPropertyName("stream_options"), System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)] StreamOptions? StreamOptions, [property: System.Text.Json.Serialization.JsonIgnore(Condition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull)] List<string>? Stop);

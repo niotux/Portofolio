@@ -1,0 +1,8 @@
+{
+  "FormatVersion": 1,
+  "Id": "holodeck.humans",
+  "Version": "0.1.0",
+  "Name": "Holodeck Humans",
+  "Description": "People with prose thoughts, conversation, semantic memory and context compaction.",
+  "Dependencies": []
+}

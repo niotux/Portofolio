@@ -1,0 +1,175 @@
+using System.Security.Cryptography;
+using System.Text;
+using Holodeck.Web.Rooms;
+using Npgsql;
+
+namespace Holodeck.Web.AgentData;
+
+// Library data is shared across projects and agents of one exact package version. It outlives agent instances;
+// Holodeck provisions and isolates it without knowing what the library stores there.
+public sealed partial class AgentDatabases
+{
+  private const string LibraryRolePrefix = "library_";
+  private const string LibraryCachePrefix = "library:";
+  private const int LibraryRoleHashCharacters = 48;
+
+  public async Task<SqlResponse> RunLibraryAsync(string libraryKey, SqlRequest request, bool readOnly, CancellationToken token)
+  {
+    ValidateLibraryKey(libraryKey);
+    Validate(request);
+    string cacheKey = LibraryCachePrefix + libraryKey;
+    NpgsqlDataSource? source;
+    lock (gate)
+    {
+      sources.TryGetValue(cacheKey, out source);
+    }
+
+    if (source is null)
+    {
+      AgentDatabaseLogin login = await EnsureLibraryLoginAsync(libraryKey, token);
+      source = CacheSource(cacheKey, login);
+    }
+
+    return await RunOnSourceAsync(source, request, readOnly, token);
+  }
+
+  // Explicit administrative removal only. Agent/project deletion and library uninstallation do not call this.
+  public async Task DropLibraryAsync(string libraryKey)
+  {
+    ValidateLibraryKey(libraryKey);
+    NpgsqlDataSource? source;
+    lock (gate)
+    {
+      sources.Remove(LibraryCachePrefix + libraryKey, out source);
+    }
+
+    if (source is not null)
+    {
+      await source.DisposeAsync();
+    }
+
+    await provisioning.WaitAsync();
+    try
+    {
+      await using NpgsqlConnection connection = await database.OpenConnectionAsync();
+      await using NpgsqlTransaction transaction = await connection.BeginTransactionAsync();
+      await LockLibrariesAsync(connection, transaction, CancellationToken.None);
+      AgentDatabaseLogin? login = await FindLibraryLoginAsync(connection, transaction, libraryKey, CancellationToken.None);
+      if (login is null)
+      {
+        return;
+      }
+
+      string role = login.Value.Role;
+      await using (NpgsqlCommand terminate = new("SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE usename = $1", connection, transaction))
+      {
+        terminate.Parameters.AddWithValue(role);
+        await terminate.ExecuteNonQueryAsync();
+      }
+
+      await using (NpgsqlCommand drop = new($"DROP SCHEMA IF EXISTS {role} CASCADE; DROP ROLE IF EXISTS {role}", connection, transaction))
+      {
+        await drop.ExecuteNonQueryAsync();
+      }
+
+      await using (NpgsqlCommand forget = new("DELETE FROM library_databases WHERE library_key = $1", connection, transaction))
+      {
+        forget.Parameters.AddWithValue(libraryKey);
+        await forget.ExecuteNonQueryAsync();
+      }
+
+      await transaction.CommitAsync();
+    }
+    finally
+    {
+      provisioning.Release();
+    }
+  }
+
+  private async Task<AgentDatabaseLogin> EnsureLibraryLoginAsync(string libraryKey, CancellationToken token)
+  {
+    await provisioning.WaitAsync(token);
+    try
+    {
+      await using NpgsqlConnection connection = await database.OpenConnectionAsync(token);
+      await using NpgsqlTransaction transaction = await connection.BeginTransactionAsync(token);
+      // The database lock also coordinates separate Holodeck processes doing first use simultaneously.
+      await LockLibrariesAsync(connection, transaction, token);
+      AgentDatabaseLogin? existing = await FindLibraryLoginAsync(connection, transaction, libraryKey, token);
+      if (existing is not null)
+      {
+        await transaction.CommitAsync(token);
+        return existing.Value;
+      }
+
+      string schema;
+      await using (NpgsqlCommand current = new("SELECT current_schema()", connection, transaction))
+      {
+        schema = (string)(await current.ExecuteScalarAsync(token))!;
+      }
+
+      string hash = Convert.ToHexStringLower(SHA256.HashData(Encoding.UTF8.GetBytes(schema + ":" + libraryKey)));
+      string role = LibraryRolePrefix + hash[..LibraryRoleHashCharacters];
+      string password = Convert.ToHexStringLower(RandomNumberGenerator.GetBytes(PasswordBytes));
+      await CreateLibraryRoleAsync(connection, transaction, role, password, token);
+      await using (NpgsqlCommand remember = new("INSERT INTO library_databases(library_key, role_name, password) VALUES($1, $2, $3)", connection, transaction))
+      {
+        remember.Parameters.AddWithValue(libraryKey);
+        remember.Parameters.AddWithValue(role);
+        remember.Parameters.AddWithValue(password);
+        await remember.ExecuteNonQueryAsync(token);
+      }
+
+      await transaction.CommitAsync(token);
+      return new AgentDatabaseLogin(role, password);
+    }
+    finally
+    {
+      provisioning.Release();
+    }
+  }
+
+  private static async Task CreateLibraryRoleAsync(NpgsqlConnection connection, NpgsqlTransaction transaction, string role, string password, CancellationToken token)
+  {
+    // Both identifiers and password are generated by code, never interpolated from request text.
+    string create = $"""
+      CREATE ROLE {role} LOGIN PASSWORD '{password}' NOSUPERUSER NOCREATEDB NOCREATEROLE NOINHERIT NOREPLICATION CONNECTION LIMIT {ConnectionLimit};
+      CREATE SCHEMA {role} AUTHORIZATION {role};
+      ALTER ROLE {role} SET search_path = {role}, public;
+      ALTER ROLE {role} SET statement_timeout = '{CommandSeconds}s';
+      """;
+    await using NpgsqlCommand command = new(create, connection, transaction);
+    await command.ExecuteNonQueryAsync(token);
+  }
+
+  private static async Task LockLibrariesAsync(NpgsqlConnection connection, NpgsqlTransaction transaction, CancellationToken token)
+  {
+    await using NpgsqlCommand command = new("LOCK TABLE library_databases IN SHARE ROW EXCLUSIVE MODE", connection, transaction);
+    await command.ExecuteNonQueryAsync(token);
+  }
+
+  private static async Task<AgentDatabaseLogin?> FindLibraryLoginAsync(NpgsqlConnection connection, NpgsqlTransaction transaction, string libraryKey, CancellationToken token)
+  {
+    await using NpgsqlCommand command = new("SELECT role_name, password FROM library_databases WHERE library_key = $1", connection, transaction);
+    command.Parameters.AddWithValue(libraryKey);
+    await using NpgsqlDataReader reader = await command.ExecuteReaderAsync(token);
+    if (!await reader.ReadAsync(token))
+    {
+      return null;
+    }
+
+    return new AgentDatabaseLogin(reader.GetString(0), reader.GetString(1));
+  }
+
+  private static void ValidateLibraryKey(string libraryKey)
+  {
+    string[] parts = libraryKey.Split('/');
+    if (parts.Length != 2)
+    {
+      throw new ArgumentException("Use an exact library package identity.");
+    }
+
+    LibraryFiles.RequireId(parts[0], "Library Id");
+    LibraryFiles.RequireId(parts[1], "Library Version");
+  }
+}

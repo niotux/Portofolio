@@ -1,0 +1,10 @@
+**/bin/
+**/obj/
+**/__pycache__/
+runtime/
+.publish.*/
+.publish.lock
+artifacts/
+.env
+*.log
+*.user

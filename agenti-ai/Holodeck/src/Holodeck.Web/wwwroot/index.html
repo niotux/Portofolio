@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Holodeck Workspace</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="project.css"><link rel="stylesheet" href="library.css"><link rel="stylesheet" href="conversations.css"><link rel="stylesheet" href="boot.css"><link rel="stylesheet" href="lcars-theme.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body class="booting lcars-frame-full">
+  <div class="lcars-corner-top shell-lcars" aria-hidden="true"></div>
+  <div class="lcars-bar shell-lcars shell-menu-bar"><span class="lcars-lilac" style="--lcars-grow: 5" aria-hidden="true"></span><span class="lcars-violet" aria-hidden="true"></span><span class="lcars-tan" style="--lcars-grow: 3" aria-hidden="true"></span><div id="menu-sound-control" class="sound-control" role="group" aria-label="Sound"></div></div>
+  <div class="lcars-rail shell-lcars shell-rail"><button class="main-menu-button rail-main-menu" type="button" title="Save this project and return to the main menu">Main menu</button><div class="lcars-tan" aria-hidden="true">01-1701</div><div class="lcars-lilac" aria-hidden="true">Workspace</div><div class="lcars-fill lcars-peach" aria-hidden="true">03-1701</div></div>
+  <header class="taskbar"><button id="start" class="brand" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="start-menu" title="Applets"><b>H</b><span>HOLODECK</span></button><span id="project-name" class="project-name"></span><nav id="tasks" aria-label="Open windows"></nav><div class="sound-control shell-lcars" role="group" aria-label="Sound"><button id="sound-mute" type="button" aria-pressed="false" title="Mute sounds">Audio</button><input id="sound-volume" type="range" min="0" max="100" step="5" aria-label="Volume"></div><button id="arrange" title="Arrange open windows">Arrange</button><button class="main-menu-button bar-main-menu" type="button" title="Save this project and return to the main menu">Main menu</button></header>
+  <section id="boot" aria-label="Main menu"><aside class="boot-rail lcars-rail"><a id="boot-home" class="boot-home">PC services</a><nav class="boot-nav lcars-group" role="tablist" aria-label="Main menu"></nav><div class="lcars-fill lcars-tan shell-lcars" aria-hidden="true">01-1701</div></aside><div class="boot-panel"><h1 class="boot-title">Holodeck</h1></div></section>
+  <main id="desktop" aria-label="Applet workspace"><nav id="phone-home" aria-label="Project home"></nav><div id="window-layer" aria-label="Open applet windows"></div><div class="desktop-mark" aria-hidden="true">H<span>HOLODECK</span></div></main>
+  <footer class="statusbar"><span id="status">Ready</span><span>16 px grid <span class="status-divider">/</span> Drag edges to resize</span></footer>
+  <nav id="start-menu" class="lcars-menu" aria-label="Applets" hidden><input class="start-search" type="search" placeholder="Search applets…" aria-label="Search applets"><div class="start-list"><div class="start-group start-builtin"></div><div class="start-divider" role="separator" hidden></div><div class="start-group start-library"></div></div><p class="start-empty" hidden>No applets match.</p></nav>
+  <div id="notifications" role="status" aria-live="polite"></div>
+  <div class="lcars-corner-bottom shell-lcars" aria-hidden="true"></div>
+  <div class="lcars-bar-bottom shell-lcars shell-menu-bar" aria-hidden="true"><span class="lcars-violet" style="--lcars-grow: 2"></span><span class="lcars-orange"></span><span class="lcars-lilac" style="--lcars-grow: 6"></span></div>
+</body>
+</html>

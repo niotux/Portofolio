@@ -1,0 +1,53 @@
+{
+  "FormatVersion": 1,
+  "Actions": [
+    {
+      "Id": "read-prompt",
+      "Title": "Read prompt",
+      "Description": "Read an active versioned prompt by its registered purpose.",
+      "InputSchema": "read-prompt.schema.json",
+      "ResultSchema": "Result.schema.json",
+      "FollowUpActions": []
+    },
+    {
+      "Id": "save-prompt",
+      "Title": "Save prompt draft",
+      "Description": "Save a new immutable prompt draft. Existing generations and active prompts keep their current versions.",
+      "InputSchema": "save-prompt.schema.json",
+      "ResultSchema": "Result.schema.json",
+      "FollowUpActions": []
+    },
+    {
+      "Id": "select-prompt",
+      "Title": "Publish prompt revision",
+      "Description": "Select an existing prompt revision for future work. Select an earlier revision to roll back.",
+      "InputSchema": "select-prompt.schema.json",
+      "ResultSchema": "Result.schema.json",
+      "FollowUpActions": []
+    },
+    {
+      "Id": "list-prompts",
+      "Title": "List prompt purposes",
+      "Description": "List registered prompt purposes and their active revision history.",
+      "InputSchema": "list-prompts.schema.json",
+      "ResultSchema": "Result.schema.json",
+      "FollowUpActions": []
+    },
+    {
+      "Id": "retry-generation",
+      "Title": "Retry uncertain generation",
+      "Description": "Explicitly retry the retained request only after checking ComfyUI history. Use the request identity shown in the action result or log.",
+      "InputSchema": "retry-generation.schema.json",
+      "ResultSchema": "Result.schema.json",
+      "FollowUpActions": []
+    },
+    {
+      "Id": "list-generations",
+      "Title": "Inspect image requests",
+      "Description": "Read saved request identities, states and execution errors.",
+      "InputSchema": "list-generations.schema.json",
+      "ResultSchema": "Result.schema.json",
+      "FollowUpActions": []
+    }
+  ]
+}

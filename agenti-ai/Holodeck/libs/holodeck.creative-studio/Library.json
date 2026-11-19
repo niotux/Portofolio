@@ -1,0 +1,12 @@
+{
+  "FormatVersion": 1,
+  "Id": "holodeck.creative-studio",
+  "Version": "0.1.0",
+  "Name": "Creative Studio",
+  "Description": "A conversational visual collaborator with a prose notebook, versioned prompts and ComfyUI workflows.",
+  "Dependencies": [],
+  "Runtime": {
+    "Image": "holodeck-library:1",
+    "Processes": []
+  }
+}

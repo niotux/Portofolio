@@ -1,0 +1,17 @@
+{
+  "FormatVersion": 1,
+  "Id": "holodeck.show-writing",
+  "Version": "0.1.0",
+  "Name": "Show Writing",
+  "Description": "Writing and bench roles built on Person from Holodeck Humans.",
+  "Dependencies": [
+    {
+      "Id": "holodeck.humans",
+      "Version": "0.1.0"
+    }
+  ],
+  "Runtime": {
+    "Image": "holodeck-library:1",
+    "Processes": []
+  }
+}

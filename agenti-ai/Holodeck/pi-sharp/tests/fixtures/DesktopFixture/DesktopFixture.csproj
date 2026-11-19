@@ -1,0 +1,13 @@
+<!-- The desktop toolkit's live fixture (DesktopToolkitTests.Live_*): not in PiSharp.slnx, so the suite never restores
+     Avalonia. Avalonia 12 is the first to expose AT-SPI on X11; 11.3 registers nothing. Build it on the demo box and
+     point PI_SHARP_DESKTOP_FIXTURE at the output. -->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="12.1.4" />
+    <PackageReference Include="Avalonia.Desktop" Version="12.1.4" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="12.1.4" />
+  </ItemGroup>
+</Project>

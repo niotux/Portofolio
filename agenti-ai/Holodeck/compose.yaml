@@ -1,0 +1,90 @@
+name: holodeck
+
+services:
+  holodeck:
+    build: .
+    init: true
+    restart: unless-stopped
+    user: "${ASTUDIO_UID:-1000}:${ASTUDIO_GID:-1000}"
+    ports:
+      - "127.0.0.1:7077:8080"
+    environment:
+      Studio__DataPath: /data
+      Studio__LibrariesPath: /libs
+      Supervisor__HolodeckUrl: http://holodeck:8081
+      Computer__User: "${ASTUDIO_UID:-1000}:${ASTUDIO_GID:-1000}"
+      # The host folder agents may be given parts of; blank shares nothing.
+      Computer__AllowedFolderRoots__0: "${AGENT_FOLDER_ROOT:-}"
+      Database__ConnectionString: "Host=postgres;Database=astudio;Username=astudio;Password=${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env};GSS Encryption Mode=Disable"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      docker-proxy:
+        condition: service_started
+      library-image:
+        condition: service_completed_successfully
+    volumes:
+      - ./data:/data
+      - ./libs:/libs:ro
+      # The shared LCARS sound adapter can update independently of application builds.
+      - ./src/Holodeck.Web/wwwroot/sounds.js:/app/wwwroot/sounds.js:ro
+      - ./src/Holodeck.Web/wwwroot/index.html:/app/wwwroot/index.html:ro
+      - ./src/Holodeck.Web/wwwroot/lcars-theme.css:/app/wwwroot/lcars-theme.css:ro
+    # Port 8080 is the user's (published above); agents reach Holodeck only as holodeck:8081 on the agent network.
+    networks:
+      default: {}
+      docker: {}
+      agents:
+        aliases: [holodeck]
+  # Holodeck's only way to Docker: containers, images and networks, nothing else. Agents cannot reach it.
+  docker-proxy:
+    image: tecnativa/docker-socket-proxy:0.3.0
+    restart: unless-stopped
+    environment:
+      CONTAINERS: 1
+      IMAGES: 1
+      NETWORKS: 1
+      POST: 1
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - docker
+  # Builds the trusted runtime image of every project/library environment and exits.
+  library-image:
+    build: runtime/library
+    image: holodeck-library:1
+    entrypoint: ["/bin/true"]
+    restart: "no"
+    network_mode: none
+  postgres:
+    image: pgvector/pgvector:pg18
+    restart: unless-stopped
+    user: "${ASTUDIO_UID:-1000}:${ASTUDIO_GID:-1000}"
+    environment:
+      POSTGRES_DB: astudio
+      POSTGRES_USER: astudio
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}"
+      PGDATA: /var/lib/postgresql/18/docker
+      PGHOST: /tmp
+    command: ["postgres", "-c", "unix_socket_directories=/tmp,/var/run/postgresql"]
+    tmpfs:
+      - "/var/run/postgresql:uid=${ASTUDIO_UID:-1000},gid=${ASTUDIO_GID:-1000},mode=0700"
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - ./data/postgres:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD", "psql", "-h", "/tmp", "-U", "astudio", "-d", "astudio", "-c", "SELECT 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+networks:
+  # How agents reach Holodeck's agent API, and how Holodeck recognises them: no route out.
+  agents:
+    name: holodeck-agents
+    internal: true
+  # Agents' network access.
+  open:
+    name: holodeck-network
+  docker:
+    internal: true

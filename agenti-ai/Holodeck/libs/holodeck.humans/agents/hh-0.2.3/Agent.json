@@ -1,0 +1,14 @@
+{
+  "Id": "hh-0.2.3",
+  "Name": "Human HH-0.2.3",
+  "Description": "HH-0.2.3: HH-0.2.2 with a way to stop and work something out carefully (a calculation, times, a fact) before saying it.",
+  "Launch": {
+    "Command": "${Library}/HH-0.2.3/runtime/Person",
+    "Args": [
+      "",
+      "${Library}/HH-0.2.3"
+    ]
+  },
+  "Settings": "settings.json",
+  "SettingsSchema": "settings.schema.json"
+}

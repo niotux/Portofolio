@@ -1,0 +1,101 @@
+/* Conversation feed and composer, retained from the room UI. */
+.conversations-app{position:relative;display:grid;flex:1;min-height:0;min-width:0}
+.window-body:has(> .conversations-app){container-type:inline-size}
+.conversations-app .small{padding:4px 8px;font-size:12px}
+.room-main{position:relative;display:flex;flex-direction:column;min-width:0;min-height:0}
+.conversations-app .chat-header{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--border);min-height:60px;flex-wrap:wrap;flex:none}
+.conversations-app .chat-heading{flex:1;min-width:100px}
+.conversations-app .chat-title{flex:1;margin:0;font-size:14px;color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.conversations-app .feed{flex:1;min-height:0;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.conversations-app .feed-empty{margin:auto;text-align:center;color:var(--muted);max-width:360px;padding:20px;line-height:1.6}
+.conversations-app .feed-empty h2{color:var(--text);font-size:22px;font-weight:500;margin:0 0 10px}
+.conversations-app .feed-empty p{margin:10px 0 20px}
+.conversations-app .bubble{align-self:flex-start;max-width:min(78%,640px);padding:8px 12px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--tag)}
+.conversations-app .bubble.mine{align-self:flex-end;border-left:1px solid var(--border);border-right:3px solid var(--accent);background:color-mix(in srgb,var(--accent) 10%,var(--surface))}
+.conversations-app .bubble-meta{display:flex;gap:8px;align-items:baseline;font-size:12px;margin-bottom:2px}
+.conversations-app .bubble-meta time{font-size:11px}
+.conversations-app .bubble-text{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.45}
+.conversations-app .bubble-files{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;align-items:flex-end}
+.conversations-app .bubble-image img{display:block;max-width:220px;max-height:160px;border:1px solid var(--border)}
+.conversations-app .file-chip{display:inline-block;padding:3px 8px;font-size:12px;border:1px solid var(--border);background:var(--raised);color:var(--text);text-decoration:none}
+.conversations-app .file-chip:hover{border-color:var(--accent)}
+
+.conversations-app .composer{padding:10px 16px 12px;border-top:1px solid var(--border);display:grid;grid-template-columns:1fr auto;gap:6px 8px;align-items:end}
+.conversations-app .composer textarea{grid-column:1;resize:none;min-height:44px;max-height:160px}
+.conversations-app .composer .attachments{grid-column:1 / -1;grid-row:2;margin:0}
+.conversations-app .composer .attachments:empty{display:none}
+.conversations-app .composer-actions{grid-column:2;grid-row:1;display:flex;gap:6px}
+.conversations-app .attachment{display:inline-flex;align-items:center;gap:4px;padding:2px 2px 2px 8px;font-size:12px;border:1px solid var(--border);background:var(--raised)}
+.conversations-app .attachment button{position:static;width:auto;height:auto;padding:0 6px;background:none}
+
+/* Messages and history have their own workspace; agent administration stays in Project. */
+.conversations-app{grid-template-columns:256px minmax(0,1fr)}
+.conversation-sidebar{display:flex;flex-direction:column;min-height:0;min-width:0;border-right:1px solid var(--border);background:var(--bg)}
+.conversation-side-heading{padding:14px 12px;display:flex;align-items:center;gap:8px;justify-content:space-between}
+.conversation-side-heading h3{color:var(--text)}
+.conversation-tabs{display:flex;padding:0 12px 10px;gap:6px}
+.conversation-tabs button{flex:1;background:none}
+.conversation-tabs button[aria-pressed=true]{color:var(--accent);border-color:var(--accent)}
+.conversation-search{margin:0 12px 10px;width:calc(100% - 24px);font-size:12px}
+.conversation-list{overflow:auto;flex:1;min-height:0;padding:0 8px 12px}
+.conversation-list>p{padding:14px 6px;line-height:1.6;font-size:12px}
+.conversation-entry{display:flex;width:100%;flex-direction:column;gap:5px;padding:12px 10px;text-align:left;background:none;border:1px solid transparent;white-space:normal;min-width:0}
+.conversation-entry strong{font-size:13px;overflow-wrap:anywhere}
+.conversation-entry small{font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;line-height:1.5}
+.conversation-entry[aria-pressed=true]{background:var(--surface);border-color:var(--border)}
+.conversation-header-actions{display:flex;gap:6px;flex-wrap:wrap}
+.conversations-app .chat-header{align-items:flex-start}
+.conversations-app .chat-heading{display:flex;flex-direction:column;gap:5px}
+.conversation-project-choice{display:block;margin-top:10px;white-space:normal;text-align:left}
+@container (max-width:640px){
+  .conversations-app{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr)}
+  .conversation-sidebar{border-right:0;border-bottom:1px solid var(--border);max-height:220px}
+  .conversation-side-heading{padding:8px}
+  .conversation-tabs{padding:0 8px 6px}
+  .conversation-search{margin:0 8px 6px;width:calc(100% - 16px)}
+  .conversation-list{display:flex;flex:none;max-height:76px;padding:0 8px 6px;gap:4px}
+  .conversation-entry{width:180px;flex:none;padding:6px 8px}
+  .conversation-header-actions .small{font-size:11px;padding:4px 6px}
+}
+
+@container (max-width:640px){
+  .conversations-app .room-main{grid-row:2}
+  .conversations-app .chat-header{padding:8px;gap:6px}
+  .conversations-app .bubble{max-width:92%}
+  .conversations-app .composer{padding:8px;grid-template-columns:minmax(0,1fr)}
+  .conversations-app .composer-actions{grid-column:1;grid-row:3;justify-content:flex-end}
+}
+
+.conversations-app .chat-heading{flex:1;min-width:160px}
+.channel-members{flex-basis:100%;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.channel-member{display:inline-flex;align-items:center;gap:2px;border:1px solid var(--border);background:var(--raised);padding:0 0 0 8px;font-size:11px}
+.channel-member button{border:0;background:transparent;padding:3px 6px;font-size:11px}.channel-member .channel-member-name{padding-left:0}
+.channel-add{width:auto;font-size:11px;padding:3px 6px}
+.conversation-paused{color:var(--accent);font-size:10px;text-transform:uppercase;letter-spacing:1px}
+.channel-choices{border:1px solid var(--border);padding:8px 12px;margin:0 0 14px;max-height:220px;overflow:auto}.channel-choices legend{font-size:11px;color:var(--muted);padding:0 4px}
+
+/* Agent-authored work and prose voices. Status updates never replace the message composer. */
+.conversations-app .agent-typing{flex:none;padding:7px 16px;color:var(--muted);font-size:12px;border-top:1px solid var(--border)}
+.conversations-app .agent-typing[hidden]{display:none}
+.conversations-app .agent-typing-line{display:flex;align-items:center;gap:8px}
+.conversations-app .typing-dots{display:inline-block;color:var(--accent);letter-spacing:2px;animation:typing-pulse 1.2s ease-in-out infinite}
+@keyframes typing-pulse{0%,100%{opacity:.35}50%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.conversations-app .typing-dots{animation:none}}
+.conversations-app .agent-thoughts{align-self:flex-start;width:min(88%,700px);min-width:0;border:1px solid var(--border);background:color-mix(in srgb,var(--surface) 80%,var(--bg));font-size:12px}
+.conversations-app .agent-thoughts.active{border-color:color-mix(in srgb,var(--accent) 45%,var(--border))}
+.conversations-app .agent-thoughts summary{cursor:pointer;padding:8px 10px;overflow-wrap:anywhere}
+.conversations-app .agent-thoughts summary strong{margin-right:10px}
+.conversations-app .agent-thought-state{float:right;color:var(--muted);margin-left:10px}
+.conversations-app .agent-thought-body{padding:0 12px 10px;max-height:320px;overflow:auto;overscroll-behavior:contain}
+.conversations-app .agent-thought-part{padding:10px 0;border-top:1px solid var(--border)}
+.conversations-app .agent-thought-part[hidden]{display:none}
+.conversations-app .agent-thought-part h4{font-size:11px;color:var(--muted);font-weight:600;margin:0 0 6px}
+.conversations-app .agent-thought-text{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5}
+.conversations-app .agent-thought-part.in-progress h4{color:var(--accent)}
+/* Files in messages: each opens in the File Viewer and can be downloaded or copied. */
+.conversations-app .bubble-files{flex-direction:column;align-items:flex-start}
+.conversations-app .file-item{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.conversations-app .bubble-image{padding:0;border:0;background:none;display:block;cursor:zoom-in}
+.conversations-app .file-chip{cursor:pointer}
+.conversations-app .file-actions{display:inline-flex;gap:4px}
+.conversations-app .file-actions button{font-size:11px;padding:3px 8px}

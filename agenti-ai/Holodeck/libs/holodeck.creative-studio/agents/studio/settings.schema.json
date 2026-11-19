@@ -1,0 +1,118 @@
+{
+  "type": "object",
+  "properties": {
+    "Model": {
+      "type": "object",
+      "properties": {
+        "BaseUrl": {
+          "type": "string",
+          "title": "Model API base URL"
+        },
+        "Name": {
+          "type": "string",
+          "title": "Model alias"
+        },
+        "ApiKey": {
+          "type": "string",
+          "title": "API key",
+          "x-ui": {
+            "control": "password"
+          }
+        },
+        "Temperature": {
+          "type": "number",
+          "title": "Temperature",
+          "minimum": 0
+        },
+        "MaxOutputTokens": {
+          "type": "integer",
+          "title": "Maximum output tokens",
+          "minimum": 1
+        },
+        "TimeoutSeconds": {
+          "type": "integer",
+          "title": "Request timeout in seconds",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "BaseUrl",
+        "Name",
+        "ApiKey",
+        "Temperature",
+        "MaxOutputTokens",
+        "TimeoutSeconds"
+      ],
+      "additionalProperties": false
+    },
+    "Embedding": {
+      "type": "object",
+      "properties": {
+        "BaseUrl": {
+          "type": "string",
+          "title": "Embedding API base URL"
+        },
+        "Name": {
+          "type": "string",
+          "title": "Embedding model"
+        },
+        "ApiKey": {
+          "type": "string",
+          "title": "API key",
+          "x-ui": {
+            "control": "password"
+          }
+        },
+        "Dimensions": {
+          "type": "integer",
+          "title": "Embedding dimensions",
+          "minimum": 1
+        },
+        "TimeoutSeconds": {
+          "type": "integer",
+          "title": "Request timeout in seconds",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "BaseUrl",
+        "Name",
+        "ApiKey",
+        "Dimensions",
+        "TimeoutSeconds"
+      ],
+      "additionalProperties": false
+    },
+    "Comfy": {
+      "type": "object",
+      "properties": {
+        "BaseUrl": {
+          "type": "string",
+          "title": "ComfyUI API base URL"
+        },
+        "RequestTimeoutSeconds": {
+          "type": "integer",
+          "title": "Request timeout in seconds",
+          "minimum": 1
+        },
+        "PollSeconds": {
+          "type": "integer",
+          "title": "History polling interval in seconds",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "BaseUrl",
+        "RequestTimeoutSeconds",
+        "PollSeconds"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "Model",
+    "Embedding",
+    "Comfy"
+  ],
+  "additionalProperties": false
+}

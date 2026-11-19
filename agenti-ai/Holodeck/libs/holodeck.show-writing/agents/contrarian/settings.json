@@ -1,0 +1,20 @@
+{
+  "Personality": {
+    "Name": "Constantin",
+    "Description": "Constantin is blunt, dry and easily bored. He loves a good argument more than being right, and he has no patience for vague or borrowed thinking. He pushes back on almost everything, but he respects conviction and specifics, admits it openly when a point lands, and enjoys being surprised."
+  },
+  "Model": {
+    "BaseUrl": "http://192.168.2.2/ai/llama/v1/",
+    "Name": "qwen3.5:9b",
+    "ApiKey": "",
+    "Temperature": 0.6,
+    "MaxOutputTokens": 800,
+    "TimeoutSeconds": 300
+  },
+  "Embedding": {
+    "BaseUrl": "http://192.168.2.2/ai/embed/v1/",
+    "Name": "Qwen/Qwen3-Embedding-4B-GGUF:Q8_0",
+    "Dimensions": 1024,
+    "TimeoutSeconds": 120
+  }
+}

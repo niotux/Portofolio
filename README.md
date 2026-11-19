@@ -1,6 +1,12 @@
 # Portofoliu de programare
 
-Proiectele mele de grafică, dezvoltare de jocuri, simulări, compilatoare și utilitare de zi cu zi. Deschide un proiect pentru a vedea ce face și cum îl poți folosi.
+Proiectele mele de agenți AI, grafică, dezvoltare de jocuri, simulări, compilatoare și utilitare de zi cu zi. Deschide un proiect pentru a vedea ce face și cum îl poți folosi.
+
+## Agenți AI și colaborare
+
+| Proiect | Ce face |
+| --- | --- |
+| [Holodeck](agenti-ai/Holodeck) | Organizează colaborarea dintre utilizatori și agenți AI prin proiecte, biblioteci reutilizabile de agenți și echipe, canale de comunicare și medii de execuție Docker |
 
 ## Utilitare
 

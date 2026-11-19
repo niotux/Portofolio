@@ -1,0 +1,21 @@
+[
+  {
+    "id": "maxiclaude",
+    "name": "Qwen3-27B (llama.cpp)",
+    "baseUrl": "http://192.168.1.104:8000/v1",
+    "apiKey": "dummy",
+    "apiKeyEnv": "PI_SHARP_API_KEY",
+    "input": ["text", "image"],
+    "contextWindow": 200192,
+    "maxOutputTokens": 8192,
+    "reasoning": true,
+    "defaultThinkingLevel": "off",
+    "compat": {
+      "maxTokensField": "max_tokens",
+      "supportsFinishReason": true,
+      "supportsUsageInStreaming": true,
+      "thinkingFormat": "qwen-chat-template",
+      "chatTemplateKwargs": { "enable_thinking": false }
+    }
+  }
+]

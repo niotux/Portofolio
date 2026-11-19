@@ -1,0 +1,35 @@
+namespace Humans;
+
+// Library prose for the person's page, from page.json. {name}, {portrait}, {channel}, {speaker}, {others}, {count},
+// {senders}, {time} and {list} are filled by code.
+public sealed record PageText
+(
+  string Header,
+  string Portrait,
+  string Summary,
+  string Thought,
+  string Remember,
+  string Close,
+  string Said,
+  string Time,
+  string Direct,
+  string Group,
+  string Gone,
+  string Human,
+  string Buzz,
+  string Open,
+  string OpenEmpty,
+  string Earlier,
+  string Closed,
+  string Phone,
+  string PhoneEmpty,
+  string PhoneLine,
+  string NoConversation,
+  string Unavailable,
+  string Unprepared,
+  string Named,
+  string Elsewhere,
+  string Mention,
+  string Muted,
+  string Unmuted
+);

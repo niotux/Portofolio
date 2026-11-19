@@ -1,0 +1,12 @@
+{
+  "Id": "studio",
+  "Name": "Studio",
+  "Description": "Discuss visual ideas, retain useful references and generate images through ComfyUI. The first workflow creates anime images; additional image and video families follow local trials.",
+  "Launch": {
+    "Command": "${Library}/runtime/CreativeStudio",
+    "Args": []
+  },
+  "Settings": "settings.json",
+  "SettingsSchema": "settings.schema.json",
+  "Actions": "../../actions/Actions.json"
+}
